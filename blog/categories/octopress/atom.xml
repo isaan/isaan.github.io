@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Ice XBoct]]></title>
-  <link href="http://isaan.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Octopress | Ice XBoct]]></title>
+  <link href="http://isaan.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
   <updated>2016-11-04T13:58:20+07:00</updated>
   <id>http://isaan.github.io/</id>
