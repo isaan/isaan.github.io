@@ -4,7 +4,7 @@
   <title><![CDATA[Ice XBoct]]></title>
   <link href="http://isaan.github.io/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T11:28:35+07:00</updated>
+  <updated>2016-11-08T11:29:48+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -18,7 +18,7 @@
     <link href="http://isaan.github.io/blog/2016/11/08/mencoba-plugin-di-octopress/"/>
     <updated>2016-11-08T10:43:40+07:00</updated>
     <id>http://isaan.github.io/blog/2016/11/08/mencoba-plugin-di-octopress</id>
-    <content type="html"><![CDATA[<p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f603.png" width="50" height="50" title="smiley" alt="smiley">). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
+    <content type="html"><![CDATA[<p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f603.png" width="30" height="30" title="smiley" alt="smiley">). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
 
 <h4>1. Plugin Codeblock.</h4>
 
