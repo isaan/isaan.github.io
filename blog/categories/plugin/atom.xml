@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Plugin | Ice Xboct]]></title>
   <link href="http://isaan.github.io/blog/categories/plugin/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T11:41:52+07:00</updated>
+  <updated>2016-11-08T11:45:54+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -40,6 +40,12 @@
 <p>Gambar 2:</p>
 
 <p><img class="<a" src="href="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg">http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg</a>" width="400" height="250"></p>
+
+<h4>3. Video Tag</h4>
+
+<p>Plugin ini memungkinkan kamu untuk memasukan video mp4 yang di encode dalam format HTML 5 video di dalam post.</p>
+
+<p><video width='640' height='320' preload='metadata' controls ><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4">http://s3.imathis.com/video/zero-to-fancy-buttons.mp4</a>' ></video></p>
 ]]></content>
   </entry>
   
