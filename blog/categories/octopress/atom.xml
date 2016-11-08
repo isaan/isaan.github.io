@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Ice XBoct]]></title>
   <link href="http://isaan.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T11:04:41+07:00</updated>
+  <updated>2016-11-08T11:06:22+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -20,10 +20,11 @@
     <id>http://isaan.github.io/blog/2016/11/08/mencoba-plugin-di-octopress</id>
     <content type="html"><![CDATA[<p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu :D). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
 
-<h2>1. Plugin Codeblock.</h2>
+<h4>1. Plugin Codeblock.</h4>
 
-<p>   Dengan plugin ini kamu bisa menulis blok kode secara langsung dalam posting Anda dan bisa juga dengan menambahkan judul dan link.
-   Syntax:
+<p>   Dengan plugin ini kamu bisa menulis blok kode secara langsung dalam posting Anda dan bisa juga dengan menambahkan judul dan link.</p>
+
+<p>   Syntax:
     <figure class='code'><figcaption><span>[title] [bahasa] [url] [link text] </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>code snippet</span></code></pre></td></tr></table></div></figure></p>
@@ -40,10 +41,16 @@
     &lsquo;<figure class='code'><figcaption><span>Time to code - code.rb </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'>        <span class="nb">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Hello</span> <span class="n">world!</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="n">happy</span> <span class="n">tuesday</span>
-</span><span class='line'>
-</span></code></pre></td></tr></table></div></figure>&rsquo;
-2.</p>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="nb">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Hello</span> <span class="n">world!</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="n">happy</span> <span class="n">tuesday</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'>    <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>&rsquo;</p>
+
+<ol>
+<li></li>
+</ol>
+
 ]]></content>
   </entry>
   
