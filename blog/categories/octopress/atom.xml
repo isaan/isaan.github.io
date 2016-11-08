@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Ice XBoct]]></title>
   <link href="http://isaan.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T11:36:47+07:00</updated>
+  <updated>2016-11-08T11:38:31+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -32,11 +32,13 @@
 
 <h4>2. Plugin Image Tag.</h4>
 
-<pre><code>Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax.
-</code></pre>
+<p>Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax.</p>
 
 <p>Gambar 1:
 <img class="<a" src="href="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg">http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg</a>"></p>
+
+<p>Gambar 2:
+<img class="<a" src="href="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg">http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg</a>" width="400" height="250"></p>
 ]]></content>
   </entry>
   
