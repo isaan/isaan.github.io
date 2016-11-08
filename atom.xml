@@ -4,7 +4,7 @@
   <title><![CDATA[Ice Xboct]]></title>
   <link href="http://isaan.github.io/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T14:38:39+07:00</updated>
+  <updated>2016-11-08T14:51:28+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -20,7 +20,7 @@
     <id>http://isaan.github.io/blog/2016/11/08/mencoba-plugin-di-octopress</id>
     <content type="html"><![CDATA[<p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu <img src="http://www.hey.fr/tools/emoji/ios_emoji_smiling_face_with_open_mouth.png" width="30" height="30" title="smiley" alt="smiley">). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
 
-<h4>1. Plugin Codeblock.</h4>
+<h4>1. Code Block.</h4>
 
 <p>   Dengan plugin ini kamu bisa menulis blok kode secara langsung dalam posting Anda dan bisa juga dengan menambahkan judul dan link.</p>
 
@@ -31,7 +31,12 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h4>2. Plugin Image Tag.</h4>
+
+
+<!-- more -->
+
+
+<h4>2. Image Tag.</h4>
 
 <p>Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax.</p>
 
