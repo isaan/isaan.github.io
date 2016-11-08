@@ -4,7 +4,7 @@
   <title><![CDATA[Ice Xboct]]></title>
   <link href="http://isaan.github.io/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T11:39:23+07:00</updated>
+  <updated>2016-11-08T11:41:52+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -36,10 +36,11 @@
 <p>Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax.</p>
 
 <p>Gambar 1:
-<img src="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg"></p>
+<img src="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg" title="Mac OS X Yosemite" ></p>
 
-<p>Gambar 2:
-<img src="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg" width="400" height="250"></p>
+<p>Gambar 2:</p>
+
+<p><img src="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg" width="400" height="250"></p>
 ]]></content>
   </entry>
   
