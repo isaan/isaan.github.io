@@ -4,7 +4,7 @@
   <title><![CDATA[Ice Xboct]]></title>
   <link href="http://isaan.github.io/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T15:24:17+07:00</updated>
+  <updated>2016-11-08T15:33:39+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -122,6 +122,13 @@
 </span><span class='line'>  <span class="p">};</span>
 </span><span class='line'><span class="p">})();</span>
 </span></code></pre></td></tr></table></div></figure>
+
+
+<h4>5. Blockquote</h4>
+
+<p>Blockquote plugin mengambil penulis, sumber, judul dan kutipan, dan juga HTML Semantik.</p>
+
+<blockquote><p>Over the past 24 hours I've been reflecting on my life & I've realized only one thing. I need a medieval battle axe.</p><footer><strong>@allanbranch</strong> <cite><a href='https://twitter.com/allanbranch/status/90766146063712256'>twitter.com/allanbranch/status/&hellip;</a></cite></footer></blockquote>
 
 ]]></content>
   </entry>

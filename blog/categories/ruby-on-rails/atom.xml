@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on Rails | Ice Xboct]]></title>
   <link href="http://isaan.github.io/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T15:24:17+07:00</updated>
+  <updated>2016-11-08T15:33:39+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -118,6 +118,11 @@
 </span><span class='line'>  <span class="p">};</span>
 </span><span class='line'><span class="p">})();</span>
 </span></code></pre></td></tr></table></div></figure></p>
+
+<h4>5. Blockquote</h4>
+
+<p>Blockquote plugin mengambil penulis, sumber, judul dan kutipan, dan juga HTML Semantik.
+<blockquote><p>Over the past 24 hours I&rsquo;ve been reflecting on my life &amp; I&rsquo;ve realized only one thing. I need a medieval battle axe.</p><footer><strong>@allanbranch <a href="https://twitter.com/allanbranch/status/90766146063712256">https://twitter.com/allanbranch/status/90766146063712256</a></strong></footer></blockquote></p>
 ]]></content>
   </entry>
   
