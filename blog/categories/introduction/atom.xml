@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Introduction | Ice XBoct]]></title>
   <link href="http://isaan.github.io/blog/categories/introduction/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T10:39:06+07:00</updated>
+  <updated>2016-11-08T10:40:42+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -29,7 +29,7 @@
 
 <p><figure class='code'><figcaption><span>GPG Command </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ gpg &ndash;keyserver hkp://keys.gnupg.net &ndash;recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</span></code></pre></td></tr></table></div></figure></p>
+</pre></td><td class='code'><pre><code class=''><span class='line'>user@hostname:~$ gpg &ndash;keyserver hkp://keys.gnupg.net &ndash;recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</span></code></pre></td></tr></table></div></figure></p>
 ]]></content>
   </entry>
   
