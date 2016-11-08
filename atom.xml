@@ -4,7 +4,7 @@
   <title><![CDATA[Ice Xboct]]></title>
   <link href="http://isaan.github.io/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T13:56:00+07:00</updated>
+  <updated>2016-11-08T13:59:04+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -46,7 +46,7 @@
 
 <p>Plugin ini memungkinkan kamu untuk memasukan video mp4 yang di encode dalam format HTML 5 video di dalam post.</p>
 
-<p><video width='640' height='320' preload='metadata' controls ><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video></p>
+<p><video width='640' height='320' preload='metadata' controls poster='https://s17.postimg.org/ii43hq61r/fancy_button.png'><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video></p>
 ]]></content>
   </entry>
   
