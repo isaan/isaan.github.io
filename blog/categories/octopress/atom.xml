@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Ice Xboct]]></title>
   <link href="http://isaan.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T13:54:56+07:00</updated>
+  <updated>2016-11-08T13:56:00+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -45,7 +45,7 @@
 
 <p>Plugin ini memungkinkan kamu untuk memasukan video mp4 yang di encode dalam format HTML 5 video di dalam post.</p>
 
-<p>Error processing input, expected syntax: {% video url/to/video [url/to/video] [url/to/video] [width height] [url/to/poster] %}</p>
+<p><video width='640' height='320' preload='metadata' controls ><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4">http://s3.imathis.com/video/zero-to-fancy-buttons.mp4</a>' ></video></p>
 ]]></content>
   </entry>
   
