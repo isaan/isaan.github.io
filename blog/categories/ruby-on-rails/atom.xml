@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on Rails | Ice XBoct]]></title>
   <link href="http://isaan.github.io/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T11:31:47+07:00</updated>
+  <updated>2016-11-08T11:35:37+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -31,6 +31,15 @@
 </span></code></pre></td></tr></table></div></figure></p>
 
 <h4>2. Plugin Image Tag.</h4>
+
+<pre><code>Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax.
+</code></pre>
+
+<p>Syntax:
+<img class="[class names]" src="/path/to/image" title="[width] [height] [title text [alt text]]" ></p>
+
+<p>Gambar 1:
+<img class="<a" src="href="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg">http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg</a>"></p>
 ]]></content>
   </entry>
   
