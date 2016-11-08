@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Plugin | Ice Xboct]]></title>
   <link href="http://isaan.github.io/blog/categories/plugin/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T13:59:04+07:00</updated>
+  <updated>2016-11-08T14:11:20+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -37,15 +37,15 @@
 <p>Gambar 1:
 <img class="<a" src="href="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg">http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg</a>" title="Mac OS X Yosemite" ></p>
 
-<p>Gambar 2:</p>
-
-<p><img class="<a" src="href="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg">http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg</a>" width="400" height="250"></p>
-
-<h4>3. Video Tag</h4>
+<h4>3. HTML5 Video Tag</h4>
 
 <p>Plugin ini memungkinkan kamu untuk memasukan video mp4 yang di encode dalam format HTML 5 video di dalam post.</p>
 
 <p><video width='640' height='320' preload='metadata' controls poster='https://s17.postimg.org/ii43hq61r/fancy_button.png">https://s17.postimg.org/ii43hq61r/fancy_button.png</a>'><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4">http://s3.imathis.com/video/zero-to-fancy-buttons.mp4</a>' ></video></p>
+
+<h4>4. Include Code</h4>
+
+<p>File /home/iceice/Work/isaan.github.io/source/downloads/code/~/Work/isaan.github.io/source/javascripts/github.js could not be found</p>
 ]]></content>
   </entry>
   
