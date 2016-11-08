@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on Rails | Ice XBoct]]></title>
   <link href="http://isaan.github.io/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T11:11:18+07:00</updated>
+  <updated>2016-11-08T11:16:27+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -24,27 +24,15 @@
 
 <p>   Dengan plugin ini kamu bisa menulis blok kode secara langsung dalam posting Anda dan bisa juga dengan menambahkan judul dan link.</p>
 
-<p>   Syntax:
-    <figure class='code'><figcaption><span>[title] [bahasa] [url] [link text] </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>code snippet</span></code></pre></td></tr></table></div></figure></p>
-
 <p>   Contoh:
-    <figure class='code'><figcaption><span>The code - code.rb </span></figcaption>
+    <figure class='code'><figcaption><span>The code <a href="http://octopress.org/docs/plugins/codeblock/">http://octopress.org/docs/plugins/codeblock/</a> </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'>        <span class="nb">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Hello</span> <span class="n">world!</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="n">happy</span> <span class="n">tuesday</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>        <span class="nb">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Hello</span> <span class="n">world!</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="no">Happy</span> <span class="n">monday!</span>
 </span><span class='line'>
 </span></code></pre></td></tr></table></div></figure></p>
 
-<p>   Source:
-    <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>puts &ldquo;Hello world!&rdquo; happy tuesday</span></code></pre></td></tr></table></div></figure></p>
-
-<ol>
-<li></li>
-</ol>
-
+<h4>2. Plugin Image Tag.</h4>
 ]]></content>
   </entry>
   
