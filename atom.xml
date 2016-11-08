@@ -4,7 +4,7 @@
   <title><![CDATA[Ice XBoct]]></title>
   <link href="http://isaan.github.io/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-08T10:40:42+07:00</updated>
+  <updated>2016-11-08T10:54:25+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mencoba Plugin Di Octopress]]></title>
+    <link href="http://isaan.github.io/blog/2016/11/08/mencoba-plugin-di-octopress/"/>
+    <updated>2016-11-08T10:43:40+07:00</updated>
+    <id>http://isaan.github.io/blog/2016/11/08/mencoba-plugin-di-octopress</id>
+    <content type="html"><![CDATA[<p>Halo, beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu :D). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
+
+<ol>
+<li>Plugin Codeblock
+Dengan plugin ini kamu bisa menulis blok kode secara langsung dalam posting Anda dan bisa juga dengan menambahkan judul dan link.
+Syntax:
+ <figure class='code'><figcaption><span>[title] [bahasa] [url] [link text] </span></figcaption></li>
+</ol>
+
+
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>code snippet</span></code></pre></td></tr></table></div>
+
+
+<p></figure></p>
+
+<p>   Contoh:
+    <figure class='code'><figcaption><span>Time to code - code.rb </span></figcaption></p>
+
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'>       <span class="nb">puts</span> <span class="s2">&quot;Hello world!&quot;</span> <span class="n">happy</span> <span class="n">tuesday</span>
+</span><span class='line'>  
+</span></code></pre></td></tr></table></div>
+
+
+<p></figure></p>
+
+<p>   Source:
+    <figure class='code'><figcaption><span>Time to code - code.rb </span></figcaption></p>
+
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'>       <span class="nb">puts</span> <span class="s2">&quot;Hello world!&quot;</span> <span class="n">happy</span> <span class="n">tuesday</span>
+</span><span class='line'>  
+</span></code></pre></td></tr></table></div>
+
+
+<p></figure>
+2.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Introduction]]></title>
