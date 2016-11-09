@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby on Rails | Ice Xboct]]></title>
   <link href="http://isaan.github.io/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-09T09:17:08+07:00</updated>
+  <updated>2016-11-09T09:18:35+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -15,7 +15,7 @@
   
   <entry>
     <title type="html"><![CDATA[Mencoba Plugin Di Octopress]]></title>
-    <link href="http://isaan.github.io/title/"/>
+    <link href="http://isaan.github.io/mencoba-plugin-di-octopress/"/>
     <updated>2016-11-08T10:43:40+07:00</updated>
     <id>http://isaan.github.io/mencoba-plugin-di-octopress</id>
     <content type="html"><![CDATA[<p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu <img class="<a" src="href="http://www.hey.fr/tools/emoji/ios_emoji_smiling_face_with_open_mouth.png">http://www.hey.fr/tools/emoji/ios_emoji_smiling_face_with_open_mouth.png</a>" width="30" height="30" title="&lsquo;smiley&rsquo; &lsquo;smiley&rsquo;" >). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
