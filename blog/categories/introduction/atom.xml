@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Introduction | Ice Code]]></title>
-  <link href="http://isaan.github.io/blog/categories/introduction/atom.xml" rel="self"/>
-  <link href="http://isaan.github.io/"/>
-  <updated>2016-11-09T16:26:16+07:00</updated>
-  <id>http://isaan.github.io/</id>
-  <author>
-    <name><![CDATA[iceice]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+    <title><![CDATA[Category: introduction | Ice Code]]></title>
+    <link href="http://isaan.github.io/blog/categories/introduction/atom.xml" rel="self"/>
+    <link href="http://isaan.github.io/"/>
+    <updated>2016-11-09T16:34:20+07:00</updated>
+    <id>http://isaan.github.io/</id>
+    <author>
+        <name><![CDATA[iceice]]></name>
+        
+      </author>
+    <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Introduction]]></title>
-    <link href="http://isaan.github.io/introduction/"/>
-    <updated>2016-11-04T11:12:06+07:00</updated>
-    <id>http://isaan.github.io/introduction</id>
-    <content type="html"><![CDATA[<p>Hi, i&rsquo;m iceice, nice to meet you guys. Stay tune with me on twitter: @Ikhsan_IR</p>
+    
+    <entry>
+        <title type="html"><![CDATA[Introduction]]></title>
+        <link href="http://isaan.github.io/introduction/"/>
+        <updated>2016-11-04T11:12:06+07:00</updated>
+        <id>http://isaan.github.io/introduction</id>
+        <content type="html"><![CDATA[<p>Hi, i&rsquo;m iceice, nice to meet you guys. Stay tune with me on twitter: @Ikhsan_IR</p>
 
 <p><img class="<a" src="href="https://s-media-cache-ak0.pinimg.com/originals/97/61/87/9761871e4eeff7c3a1698d8688852ed9.jpg">https://s-media-cache-ak0.pinimg.com/originals/97/61/87/9761871e4eeff7c3a1698d8688852ed9.jpg</a>"></p>
 
@@ -30,6 +30,6 @@
 </pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Hello</span> <span class="n">world!</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="n">happy</span> <span class="n">tuesday</span>
 </span></code></pre></td></tr></table></div></figure></p>
 ]]></content>
-  </entry>
-  
+    </entry>
+    
 </feed>
