@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Ice Code]]></title>
   <link href="http://isaan.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-09T13:58:30+07:00</updated>
+  <updated>2016-11-09T16:26:16+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -128,6 +128,8 @@
 <p>Blockquote plugin mengambil penulis, sumber, judul dan kutipan, dan juga HTML Semantik.
 Contoh:
 <blockquote><p>Over the past 24 hours I&rsquo;ve been reflecting on my life &amp; I&rsquo;ve realized only one thing. I need a medieval battle axe.</p><footer><strong>@allanbranch <a href="https://twitter.com/allanbranch/status/90766146063712256">https://twitter.com/allanbranch/status/90766146063712256</a></strong></footer></blockquote></p>
+
+<h4>6. Puts</h4>
 ]]></content>
   </entry>
   
