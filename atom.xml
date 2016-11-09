@@ -4,7 +4,7 @@
   <title><![CDATA[Ice Xboct]]></title>
   <link href="http://isaan.github.io/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-09T11:29:56+07:00</updated>
+  <updated>2016-11-09T11:42:06+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -38,13 +38,17 @@
 
 <h4>2. Image Tag.</h4>
 
-<p>Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax.</p>
+<p>Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax. Memasukkan gambar di Octopress ada dua jenis yaitu memasukkan gambar dari website / link url gambar tersebut. Contoh:</p>
 
-<p>Gambar 1:
+<p>Contoh Gambar dari Link Web Lain:
 <img src="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg" title="Mac OS X Yosemite" ></p>
 
-<p>Gambar 2:
-<img src="http://isaan.github.io/post/images/screenshot.png" title="image" alt="images"></p>
+<p>Dan yang kedua adalah memasukkan gambar kita sendiri dari Local. Caranya yaitu dengan copy gambar yang akan di post misal dari hasil screenshot ke dalam folder &lsquo;/source/images&rsquo;. Setelah itu url pada gambar ubah menjadi /images/namagambar.png.</p>
+
+<p>Contoh Gambar Local:
+<img src="http://isaan.github.io/images/screenshot.png" title="image" alt="images"></p>
+
+<p>Bedanya adalah ketika memasukkan gambar dari link web lain otomatis itu bukan milik kita tetapi milik gambar orang tertentu, dan kita bisa terkena hak cipta jika suatu saat yang punya gambar menuntut. Sedangkan jika memasukkan gambar sendiri itu artinya gambar milik kita sendiri misal dari hasil Screenshot, foto objek tertentu, dll.</p>
 
 <h4>3. HTML5 Video Tag</h4>
 
