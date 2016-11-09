@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Plugin | Ice Xboct]]></title>
+  <title><![CDATA[Category: Plugin | Ice Code]]></title>
   <link href="http://isaan.github.io/blog/categories/plugin/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-09T13:53:47+07:00</updated>
+  <updated>2016-11-09T13:58:30+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -36,10 +36,6 @@
 <h4>2. Image Tag.</h4>
 
 <p>Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax. Memasukkan gambar di Octopress ada dua jenis yaitu memasukkan gambar dari website / link url gambar tersebut.</p>
-
-<p>Syntax:
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>( &lt;img class="&lt;a" src="href="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg">http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg&lt;/a>" title="Mac OS X Yosemite" > )</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Contoh Gambar dari Link Web Lain:
 <img class="<a" src="href="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg">http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg</a>" title="Mac OS X Yosemite" ></p>
