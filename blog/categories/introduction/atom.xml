@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-    <title><![CDATA[Category: introduction | Ice Code]]></title>
+    <title><![CDATA[Category: introduction | Iceisan Labs]]></title>
     <link href="http://isaan.github.io/blog/categories/introduction/atom.xml" rel="self"/>
     <link href="http://isaan.github.io/"/>
-    <updated>2016-11-09T16:49:03+07:00</updated>
+    <updated>2016-11-09T16:51:38+07:00</updated>
     <id>http://isaan.github.io/</id>
     <author>
-        <name><![CDATA[iceice]]></name>
+        <name><![CDATA[Mr. Iceisan]]></name>
         
       </author>
     <generator uri="http://octopress.org/">Octopress</generator>
