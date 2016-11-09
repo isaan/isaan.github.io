@@ -4,7 +4,7 @@
   <title><![CDATA[Ice Xboct]]></title>
   <link href="http://isaan.github.io/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-09T13:52:18+07:00</updated>
+  <updated>2016-11-09T13:53:47+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -43,7 +43,7 @@
 <p>Syntax:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;img src="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg" title="Mac OS X Yosemite" ></span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>( &lt;img src="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg" title="Mac OS X Yosemite" > )</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Contoh Gambar dari Link Web Lain:
@@ -52,7 +52,7 @@
 <p>Dan yang kedua adalah memasukkan gambar kita sendiri dari Local. Caranya yaitu dengan copy gambar yang akan di post misal dari hasil screenshot ke dalam folder &lsquo;/source/images&rsquo;. Setelah itu url pada gambar ubah menjadi /images/namagambar.png.</p>
 
 <p>Contoh Gambar Local:
-<img src="http://isaan.github.io/images/screenshot.png" title="image" alt="images"></p>
+<img src="http://isaan.github.io/images/screenshot.png" title="Octopress" ></p>
 
 <p>Bedanya adalah ketika memasukkan gambar dari link web lain otomatis itu bukan milik kita tetapi milik gambar orang tertentu, dan kita bisa terkena hak cipta jika suatu saat yang punya gambar menuntut. Sedangkan jika memasukkan gambar sendiri itu artinya gambar milik kita sendiri misal dari hasil Screenshot, foto objek tertentu, dll. Cara membedakan apakah gambar itu diambil dari link web lain atau upload sendiri adalah dengan klik kanan pada gambar dan open image in new tab.</p>
 
