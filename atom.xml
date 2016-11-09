@@ -4,7 +4,7 @@
   <title><![CDATA[Ice Xboct]]></title>
   <link href="http://isaan.github.io/atom.xml" rel="self"/>
   <link href="http://isaan.github.io/"/>
-  <updated>2016-11-09T09:18:35+07:00</updated>
+  <updated>2016-11-09T09:21:52+07:00</updated>
   <id>http://isaan.github.io/</id>
   <author>
     <name><![CDATA[iceice]]></name>
@@ -15,7 +15,7 @@
   
   <entry>
     <title type="html"><![CDATA[Mencoba Plugin Di Octopress]]></title>
-    <link href="http://isaan.github.io/mencoba-plugin-di-octopress/"/>
+    <link href="http://isaan.github.io/mencoba-plugin-di-octopress.html/"/>
     <updated>2016-11-08T10:43:40+07:00</updated>
     <id>http://isaan.github.io/mencoba-plugin-di-octopress</id>
     <content type="html"><![CDATA[<p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu <img src="http://www.hey.fr/tools/emoji/ios_emoji_smiling_face_with_open_mouth.png" width="30" height="30" title="smiley" alt="smiley">). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
@@ -136,7 +136,7 @@ Contoh:</p>
   
   <entry>
     <title type="html"><![CDATA[Introduction]]></title>
-    <link href="http://isaan.github.io/introduction/"/>
+    <link href="http://isaan.github.io/introduction.html/"/>
     <updated>2016-11-04T11:12:06+07:00</updated>
     <id>http://isaan.github.io/introduction</id>
     <content type="html"><![CDATA[<p>Hi, i&rsquo;m iceice, nice to meet you guys. Stay tune with me on twitter: @Ikhsan_IR</p>
