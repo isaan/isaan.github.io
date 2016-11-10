@@ -4,7 +4,7 @@
     <title><![CDATA[Iceisan Labs]]></title>
     <link href="http://isaan.github.io/atom.xml" rel="self"/>
     <link href="http://isaan.github.io/"/>
-    <updated>2016-11-10T14:28:53+07:00</updated>
+    <updated>2016-11-10T14:35:56+07:00</updated>
     <id>http://isaan.github.io/</id>
     <author>
         <name><![CDATA[Mr. Iceisan]]></name>
@@ -12,6 +12,15 @@
     </author>
     <generator uri="http://octopress.org/">Octopress</generator>
 
+    
+    <entry>
+        <title type="html"><![CDATA[Oscailte Theme]]></title>
+        <link href="http://isaan.github.io/oscailte-theme/"/>
+        <updated>2016-11-10T14:33:59+07:00</updated>
+        <id>http://isaan.github.io/oscailte-theme</id>
+        <content type="html"><![CDATA[<p>Tes menggunakan tema Oscailte yang powerfull, lightweight, dan responsive.</p>
+]]></content>
+    </entry>
     
     <entry>
         <title type="html"><![CDATA[Mencoba Plugin di Octopress]]></title>
