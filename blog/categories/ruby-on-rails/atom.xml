@@ -4,7 +4,7 @@
     <title><![CDATA[Category: ruby on rails | Iceisan Labs]]></title>
     <link href="http://isaan.github.io/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
     <link href="http://isaan.github.io/"/>
-    <updated>2016-11-18T15:41:58+07:00</updated>
+    <updated>2016-11-18T18:26:13+07:00</updated>
     <id>http://isaan.github.io/</id>
     <author>
         <name><![CDATA[Iceisan]]></name>
@@ -47,13 +47,13 @@
 
 <p>Bedanya adalah ketika memasukkan gambar dari link web lain otomatis itu bukan milik kita tetapi milik gambar orang tertentu, dan kita bisa terkena hak cipta jika suatu saat yang punya gambar menuntut. Sedangkan jika memasukkan gambar sendiri itu artinya gambar milik kita sendiri misal dari hasil Screenshot, foto objek tertentu, dll. Cara membedakan apakah gambar itu diambil dari link web lain atau upload sendiri adalah dengan klik kanan pada gambar dan open image in new tab.</p>
 
-<h4>3. HTML5 Video Tag</h4>
+<!-- #### 3. HTML5 Video Tag
+Plugin ini memungkinkan kamu untuk memasukan video mp4 yang di encode dalam format HTML 5 video di dalam post. 
 
-<p>Plugin ini memungkinkan kamu untuk memasukan video mp4 yang di encode dalam format HTML 5 video di dalam post.</p>
+<video width='640' height='320' preload='metadata' controls poster='https://s17.postimg.org/ii43hq61r/fancy_button.png'><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video> -->
 
-<p><video width='640' height='320' preload='metadata' controls poster='https://s17.postimg.org/ii43hq61r/fancy_button.png">https://s17.postimg.org/ii43hq61r/fancy_button.png</a>'><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4">http://s3.imathis.com/video/zero-to-fancy-buttons.mp4</a>' ></video></p>
 
-<h4>4. Include Code</h4>
+<h4>3. Include Code</h4>
 
 <p>Untuk menampilkan isi code tertentu, arahkan path directory tersebut. Default dari Octopress adalah di dalam directory &lsquo;source/&hellip;.&rsquo;
 <figure class='code'><figcaption><span> (github.js)</span> <a href='/./javascripts/github.js'>download</a></figcaption>
@@ -135,13 +135,13 @@
 </span><span class='line'><span class="p">})();</span>
 </span></code></pre></td></tr></table></div></figure></p>
 
-<h4>5. Blockquote</h4>
+<h4>4. Blockquote</h4>
 
 <p>Blockquote plugin mengambil penulis, sumber, judul dan kutipan, dan juga HTML Semantik.
 Contoh:
 <blockquote><p>Over the past 24 hours I&rsquo;ve been reflecting on my life &amp; I&rsquo;ve realized only one thing. I need a medieval battle axe.</p><footer><strong>@allanbranch <a href="https://twitter.com/allanbranch/status/90766146063712256">https://twitter.com/allanbranch/status/90766146063712256</a></strong></footer></blockquote></p>
 
-<h4>6. Puts</h4>
+<h4>5. Puts</h4>
 ]]></content>
     </entry>
     
