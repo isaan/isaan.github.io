@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
     <title><![CDATA[Category: ruby on rails | Iceisan Labs]]></title>
-    <link href="http://isaan.github.io/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
-    <link href="http://isaan.github.io/"/>
-    <updated>2016-11-22T15:00:02+07:00</updated>
-    <id>http://isaan.github.io/</id>
+    <link href="https://isaan.github.io/blog/categories/ruby-on-rails/atom.xml" rel="self"/>
+    <link href="https://isaan.github.io/"/>
+    <updated>2016-11-22T15:54:34+07:00</updated>
+    <id>https://isaan.github.io/</id>
     <author>
         <name><![CDATA[Iceisan]]></name>
         
@@ -15,9 +15,9 @@
     
     <entry>
         <title type="html"><![CDATA[Mencoba Plugin di Octopress]]></title>
-        <link href="http://isaan.github.io/blog/2016/11/08/mencoba-plugin-di-octopress/"/>
+        <link href="https://isaan.github.io/blog/2016/11/08/mencoba-plugin-di-octopress/"/>
         <updated>2016-11-08T10:43:40+07:00</updated>
-        <id>http://isaan.github.io/blog/2016/11/08/mencoba-plugin-di-octopress</id>
+        <id>https://isaan.github.io/blog/2016/11/08/mencoba-plugin-di-octopress</id>
         <content type="html"><![CDATA[<p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu :D). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
 
 <h4>1. Code Block.</h4>

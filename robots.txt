@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://isaan.github.io/sitemap.xml
+Sitemap: https://isaan.github.io/sitemap.xml
