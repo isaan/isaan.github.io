@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
     <title><![CDATA[Category: oscailte | Iceisan Labs]]></title>
-    <link href="https://isaan.github.io/blog/categories/oscailte/atom.xml" rel="self"/>
-    <link href="https://isaan.github.io/"/>
-    <updated>2016-11-22T15:54:34+07:00</updated>
-    <id>https://isaan.github.io/</id>
+    <link href="http://isaan.github.io/blog/categories/oscailte/atom.xml" rel="self"/>
+    <link href="http://isaan.github.io/"/>
+    <updated>2016-11-23T10:54:15+07:00</updated>
+    <id>http://isaan.github.io/</id>
     <author>
         <name><![CDATA[Iceisan]]></name>
         
@@ -15,9 +15,9 @@
     
     <entry>
         <title type="html"><![CDATA[Oscailte Theme]]></title>
-        <link href="https://isaan.github.io/blog/2016/11/10/oscailte-theme/"/>
+        <link href="http://isaan.github.io/blog/2016/11/10/oscailte-theme/"/>
         <updated>2016-11-10T14:33:59+07:00</updated>
-        <id>https://isaan.github.io/blog/2016/11/10/oscailte-theme</id>
+        <id>http://isaan.github.io/blog/2016/11/10/oscailte-theme</id>
         <content type="html"><![CDATA[<p>Tes menggunakan tema Oscailte yang powerfull, lightweight, dan responsive.</p>
 ]]></content>
     </entry>
