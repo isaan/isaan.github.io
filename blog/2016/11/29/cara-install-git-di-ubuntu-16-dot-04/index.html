@@ -9,13 +9,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Category: github - Iceisan Labs</title>
+        <title>Cara Install Git di Ubuntu 16.04 - Iceisan Labs</title>
         <meta name="author" content="Iceisan">
         
-        <meta name="description" content="Category: github">
+        <meta name="description" content="My blog diary">
         
         <meta name="viewport" content="width=device-width">
-        <link rel="canonical" href="https://ikhsanir.com/blog/categories/github">
+        <link rel="canonical" href="https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04">
 
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
@@ -76,104 +76,131 @@
                 
                 <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
                 
-                    <article class="page">
-
+                    <article class="article article--single">
+    <header class="article__header">
     
-    <header>
-        <h1 class="page__title">
-            Category: Github
-        </h1>
-    </header>
-    <hr class="divider">
+        <h1 class="article__title">Cara Install Git di Ubuntu 16.04</h1>
     
 
-    <div id="archive-list">
     
-        
-        
-            
-            <h2>2016</h2>
-        
-        <article class="article article--archive">
+        <div class="article__meta clearfix">
             
 
-<div class="row">
 
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <time class="article__date article__date--listing" datetime="2016-11-29T16:03:14+07:00" pubdate>
-            <span class='month'>Nov</span> <span class='day'>29</span>
-        </time>
-    </div>
-    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-        <h1 class="article__title h3"><a href="/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/">Cara Install Git di Ubuntu 16.04</a></h1>
-        
-            <footer class="article__meta">
-                
+
+
+
+
+    <time class="article__date pull-left" datetime="2016-11-29T16:03:14+07:00" pubdate><i class="fa fa-calendar"></i> Nov 29th, 2016</time>
+
+
+
+
+            
 
     <div class="article__tags pull-left">
         <i class="fa fa-tags"></i>
         <ul class="unstyled">
         
+
             
                 <li><a class='category' href='/blog/categories/github/'>github</a></li>
             
-            
+        
         </ul>
     </div>
 
 
-            </footer>
-        
-        <hr class="divider">
-    </div>
-
-</div>
-
-        </article>
+            
+                <a class="pull-right" href="#disqus_thread">
+                    Comments <i class="fa fa-comment"></i>
+                </a>
+            
+        </div>
     
-        
-        
-        <article class="article article--archive">
-            
-
-<div class="row">
-
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <time class="article__date article__date--listing" datetime="2016-11-29T10:15:21+07:00" pubdate>
-            <span class='month'>Nov</span> <span class='day'>29</span>
-        </time>
-    </div>
-    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-        <h1 class="article__title h3"><a href="/blog/2016/11/29/cara-menghapus-repository-di-github/">Cara Menghapus Repository di Github</a></h1>
-        
-            <footer class="article__meta">
-                
-
-    <div class="article__tags pull-left">
-        <i class="fa fa-tags"></i>
-        <ul class="unstyled">
-        
-            
-                <li><a class='category' href='/blog/categories/github/'>github</a></li>
-            
-            
-        </ul>
-    </div>
+</header>
 
 
-            </footer>
-        
-        <hr class="divider">
-    </div>
 
-</div>
 
-        </article>
-    
-</div>
+    <p>Dalam pengembangan software (perangkat lunak) modern sangat memerlukan alat sistem kontrol versi atau yang lebih dikenal dengan <em>version control</em>. Sistem kontrol versi memungkinkan Anda untuk melacak software atau aplikasi yang anda kerjakan pada tingkat sumber. Salah satu sistem kontrol versi yang paling populer di kalangan developer adalah Git, sistem kontrol versi terdistribusi.</p>
+
+<!-- more -->
+
+
+<p>Adapun Git bisa mendukung sistem operasi yang banyak digunakan oleh user saat ini seperti Mac, Linux, dan Windows. Berikut adalah <strong>tutorial install git</strong> di Ubuntu 16.04 Desktop.</p>
+
+<p><strong>1. Install Git dengan apt</strong></p>
+
+<p>Ini adalah cara paling mudah karena anda dengan cepat memasang git dengan memanfaatkan repositori Ubuntu.</p>
+
+<figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get update
+</span><span class='line'>$ sudo apt-get install git</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>2. Setup Git</strong></p>
+
+<p>Setelah berhasil install git, selanjutnya adalah melakukan config git. Untuk config kali ini memerlukan username dan email yang anda daftarkan di Github. Jika anda belum memiliki akun <em>Github</em>, anda bisa mendaftarnya <a href="https://github.com/">disini</a>.</p>
+
+<p>Jika sudah memilik akun Github anda langsung menuju config dibawah ini"</p>
+
+<figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git config --global user.name "Your Name" -> isi dengan username Github anda
+</span><span class='line'>$ git config --global user.email "youremail@domain.com" -> isi dengan email yg anda daftarkan di Github</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Setelah sudah anda bisa melihat konfigurasi tersebut dengan command dibawah ini</p>
+
+<figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git config --list</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Maka akan tampil konfigurasi yang telah dilakukan</p>
+
+<figure class='code'><figcaption><span>git configuration </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>user.name=your name
+</span><span class='line'>user.emai=youremail@domain.com</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Konfigurasi dari akun Github tersebut disimpan di ~/.gitconfig. Untuk melihatnya ketik command:</p>
+
+<figure class='code'><figcaption><span>~/.gitconfig </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cat ~/.gitconfig</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>~/.gitconfig </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[user]
+</span><span class='line'>  name = your name
+</span><span class='line'>  emai = youremail@domain.com</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sekarang Ubuntu 16.04 Desktop anda sudah terinstall git dan sudah siap digunakan.</p>
+
 
 
 </article>
+
+
+<section id="disqus">
+    <h1 class="disqus__title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
 
                 </div>
 
@@ -375,7 +402,10 @@
     var disqus_shortname = 'ikhsanir';
     
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/';
+        var disqus_url = 'https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/';
+        var disqus_script = 'embed.js';
     
     (function () {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
