@@ -4,7 +4,7 @@
     <title><![CDATA[Category: github | Iceisan Labs]]></title>
     <link href="https://ikhsanir.com/blog/categories/github/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2016-11-29T17:31:25+07:00</updated>
+    <updated>2016-11-29T17:56:59+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Iceisan]]></name>
@@ -45,7 +45,7 @@
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git config &ndash;global user.name &ldquo;Your Name&rdquo; -> isi dengan username Github anda
-</span><span class='line'>$ git config &ndash;global user.email &ldquo;&lt;a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#x79;&#x6f;&#117;&#x72;&#x65;&#x6d;&#97;&#105;&#108;&#x40;&#x64;&#111;&#x6d;&#x61;&#105;&#x6e;&#46;&#99;&#x6f;&#x6d;">&#x79;&#111;&#x75;&#x72;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#64;&#x64;&#x6f;&#109;&#97;&#105;&#x6e;&#x2e;&#99;&#111;&#x6d;&lt;/a>&rdquo; -> isi dengan email yg anda daftarkan di Github</span></code></pre></td></tr></table></div></figure></p>
+</span><span class='line'>$ git config &ndash;global user.email &ldquo;&lt;a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#121;&#111;&#x75;&#114;&#101;&#x6d;&#x61;&#105;&#x6c;&#64;&#100;&#x6f;&#x6d;&#x61;&#105;&#x6e;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#x6f;&#117;&#x72;&#101;&#109;&#97;&#105;&#108;&#x40;&#x64;&#111;&#109;&#x61;&#105;&#110;&#46;&#99;&#111;&#x6d;&lt;/a>&rdquo; -> isi dengan email yg anda daftarkan di Github</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Setelah sudah anda bisa melihat konfigurasi tersebut dengan command dibawah ini</p>
 
@@ -59,7 +59,7 @@
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>user.name=your name
-</span><span class='line'>user.emai=&lt;a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x79;&#111;&#x75;&#114;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#100;&#x6f;&#x6d;&#97;&#105;&#110;&#46;&#99;&#111;&#109;">&#x79;&#x6f;&#117;&#x72;&#x65;&#x6d;&#x61;&#105;&#108;&#x40;&#x64;&#x6f;&#x6d;&#97;&#x69;&#110;&#46;&#x63;&#x6f;&#109;&lt;/a></span></code></pre></td></tr></table></div></figure></p>
+</span><span class='line'>user.emai=&lt;a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x79;&#111;&#x75;&#114;&#101;&#x6d;&#x61;&#105;&#x6c;&#x40;&#100;&#x6f;&#x6d;&#97;&#105;&#x6e;&#46;&#x63;&#x6f;&#109;">&#121;&#x6f;&#x75;&#x72;&#101;&#x6d;&#97;&#x69;&#x6c;&#x40;&#100;&#111;&#109;&#x61;&#x69;&#110;&#46;&#99;&#111;&#x6d;&lt;/a></span></code></pre></td></tr></table></div></figure></p>
 
 <p>Konfigurasi dari akun Github tersebut disimpan di ~/.gitconfig. Untuk melihatnya ketik command:</p>
 
@@ -73,7 +73,7 @@
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>[user]
 </span><span class='line'>    name = your name
-</span><span class='line'>    emai = &lt;a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#121;&#111;&#117;&#114;&#x65;&#x6d;&#97;&#105;&#108;&#64;&#x64;&#x6f;&#109;&#97;&#105;&#x6e;&#x2e;&#99;&#111;&#109;">&#x79;&#111;&#x75;&#x72;&#x65;&#x6d;&#97;&#x69;&#x6c;&#x40;&#x64;&#x6f;&#x6d;&#x61;&#105;&#x6e;&#x2e;&#99;&#x6f;&#x6d;&lt;/a></span></code></pre></td></tr></table></div></figure></p>
+</span><span class='line'>    emai = &lt;a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#x79;&#111;&#117;&#x72;&#101;&#109;&#97;&#105;&#108;&#64;&#100;&#x6f;&#x6d;&#97;&#x69;&#110;&#46;&#x63;&#x6f;&#109;">&#x79;&#x6f;&#x75;&#x72;&#101;&#109;&#x61;&#105;&#x6c;&#64;&#x64;&#111;&#x6d;&#x61;&#x69;&#x6e;&#x2e;&#99;&#x6f;&#x6d;&lt;/a></span></code></pre></td></tr></table></div></figure></p>
 
 <p>Sekarang Ubuntu 16.04 Desktop anda sudah terinstall git dan sudah siap digunakan.</p>
 ]]></content>
