@@ -4,7 +4,7 @@
     <title><![CDATA[Category: github | Iceisan Labs]]></title>
     <link href="https://ikhsanir.com/blog/categories/github/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2016-11-29T14:00:49+07:00</updated>
+    <updated>2016-11-29T14:04:17+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Iceisan]]></name>
@@ -23,6 +23,9 @@
 <p><figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>&lt;a href="https://github.com/username/nama-repository">https://github.com/username/nama-repository&lt;/a></span></code></pre></td></tr></table></div></figure></p>
+
+<!-- more -->
+
 
 <p><img src="/images/29112016/repo1.png" title="repository" ></p>
 

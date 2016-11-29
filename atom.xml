@@ -4,7 +4,7 @@
     <title><![CDATA[Iceisan Labs]]></title>
     <link href="https://ikhsanir.com/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2016-11-29T14:00:49+07:00</updated>
+    <updated>2016-11-29T14:04:17+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Iceisan]]></name>
@@ -23,6 +23,11 @@
 <figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/username/nama-repository</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
 
 
 <p><img src="https://ikhsanir.com/images/29112016/repo1.png" title="repository" ></p>
@@ -60,9 +65,11 @@
         <id>https://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress</id>
         <content type="html"><![CDATA[<p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu :D). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
 
-<h4>1. Code Block.</h4>
+<p><strong>1. Code Block</strong>
+Dengan plugin ini kamu bisa menulis blok kode secara langsung dalam posting Anda dan bisa juga dengan menambahkan judul dan link.</p>
 
-<p>   Dengan plugin ini kamu bisa menulis blok kode secara langsung dalam posting Anda dan bisa juga dengan menambahkan judul dan link.</p>
+<!-- more -->
+
 
 <p>Contoh:</p>
 
@@ -71,14 +78,8 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-
-
-<!-- more -->
-
-
-<h4>2. Image Tag.</h4>
-
-<p>Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax. Memasukkan gambar di Octopress ada dua jenis yaitu memasukkan gambar dari website / link url gambar tersebut.</p>
+<p><strong>2. Image Tag</strong>
+Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax. Memasukkan gambar di Octopress ada dua jenis yaitu memasukkan gambar dari website / link url gambar tersebut.</p>
 
 <p>Contoh Gambar dari Link Web Lain:
 <img src="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg" title="Mac OS X Yosemite" ></p>
@@ -90,15 +91,13 @@
 
 <p>Bedanya adalah ketika memasukkan gambar dari link web lain otomatis itu bukan milik kita tetapi milik gambar orang tertentu, dan kita bisa terkena hak cipta jika suatu saat yang punya gambar menuntut. Sedangkan jika memasukkan gambar sendiri itu artinya gambar milik kita sendiri misal dari hasil Screenshot, foto objek tertentu, dll. Cara membedakan apakah gambar itu diambil dari link web lain atau upload sendiri adalah dengan klik kanan pada gambar dan open image in new tab.</p>
 
-<h4>3. HTML5 Video Tag</h4>
-
-<p>Plugin ini memungkinkan kamu untuk memasukan video mp4 yang di encode dalam format HTML 5 video di dalam post.</p>
+<p><strong>3. HTML5 Video Tag</strong>
+Plugin ini memungkinkan kamu untuk memasukan video mp4 yang di encode dalam format HTML 5 video di dalam post.</p>
 
 <p><video width='640' height='320' preload='metadata' controls poster='https://s17.postimg.org/ii43hq61r/fancy_button.png'><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video></p>
 
-<h4>4. Include Code</h4>
-
-<p>Untuk menampilkan isi code tertentu, arahkan path directory tersebut. Default dari Octopress adalah di dalam directory &lsquo;source/&hellip;.&rsquo;</p>
+<p><strong>4. Include Code</strong>
+Untuk menampilkan isi code tertentu, arahkan path directory tersebut. Default dari Octopress adalah di dalam directory &lsquo;source/&hellip;.&rsquo;</p>
 
 <figure class='code'><figcaption><span> (github.js)</span> <a href='https://ikhsanir.com/./javascripts/github.js'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -180,15 +179,14 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h4>5. Blockquote</h4>
-
-<p>Blockquote plugin mengambil penulis, sumber, judul dan kutipan, dan juga HTML Semantik.
+<p><strong>5. Blockquote</strong>
+Blockquote plugin mengambil penulis, sumber, judul dan kutipan, dan juga HTML Semantik.
 Contoh:</p>
 
 <blockquote><p>Over the past 24 hours I've been reflecting on my life & I've realized only one thing. I need a medieval battle axe.</p><footer><strong>@allanbranch</strong> <cite><a href='https://twitter.com/allanbranch/status/90766146063712256'>twitter.com/allanbranch/status/&hellip;</a></cite></footer></blockquote>
 
 
-<h4>6. Puts</h4>
+<p><strong>6. Puts</strong></p>
 ]]></content>
     </entry>
     

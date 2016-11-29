@@ -4,7 +4,7 @@
     <title><![CDATA[Category: octopress | Iceisan Labs]]></title>
     <link href="https://ikhsanir.com/blog/categories/octopress/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2016-11-29T14:00:49+07:00</updated>
+    <updated>2016-11-29T14:04:17+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Iceisan]]></name>
@@ -29,9 +29,11 @@
         <id>https://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress</id>
         <content type="html"><![CDATA[<p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu :D). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
 
-<h4>1. Code Block.</h4>
+<p><strong>1. Code Block</strong>
+Dengan plugin ini kamu bisa menulis blok kode secara langsung dalam posting Anda dan bisa juga dengan menambahkan judul dan link.</p>
 
-<p>   Dengan plugin ini kamu bisa menulis blok kode secara langsung dalam posting Anda dan bisa juga dengan menambahkan judul dan link.</p>
+<!-- more -->
+
 
 <p>Contoh:
 <figure class='code'><figcaption><span>The code <a href="http://octopress.org/docs/plugins/codeblock/">http://octopress.org/docs/plugins/codeblock/</a> </span></figcaption>
@@ -39,12 +41,8 @@
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Hello</span> <span class="n">world!</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="no">Happy</span> <span class="n">monday!</span>
 </span></code></pre></td></tr></table></div></figure></p>
 
-<!-- more -->
-
-
-<h4>2. Image Tag.</h4>
-
-<p>Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax. Memasukkan gambar di Octopress ada dua jenis yaitu memasukkan gambar dari website / link url gambar tersebut.</p>
+<p><strong>2. Image Tag</strong>
+Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax. Memasukkan gambar di Octopress ada dua jenis yaitu memasukkan gambar dari website / link url gambar tersebut.</p>
 
 <p>Contoh Gambar dari Link Web Lain:
 <img class="<a" src="href="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg">http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg</a>" title="Mac OS X Yosemite" ></p>
@@ -56,15 +54,13 @@
 
 <p>Bedanya adalah ketika memasukkan gambar dari link web lain otomatis itu bukan milik kita tetapi milik gambar orang tertentu, dan kita bisa terkena hak cipta jika suatu saat yang punya gambar menuntut. Sedangkan jika memasukkan gambar sendiri itu artinya gambar milik kita sendiri misal dari hasil Screenshot, foto objek tertentu, dll. Cara membedakan apakah gambar itu diambil dari link web lain atau upload sendiri adalah dengan klik kanan pada gambar dan open image in new tab.</p>
 
-<h4>3. HTML5 Video Tag</h4>
-
-<p>Plugin ini memungkinkan kamu untuk memasukan video mp4 yang di encode dalam format HTML 5 video di dalam post.</p>
+<p><strong>3. HTML5 Video Tag</strong>
+Plugin ini memungkinkan kamu untuk memasukan video mp4 yang di encode dalam format HTML 5 video di dalam post.</p>
 
 <p><video width='640' height='320' preload='metadata' controls poster='https://s17.postimg.org/ii43hq61r/fancy_button.png">https://s17.postimg.org/ii43hq61r/fancy_button.png</a>'><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4">http://s3.imathis.com/video/zero-to-fancy-buttons.mp4</a>' ></video></p>
 
-<h4>4. Include Code</h4>
-
-<p>Untuk menampilkan isi code tertentu, arahkan path directory tersebut. Default dari Octopress adalah di dalam directory &lsquo;source/&hellip;.&rsquo;
+<p><strong>4. Include Code</strong>
+Untuk menampilkan isi code tertentu, arahkan path directory tersebut. Default dari Octopress adalah di dalam directory &lsquo;source/&hellip;.&rsquo;
 <figure class='code'><figcaption><span> (github.js)</span> <a href='/./javascripts/github.js'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -144,13 +140,12 @@
 </span><span class='line'><span class="p">})();</span>
 </span></code></pre></td></tr></table></div></figure></p>
 
-<h4>5. Blockquote</h4>
-
-<p>Blockquote plugin mengambil penulis, sumber, judul dan kutipan, dan juga HTML Semantik.
+<p><strong>5. Blockquote</strong>
+Blockquote plugin mengambil penulis, sumber, judul dan kutipan, dan juga HTML Semantik.
 Contoh:
 <blockquote><p>Over the past 24 hours I&rsquo;ve been reflecting on my life &amp; I&rsquo;ve realized only one thing. I need a medieval battle axe.</p><footer><strong>@allanbranch <a href="https://twitter.com/allanbranch/status/90766146063712256">https://twitter.com/allanbranch/status/90766146063712256</a></strong></footer></blockquote></p>
 
-<h4>6. Puts</h4>
+<p><strong>6. Puts</strong></p>
 ]]></content>
     </entry>
     
