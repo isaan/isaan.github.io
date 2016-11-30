@@ -4,7 +4,7 @@
     <title><![CDATA[Category: octopress | Iceisan Labs]]></title>
     <link href="https://ikhsanir.com/blog/categories/octopress/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2016-11-29T17:56:59+07:00</updated>
+    <updated>2016-11-30T09:18:00+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Iceisan]]></name>
@@ -14,26 +14,19 @@
 
     
     <entry>
-        <title type="html"><![CDATA[Oscailte]]></title>
-        <link href="https://ikhsanir.com/blog/2016/11/10/oscailte-theme/"/>
-        <updated>2016-11-10T14:33:59+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/11/10/oscailte-theme</id>
-        <content type="html"><![CDATA[<p>Oscailte is powerfull, lightweight, dan responsive. Good Looking!</p>
-]]></content>
-    </entry>
-    
-    <entry>
         <title type="html"><![CDATA[Mencoba Plugin di Octopress]]></title>
         <link href="https://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress/"/>
         <updated>2016-11-08T10:43:40+07:00</updated>
         <id>https://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress</id>
-        <content type="html"><![CDATA[<p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu :D). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
+        <content type="html"><![CDATA[<p><img src="/images/08112016/octopress.jpg" title="octopress" ></p>
 
-<p><strong>1. Code Block</strong>
-Dengan plugin ini kamu bisa menulis blok kode secara langsung dalam posting Anda dan bisa juga dengan menambahkan judul dan link.</p>
+<p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu :D). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
 
 <!-- more -->
 
+
+<p><strong>1. Code Block</strong>
+Dengan plugin ini kamu bisa menulis blok kode secara langsung dalam posting Anda dan bisa juga dengan menambahkan judul dan link.</p>
 
 <p>Contoh:
 <figure class='code'><figcaption><span>The code <a href="http://octopress.org/docs/plugins/codeblock/">http://octopress.org/docs/plugins/codeblock/</a> </span></figcaption>
@@ -154,12 +147,15 @@ Contoh:
         <link href="https://ikhsanir.com/blog/2016/11/04/introduction/"/>
         <updated>2016-11-04T11:12:06+07:00</updated>
         <id>https://ikhsanir.com/blog/2016/11/04/introduction</id>
-        <content type="html"><![CDATA[<p>Hi, i&rsquo;m icesan, nice to meet you guys. Stay tune with me on twitter: @Ikhsan_IR</p>
+        <content type="html"><![CDATA[<p><img src="/images/04112016/github.jpg" title="introduction" ></p>
 
 <!-- more -->
 
 
-<p><img class="<a" src="href="https://s-media-cache-ak0.pinimg.com/originals/97/61/87/9761871e4eeff7c3a1698d8688852ed9.jpg">https://s-media-cache-ak0.pinimg.com/originals/97/61/87/9761871e4eeff7c3a1698d8688852ed9.jpg</a>"></p>
+<p>Hi, i&rsquo;m icesan, nice to meet you guys. Stay tune with me on twitter: <a href="https://twitter.com/Ikhsan_IR">@Ikhsan_IR</a></p>
+
+<!-- <img src="https://s-media-cache-ak0.pinimg.com/originals/97/61/87/9761871e4eeff7c3a1698d8688852ed9.jpg"> -->
+
 
 <p><figure class='code'><figcaption><span>Time to code - code.rb </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
