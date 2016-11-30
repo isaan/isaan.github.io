@@ -4,7 +4,7 @@
     <title><![CDATA[Iceisan Labs]]></title>
     <link href="https://ikhsanir.com/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2016-11-30T11:37:45+07:00</updated>
+    <updated>2016-11-30T14:42:48+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Iceisan]]></name>
@@ -136,6 +136,15 @@
 <p><img src="https://ikhsanir.com/images/30112016/directory.png" title="add directory" ></p>
 
 <p>Sekian tutorial <em>menggunakan github dan membuat repository baru</em> kali ini, semoga bermanfaat. Salam.</p>
+
+<!-- ```sh
+
+$ cd apps
+$ touch apps/index.html
+$ git add apps
+
+``` -->
+
 ]]></content>
     </entry>
     
