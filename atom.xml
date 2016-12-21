@@ -4,7 +4,7 @@
     <title><![CDATA[Iceisan Labs]]></title>
     <link href="https://ikhsanir.com/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2016-12-21T09:26:38+07:00</updated>
+    <updated>2016-12-21T13:27:39+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Iceisan]]></name>
@@ -14,11 +14,105 @@
 
     
     <entry>
+        <title type="html"><![CDATA[Install Ruby on Rails dengan RVM di Ubuntu 16.04]]></title>
+        <link href="https://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/"/>
+        <updated>2016-12-21T09:42:28+07:00</updated>
+        <id>https://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04</id>
+        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/12/21/rubyonrails.jpg" title="ruby on rails" ></p>
+
+<p><strong>Ruby on Rails</strong> adalah application stacks yang cukup populer di kalangan developer untuk membuat situs dan web apps. Ruby adalah bahasa pemrograman yang dikombinasikan dengan Rails framework, yang membuat development aplikasi menjadi sederhana.</p>
+
+<!-- more -->
+
+
+<p><strong>Menginstall Ruby on Rails</strong> bisa dilakukan dengan dua cara yaitu dengan RVM dan RBENV. Kali ini saya akan bahas cara instalasi ruby on rails dengan RVM (Ruby Version Manager). Mengapa RVM? Karena dengan RVM memungkinkan Anda untuk manage dan bekerja dengan multiple Ruby environments dengan melakukan switch versinya.</p>
+
+<p>Untuk <em>menginstall Ruby on Rails</em> dengan menggunakan RVM, Anda harus login dengan user biasa atau non-root user. Pertama kita gunakan &ldquo;gpg command&rdquo; untuk request public key dari RVM projects key.</p>
+
+<p><strong>Instalasi</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pindah ke directory yang writable locations seperti /tmp dan download RVM script. Gunakan curl untuk mendownload RVM instalasi script nya.</p>
+
+<figure class='code'><figcaption><span>/tmp </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ \curl -sSL https://get.rvm.io -o rvm.sh</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Setelah selesai download, jalankan script <em>rvm.sh</em> nya</p>
+
+<figure class='code'><figcaption><span>/tmp </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ less /tmp/rvm.sh</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Selama proses instalasi, akan muncul popup yang meminta untuk memasukkan password anda. Dan setelah selesai kanu bisa cek nya dengan mengetik &lsquo;rvm&rsquo;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Install Spesifik Ruby on Rails Version</strong></p>
+
+<p>Jika anda ingin menginstall Ruby dengan versi tertentu, maka anda bisa mengetik command dibawah ini untuk menampilkan versi Ruby yang tersedia.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm list known</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dan setelah tampil daftar Ruby beserta versinya, ketika akan install dengan versi tertentu yaitu dengan cara:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm install ruby_version</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Untuk &ldquo;ruby_version&rdquo; kamu bisa menulisnya dengan ruby-2.3.0 atau hanya 2.3.0. Setelah selesai, anda bisa cek versi Ruby yang telah diinstall dengan mengetik:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm list</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lalu ketika anda ingin switch atau ganti versi Ruby cukup mengetik:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm use ruby_version</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dan sejak rails adalah gem, kita bisa install beberapa jenis versi dari Rails dengan menggunakan &ldquo;gem command&rdquo;.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem search '^rails$' --all</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Note: Untuk install rails anda hanya perlu menulis versi rails nya saja. Contoh: 4.2.0</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem install rails -v rails_version</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Install JavaScript Runtime</strong></p>
+
+<p>Di beberapa fitur dari Rails, seperti Pipeline asset tergantung pada JavaScript Runtime. Maka dari itu kita akan menginstall node.js dengan mengguanakan command &ldquo;apt-get&rdquo;.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get update
+</span><span class='line'>$ sudo apt-get install -y nodejs</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sampai langkah ini, anda bisa memulai untuk melakukan tes develop aplikasi web dengan menggunakan Ruby on Rails yang telah di install.</p>
+]]></content>
+    </entry>
+    
+    <entry>
         <title type="html"><![CDATA[Cara Menggunakan Github dan Membuat Repository Baru]]></title>
         <link href="https://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru/"/>
         <updated>2016-11-30T09:44:45+07:00</updated>
         <id>https://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/30112016/githome.png" title="github repository" ></p>
+        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/30/githome.png" title="github repository" ></p>
 
 <p>Setelah melakukan <a href="https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/">install git</a>, langkah selanjutnya adalah memulai untuk <strong>menggunakan Github dan membuat repository baru</strong> untuk aplikasi yang kita buat agar tersimpan dalam sistem versi kontrol dari <em>Github</em>.</p>
 
@@ -27,11 +121,11 @@
 
 <p>Pertama login di situs Github dengan username dan password anda, kemudian klik <strong>Create New Repository</strong>.</p>
 
-<p><img src="https://ikhsanir.com/images/30112016/newrepo.png" title="github repository" ></p>
+<p><img src="https://ikhsanir.com/images/2016/11/30/newrepo.png" title="github repository" ></p>
 
 <p>Isi nama repository dan deskripsinya. Di github ada dua jenis repository yaitu public dan private. Public artinya repository kita bisa diliat oleh semua orang sedangkan private itu nanti yg bisa liat cuma kita dan team yang kita tentukan saja, tetapi untuk private ini kita dikenakan biaya langganan $7/month. Untuk awal kita buat public terlebih dahulu untuk perkenalan dengan teknologinya, baru nanti kalau sudah mulai faham anda bisa <em>upgrade plan</em> ke paket private sendiri. Setelah itu klik <strong>Create Repository</strong></p>
 
-<p><img src="https://ikhsanir.com/images/30112016/repo.gif" title="github repository" ></p>
+<p><img src="https://ikhsanir.com/images/2016/11/30/repo.gif" title="github repository" ></p>
 
 <p>Akan muncul tampilan &ldquo;Quick setup&rdquo; seperti gambar diatas. Ada dua opsi untuk melakukan setup yaitu dengan HTTPS atau SSH. Pilih salah satu dan kemudian masuk buka terminal dari desktop Ubuntu anda. Masuk ke directory kerja anda (dimana saja terserah) untuk melakukan clone repository yang telah anda buat di Github. Contoh disini saya mengguakan SSH untuk melakukan clone:</p>
 
@@ -40,7 +134,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git@github.com:isaan/timetracker.git</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="https://ikhsanir.com/images/30112016/gitclone.png" title="git clone" ></p>
+<p><img src="https://ikhsanir.com/images/2016/11/30/gitclone.png" title="git clone" ></p>
 
 <p>Lalu masuk ke directory yang telah di clone dari Github tersebut. Buat file apa saja untuk tes apakah repository sudah berfungsi.</p>
 
@@ -70,11 +164,11 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="https://ikhsanir.com/images/30112016/gitadd.png" title="git add" ></p>
+<p><img src="https://ikhsanir.com/images/2016/11/30/gitadd.png" title="git add" ></p>
 
 <p>Jika tidak ada error dan muncul notifikasi seperti diatas, harusnya file <em>README.md</em> yang baru saja dibuat akan terkirim ke server github. Sekarang cek ke repository github Anda, file tersebut sudah masuk ke repository. Artinya repositroy tersebut sudah siap digunakan untuk dilakukan development.</p>
 
-<p><img src="https://ikhsanir.com/images/30112016/repository.png" title="repository" ></p>
+<p><img src="https://ikhsanir.com/images/2016/11/30/repository.png" title="repository" ></p>
 
 <p>Selanjutnya kita akan mencoba menambah directory di repository yang telah kita clone dan melakukan push ke github lagi.</p>
 
@@ -97,7 +191,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="https://ikhsanir.com/images/30112016/gitadddir.png" title="add directory" ></p>
+<p><img src="https://ikhsanir.com/images/2016/11/30/gitadddir.png" title="add directory" ></p>
 
 <p>Ketika anda mengikuti mengikuti 3 cara diatas pasti directory yang dibuat tidak terkirim ke repository github. Walaupun 100 kali reload github tetap tidak ada directory yang baru saja dibuat ada disana. Mengapa? Karena directory yang dibuat tadi belum ada isinya alias kosong.</p>
 
@@ -133,7 +227,7 @@
 
 <p>Sekarang refresh repository Github anda, akan muncul directory beserta isi file didalamnya.</p>
 
-<p><img src="https://ikhsanir.com/images/30112016/directory.png" title="add directory" ></p>
+<p><img src="https://ikhsanir.com/images/2016/11/30/directory.png" title="add directory" ></p>
 
 <p>Sekian tutorial <em>menggunakan github dan membuat repository baru</em> kali ini, semoga bermanfaat. Salam.</p>
 
@@ -153,7 +247,7 @@ $ git add apps
         <link href="https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/"/>
         <updated>2016-11-29T16:03:14+07:00</updated>
         <id>https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/29112016/gitlogo.jpg" title="git" ></p>
+        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/29/gitlogo.jpg" title="git" ></p>
 
 <p>Dalam pengembangan software (perangkat lunak) modern sangat memerlukan alat sistem kontrol versi atau yang lebih dikenal dengan <em>version control</em>. Sistem kontrol versi memungkinkan Anda untuk melacak software atau aplikasi yang anda kerjakan pada tingkat sumber. Salah satu sistem kontrol versi yang paling populer di kalangan developer adalah Git, sistem kontrol versi terdistribusi.</p>
 
@@ -229,7 +323,7 @@ $ git add apps
         <link href="https://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github/"/>
         <updated>2016-11-29T10:15:21+07:00</updated>
         <id>https://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/29112016/gitrepo.png" title="repository" ></p>
+        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/29/gitrepo.png" title="repository" ></p>
 
 <p><strong>Menghapus repository di github</strong> sebenarnya cukup mudah dan ga sampai 5 menit untuk melakukannya. Pertama, anda harus masuk ke <em>repository</em> terlebih dahulu misalnya</p>
 
@@ -243,7 +337,7 @@ $ git add apps
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/username/nama-repository</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="https://ikhsanir.com/images/29112016/repo1.png" title="repository" ></p>
+<p><img src="https://ikhsanir.com/images/2016/11/29/repo1.png" title="repository" ></p>
 
 <p>Klik tab <em>Settings</em> di bagian paling kanan</p>
 
@@ -252,11 +346,11 @@ $ git add apps
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/username/nama-repository/settings</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="https://ikhsanir.com/images/29112016/repo2.png" title="repository" ></p>
+<p><img src="https://ikhsanir.com/images/2016/11/29/repo2.png" title="repository" ></p>
 
 <p>Lalu scroll ke bawah, di bagian bawah terdapat <strong>&ldquo;Danger Zone&rdquo;</strong> yang ditandai dengan warna merah dan klik di tombol Delete this repository. Setelah itu akan muncul popup konfirmasi untuk menghapus repository tersebut dengan memasukkan nama repository nya.</p>
 
-<p><img src="https://ikhsanir.com/images/29112016/repo3.png" title="repository" ></p>
+<p><img src="https://ikhsanir.com/images/2016/11/29/repo3.png" title="repository" ></p>
 
 <p><strong>NOTE:</strong> Penting diingat bahwa ketika anda telah menghapus repository maka hal tersebut tidak bisa dibatalkan. Itu akan otomatis menghapus secara permanen repository termasuk wiki, isu, dan komentar didalamnya.</p>
 ]]></content>
@@ -267,7 +361,7 @@ $ git add apps
         <link href="https://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress/"/>
         <updated>2016-11-08T10:43:40+07:00</updated>
         <id>https://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/08112016/octopress.jpg" title="octopress" ></p>
+        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/08/octopress.jpg" title="octopress" ></p>
 
 <p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu :D). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
 
@@ -293,7 +387,7 @@ Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di oct
 <p>Dan yang kedua adalah memasukkan gambar kita sendiri dari Local. Caranya yaitu dengan copy gambar yang akan di post misal dari hasil screenshot ke dalam folder &lsquo;/source/images&rsquo;. Setelah itu url pada gambar ubah menjadi /images/namagambar.png.</p>
 
 <p>Contoh Gambar Local:
-<img src="https://ikhsanir.com/images/screenshot.png" title="Octopress" ></p>
+<img src="https://ikhsanir.com/images/2016/11/08/screenshot.png" title="Octopress" ></p>
 
 <p>Bedanya adalah ketika memasukkan gambar dari link web lain otomatis itu bukan milik kita tetapi milik gambar orang tertentu, dan kita bisa terkena hak cipta jika suatu saat yang punya gambar menuntut. Sedangkan jika memasukkan gambar sendiri itu artinya gambar milik kita sendiri misal dari hasil Screenshot, foto objek tertentu, dll. Cara membedakan apakah gambar itu diambil dari link web lain atau upload sendiri adalah dengan klik kanan pada gambar dan open image in new tab.</p>
 
@@ -392,7 +486,10 @@ Contoh:</p>
 <blockquote><p>Over the past 24 hours I've been reflecting on my life & I've realized only one thing. I need a medieval battle axe.</p><footer><strong>@allanbranch</strong> <cite><a href='https://twitter.com/allanbranch/status/90766146063712256'>twitter.com/allanbranch/status/&hellip;</a></cite></footer></blockquote>
 
 
-<p><strong>6. Puts</strong></p>
+
+
+<!-- **6. Puts** -->
+
 ]]></content>
     </entry>
     
@@ -401,7 +498,7 @@ Contoh:</p>
         <link href="https://ikhsanir.com/blog/2016/11/04/introduction/"/>
         <updated>2016-11-04T11:12:06+07:00</updated>
         <id>https://ikhsanir.com/blog/2016/11/04/introduction</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/04112016/github.jpg" title="introduction" ></p>
+        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/04/github.jpg" title="introduction" ></p>
 
 <!-- more -->
 

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/</loc>
+<lastmod>2016-12-21T09:42:28+07:00</lastmod>
+</url>
+<url>
 <loc>https://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru/</loc>
 <lastmod>2016-11-30T09:44:45+07:00</lastmod>
 </url>
@@ -49,5 +53,8 @@
 </url>
 <url>
 <loc>https://ikhsanir.com/blog/categories/github/</loc>
+</url>
+<url>
+<loc>https://ikhsanir.com/blog/categories/ubuntu/</loc>
 </url>
 </urlset>
