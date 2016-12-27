@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://ikhsanir.com/blog/2016/12/27/membuat-video-embed-di-octopress-responsive/</loc>
+<lastmod>2016-12-27T17:04:25+07:00</lastmod>
+</url>
+<url>
 <loc>https://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/</loc>
 <lastmod>2016-12-21T09:42:28+07:00</lastmod>
 </url>
