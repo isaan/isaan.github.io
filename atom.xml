@@ -4,7 +4,7 @@
     <title><![CDATA[Iceisan Labs]]></title>
     <link href="https://ikhsanir.com/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2016-12-21T13:35:07+07:00</updated>
+    <updated>2016-12-27T14:44:30+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Iceisan]]></name>
@@ -514,6 +514,13 @@ Contoh:</p>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;Hello world!&quot;</span> <span class="n">happy</span> <span class="n">tuesday</span>
 </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- <div class="embed-video-container"><iframe src="//www.youtube.com/embed/wC0dNJGuD9w" allowfullscreen></iframe></div>
+<div class="embed-video-container"><iframe src="//player.vimeo.com/video/196565201"></iframe></div>
+<div class="embed-video-container"><iframe src="//www.dailymotion.com/embed/video/x56eaeo"></iframe></div> -->
 
 ]]></content>
     </entry>
