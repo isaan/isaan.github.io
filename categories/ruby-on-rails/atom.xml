@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title><![CDATA[Category: ruby on rails | Ikhsan Labs]]></title>
+    <link href="https://ikhsanir.com/categories/ruby-on-rails/atom.xml" rel="self"/>
+    <link href="https://ikhsanir.com/"/>
+    <updated>2016-12-29T10:57:10+07:00</updated>
+    <id>https://ikhsanir.com/</id>
+    <author>
+        <name><![CDATA[Ikhsan]]></name>
+        
+      </author>
+    <generator uri="http://octopress.org/">Octopress</generator>
+
+    
+    <entry>
+        <title type="html"><![CDATA[Membuat Video Embed di Octopress Responsive]]></title>
+        <link href="https://ikhsanir.com/membuat-video-embed-di-octopress-responsive/"/>
+        <updated>2016-12-27T17:04:25+07:00</updated>
+        <id>https://ikhsanir.com/membuat-video-embed-di-octopress-responsive</id>
+        <content type="html"><![CDATA[<p><img src="/images/2016/12/27/octocode.jpg"></p>
+
+<p>Dalam framework Octopress, untuk melakukan penulisan artikel beda dengan framework blogging yang lain. Di Octopress menggunakan syntax markdown. Jadi ketika kita ingin memasukkan misalkan gambar maka menggunakan syntax &ldquo;img (lokasi gambar)&rdquo;.</p>
+
+<!-- more -->
+
+
+<p>Yang jadi pertanyaan adalah <strong>bagaimana melakukan embed video dari Youtube</strong> atau beberapa situs video yang lain? Jika dalam framework blogging lain untuk melakukan embed adalah dengan langsung memasukkan <em>embed code</em> dari Youtube.</p>
+
+<p>Sebenarnya di Octopress ketika menulis artikel dan ingin menyisipkan atau embed video bisa langsung ditulis atau paste embed code yang kita dapatkan dari video youtube tersebut, tetapi setelah saya tes ternyata hasilnya belum responsive, dimana tampilan video nya akan berantakan ketika dibuka pada tampilan mobile.</p>
+
+<p>Berikut adalah beberapa code untuk mengakalinya agar video yang kita embed menjadi responsive. Tambahkan file atau buat file baru di dalam directory &ldquo;&hellip;/plugins&rdquo; anda dan isi dengan ruby code dibawah ini.</p>
+
+<p><strong>1. Code Embed Youtube</strong></p>
+
+<p><figure class='code'><figcaption><span>youtube.rb <a href="https://github.com/optikfluffel/octopress-responsive-video-embed/blob/master/youtube.rb">https://github.com/optikfluffel/octopress-responsive-video-embed/blob/master/youtube.rb</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">Youtube</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;def initialize(name, id, tokens)</span>
+</span><span class='line'><span class="sr">  super</span>
+</span><span class='line'><span class="sr">  @id = id</span>
+</span><span class='line'><span class="sr">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">def render(context)</span>
+</span><span class='line'><span class="sr">  %(&amp;lt;div class=&quot;embed-video-container&quot;&amp;gt;&amp;lt;iframe src=&quot;/</span><span class="o">/</span><span class="n">www</span><span class="o">.</span><span class="n">youtube</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">embed</span><span class="o">/</span><span class="c1">#{@id.strip}&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;/div&amp;gt;)</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;Liquid::Template.register_tag(&amp;lsquo;youtube&amp;rsquo;, Jekyll::Youtube)</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><strong>2. Code Embed Vimeo</strong></p>
+
+<p><figure class='code'><figcaption><span>vimeo.rb <a href="https://github.com/optikfluffel/octopress-responsive-video-embed/blob/master/vimeo.rb">https://github.com/optikfluffel/octopress-responsive-video-embed/blob/master/vimeo.rb</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">Vimeo</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;def initialize(name, id, tokens)</span>
+</span><span class='line'><span class="sr">  super</span>
+</span><span class='line'><span class="sr">  @id = id</span>
+</span><span class='line'><span class="sr">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">def render(context)</span>
+</span><span class='line'><span class="sr">  %(&amp;lt;div class=&quot;embed-video-container&quot;&amp;gt;&amp;lt;iframe src=&quot;/</span><span class="o">/</span><span class="n">player</span><span class="o">.</span><span class="n">vimeo</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">video</span><span class="o">/</span><span class="c1">#{@id.strip}&quot;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;/div&amp;gt;)</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;Liquid::Template.register_tag(&amp;lsquo;vimeo&amp;rsquo;, Jekyll::Vimeo)</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><strong>3. Code Embed Dailymotion</strong></p>
+
+<p><figure class='code'><figcaption><span>dailymotion.rb <a href="https://github.com/optikfluffel/octopress-responsive-video-embed/blob/master/dailymotion.rb">https://github.com/optikfluffel/octopress-responsive-video-embed/blob/master/dailymotion.rb</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">DailyMotion</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">tokens</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">super</span>
+</span><span class='line'>      <span class="vi">@id</span> <span class="o">=</span> <span class="nb">id</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class='line'>    <span class="sx">%(&lt;div class=&quot;embed-video-container&quot;&gt;&lt;iframe src=&quot;//www.dailymotion.com/embed/video/</span><span class="si">#{</span><span class="vi">@id</span><span class="o">.</span><span class="n">strip</span><span class="si">}</span><span class="sx">&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">dailymotion</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">DailyMotion</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Setelah anda menambahkan file tersebut didalam <em>plugins</em> selanjutnya adalah menambahkan file .scss didalam folder sass Anda. Jika Anda menggunakan theme custom (bukan theme bawaan dari Octopress) maka lokasinya adalah disini &ldquo;../sass/(nama theme)/custom/&rdquo;. Namun bila anda menggunakan theme lain atau default Anda bisa menyesuaikannya lokasinya. Tambahkan file &ldquo;_rve.scss&rdquo; dibawah ini didalam directory tersebut.</p>
+
+<p><figure class='code'><figcaption><span>_rve.scss <a href="https://github.com/optikfluffel/octopress-responsive-video-embed/blob/master/_rve.scss">https://github.com/optikfluffel/octopress-responsive-video-embed/blob/master/_rve.scss</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="nc">.embed-video-container</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">padding-bottom</span><span class="o">:</span> <span class="mi">56</span><span class="mf">.25</span><span class="kt">%</span><span class="p">;</span> <span class="na">/&lt;em&gt;</span><span class="err"> </span><span class="na">16/9</span><span class="err"> </span><span class="na">ratio</span><span class="err"> </span><span class="na">&lt;/em&gt;/</span>
+</span><span class='line'>  <span class="na">padding-top</span><span class="o">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span> <span class="na">/&lt;em&gt;</span><span class="err"> </span><span class="na">IE6</span><span class="err"> </span><span class="na">workaround&lt;/em&gt;/</span>
+</span><span class='line'>  <span class="na">height</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">overflow</span><span class="o">:</span> <span class="no">hidden</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">em</span><span class="p">;</span><span class="o">&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;</span>  <span class="nt">iframe</span><span class="o">,</span> <span class="nt">object</span><span class="o">,</span> <span class="nt">embed</span> <span class="p">{</span>
+</span><span class='line'>    <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">left</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Sampai sejauh ini cara diatas sudah selesai dan siap untuk dilakukan testing. Untuk post video atau embed video di dalam post artikel caranya adalah:</p>
+
+<p><strong>1. Vimeo</strong></p>
+
+<p>Syntax penulisan embed vimeo.</p>
+
+<p><img src="/images/2016/12/27/vimeo.png"></p>
+
+<p>Contoh Vimeo Embed:
+<div class="embed-video-container"><iframe src="//player.vimeo.com/video/188608314"></iframe></div></p>
+
+<p><strong>2. Youtube</strong></p>
+
+<p>Syntax penulisan embed youtube.</p>
+
+<p><img src="/images/2016/12/27/youtube.png"></p>
+
+<p>Contoh Youtube Embed:
+<div class="embed-video-container"><iframe src="//www.youtube.com/embed/N-GNV7jhKV4" allowfullscreen></iframe></div></p>
+
+<p><strong>3. Dailymotion</strong></p>
+
+<p>Syntax penulisan embed dailymotion.</p>
+
+<p><img src="/images/2016/12/27/dailymotion.png"></p>
+
+<p>Contoh Dailymotion Embed:
+<div class="embed-video-container"><iframe src="//www.dailymotion.com/embed/video/x56eaeo"></iframe></div></p>
+
+<p>Diatas ada beberapa contoh embed dari Vimeo, Youtube, dan Dailymotion. Jika anda mengikuti proses dari awal harusnya sudah berhasil embed video nya dan akan responsive ketika dibuka di mobile.</p>
+
+<p>Sekian <em>cara embed video responsive di Octopress</em>. Semoga membantu. Code credit ada <a href="https://github.com/optikfluffel/octopress-responsive-video-embed">disini</a>.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+        <title type="html"><![CDATA[Install Ruby on Rails dengan RVM di Ubuntu 16.04]]></title>
+        <link href="https://ikhsanir.com/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/"/>
+        <updated>2016-12-21T09:42:28+07:00</updated>
+        <id>https://ikhsanir.com/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04</id>
+        <content type="html"><![CDATA[<p><img src="/images/2016/12/21/rubyonrails.jpg" title="ruby on rails" ></p>
+
+<p><strong>Ruby on Rails</strong> adalah application stacks yang cukup populer di kalangan developer untuk membuat situs dan web apps. Ruby adalah bahasa pemrograman yang dikombinasikan dengan Rails framework, yang membuat development aplikasi menjadi sederhana.</p>
+
+<!-- more -->
+
+
+<p><strong>Menginstall Ruby on Rails</strong> bisa dilakukan dengan dua cara yaitu dengan RVM dan RBENV. Kali ini saya akan bahas cara instalasi ruby on rails dengan RVM (Ruby Version Manager). Mengapa RVM? Karena dengan RVM memungkinkan Anda untuk manage dan bekerja dengan multiple Ruby environments dengan melakukan switch versinya.</p>
+
+<p>Untuk <em>menginstall Ruby on Rails</em> dengan menggunakan RVM, Anda harus login dengan user biasa atau non-root user. Pertama kita gunakan &ldquo;gpg command&rdquo; untuk request public key dari RVM projects key.</p>
+
+<p><strong>Instalasi</strong></p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gpg &ndash;keyserver hkp://keys.gnupg.net &ndash;recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Pindah ke directory yang writable locations seperti /tmp dan download RVM script. Gunakan curl untuk mendownload RVM instalasi script nya.</p>
+
+<p><figure class='code'><figcaption><span>/tmp </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ \curl -sSL &lt;a href="https://get.rvm.io">https://get.rvm.io&lt;/a> -o rvm.sh</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Setelah selesai download, jalankan script <em>rvm.sh</em> nya</p>
+
+<p><figure class='code'><figcaption><span>/tmp </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ less /tmp/rvm.sh</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Selama proses instalasi, akan muncul popup yang meminta untuk memasukkan password anda. Dan setelah selesai kanu bisa cek nya dengan mengetik &lsquo;rvm&rsquo;</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm</span></code></pre></td></tr></table></div></figure></p>
+
+<p><strong>Install Spesifik Ruby on Rails Version</strong></p>
+
+<p>Jika anda ingin menginstall Ruby dengan versi tertentu, maka anda bisa mengetik command dibawah ini untuk menampilkan versi Ruby yang tersedia.</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm list known</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Dan setelah tampil daftar Ruby beserta versinya, ketika akan install dengan versi tertentu yaitu dengan cara:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm install ruby_version</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Untuk &ldquo;ruby_version&rdquo; kamu bisa menulisnya dengan ruby-2.3.0 atau hanya 2.3.0. Setelah selesai, anda bisa cek versi Ruby yang telah diinstall dengan mengetik:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm list</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Lalu ketika anda ingin switch atau ganti versi Ruby cukup mengetik:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm use ruby_version</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Dan sejak rails adalah gem, kita bisa install beberapa jenis versi dari Rails dengan menggunakan &ldquo;gem command&rdquo;.</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem search &lsquo;^rails$&rsquo; &ndash;all</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Note: Untuk install rails anda hanya perlu menulis versi rails nya saja. Contoh: 4.2.0</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem install rails -v rails_version</span></code></pre></td></tr></table></div></figure></p>
+
+<p><strong>Install JavaScript Runtime</strong></p>
+
+<p>Di beberapa fitur dari Rails, seperti Pipeline asset tergantung pada JavaScript Runtime. Maka dari itu kita akan menginstall node.js dengan mengguanakan command &ldquo;apt-get&rdquo;.</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get update
+</span><span class='line'>$ sudo apt-get install -y nodejs</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Sampai langkah ini, anda bisa memulai untuk melakukan tes develop aplikasi web dengan menggunakan Ruby on Rails yang telah di install.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+        <title type="html"><![CDATA[Mencoba Plugin di Octopress]]></title>
+        <link href="https://ikhsanir.com/mencoba-plugin-di-octopress/"/>
+        <updated>2016-11-08T10:43:40+07:00</updated>
+        <id>https://ikhsanir.com/mencoba-plugin-di-octopress</id>
+        <content type="html"><![CDATA[<p><img src="/images/2016/11/08/octopress.jpg" title="octopress" ></p>
+
+<p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu :D). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
+
+<!-- more -->
+
+
+<p><strong>1. Code Block</strong>
+Dengan plugin ini kamu bisa menulis blok kode secara langsung dalam posting Anda dan bisa juga dengan menambahkan judul dan link.</p>
+
+<p>Contoh:
+<figure class='code'><figcaption><span>The code <a href="http://octopress.org/docs/plugins/codeblock/">http://octopress.org/docs/plugins/codeblock/</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Hello</span> <span class="n">world!</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="no">Happy</span> <span class="n">monday!</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><strong>2. Image Tag</strong>
+Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di octopress untuk menambah gambar menggunakan Markdown syntax. Memasukkan gambar di Octopress ada dua jenis yaitu memasukkan gambar dari website / link url gambar tersebut.</p>
+
+<p>Contoh Gambar dari Link Web Lain:
+<img class="<a" src="href="http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg">http://getpcsoft.wikisend.com/img_howto/0/322/yosemite.jpg</a>" title="Mac OS X Yosemite" ></p>
+
+<p>Dan yang kedua adalah memasukkan gambar kita sendiri dari Local. Caranya yaitu dengan copy gambar yang akan di post misal dari hasil screenshot ke dalam folder &lsquo;/source/images&rsquo;. Setelah itu url pada gambar ubah menjadi /images/namagambar.png.</p>
+
+<p>Contoh Gambar Local:
+<img src="/images/2016/11/08/screenshot.png" title="Octopress" ></p>
+
+<p>Bedanya adalah ketika memasukkan gambar dari link web lain otomatis itu bukan milik kita tetapi milik gambar orang tertentu, dan kita bisa terkena hak cipta jika suatu saat yang punya gambar menuntut. Sedangkan jika memasukkan gambar sendiri itu artinya gambar milik kita sendiri misal dari hasil Screenshot, foto objek tertentu, dll. Cara membedakan apakah gambar itu diambil dari link web lain atau upload sendiri adalah dengan klik kanan pada gambar dan open image in new tab.</p>
+
+<p><strong>3. HTML5 Video Tag</strong>
+Plugin ini memungkinkan kamu untuk memasukan video mp4 yang di encode dalam format HTML 5 video di dalam post.</p>
+
+<p><video width='640' height='320' preload='metadata' controls poster='https://s17.postimg.org/ii43hq61r/fancy_button.png">https://s17.postimg.org/ii43hq61r/fancy_button.png</a>'><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4">http://s3.imathis.com/video/zero-to-fancy-buttons.mp4</a>' ></video></p>
+
+<p><strong>4. Include Code</strong>
+Untuk menampilkan isi code tertentu, arahkan path directory tersebut. Default dari Octopress adalah di dalam directory &lsquo;source/&hellip;.&rsquo;
+<figure class='code'><figcaption><span> (github.js)</span> <a href='/./javascripts/github.js'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">github</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>    <span class="kd">function</span> <span class="nx">escapeHtml</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">jQuery</span><span class="p">(</span><span class="s1">&#39;&lt;div/&gt;&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">str</span><span class="p">).</span><span class="nx">html</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">function</span> <span class="nx">render</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">repos</span><span class="p">){</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">fragment</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">t</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">target</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">repos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">fragment</span> <span class="o">+=</span> <span class="s1">&#39;&lt;li&gt;&lt;a href=&quot;&#39;</span><span class="o">+</span><span class="nx">repos</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">html_url</span><span class="o">+</span><span class="s1">&#39;&quot;&gt;&#39;</span><span class="o">+</span><span class="nx">repos</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="o">+</span><span class="s1">&#39;&lt;/a&gt;&lt;p&gt;&#39;</span><span class="o">+</span><span class="nx">escapeHtml</span><span class="p">(</span><span class="nx">repos</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">description</span><span class="o">||</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&lt;/p&gt;&lt;/li&gt;&#39;</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="nx">t</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">fragment</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">showRepos</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">){</span>
+</span><span class='line'>            <span class="nx">jQuery</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+</span><span class='line'>                <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;https://api.github.com/users/&quot;</span><span class="o">+</span><span class="nx">options</span><span class="p">.</span><span class="nx">user</span><span class="o">+</span><span class="s2">&quot;/repos?sort=pushed&amp;callback=?&quot;</span><span class="p">,</span>
+</span><span class='line'>                <span class="nx">dataType</span><span class="o">:</span> <span class="s1">&#39;jsonp&#39;</span><span class="p">,</span>
+</span><span class='line'>                <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">jQuery</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">target</span> <span class="o">+</span> <span class="s1">&#39; li.loading&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">&quot;Error loading feed&quot;</span><span class="p">);</span> <span class="p">},</span>
+</span><span class='line'>                <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                    <span class="kd">var</span> <span class="nx">repos</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>                    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span> <span class="o">||</span> <span class="o">!</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span><span class="p">;</span> <span class="p">}</span>
+</span><span class='line'>                    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                        <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">skip_forks</span> <span class="o">&amp;&amp;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">fork</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                            <span class="k">continue</span><span class="p">;</span>
+</span><span class='line'>                        <span class="p">}</span>
+</span><span class='line'>                        <span class="nx">repos</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+</span><span class='line'>                    <span class="p">}</span>
+</span><span class='line'>                    <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">count</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>                        <span class="nx">repos</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">count</span><span class="p">);</span>
+</span><span class='line'>                    <span class="p">}</span>
+</span><span class='line'>                    <span class="nx">render</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">target</span><span class="p">,</span> <span class="nx">repos</span><span class="p">);</span>
+</span><span class='line'>                <span class="p">}</span>
+</span><span class='line'>            <span class="p">});</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">};</span>
+</span><span class='line'><span class="p">})();</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><strong>5. Blockquote</strong>
+Blockquote plugin mengambil penulis, sumber, judul dan kutipan, dan juga HTML Semantik.
+Contoh:
+<blockquote><p>Over the past 24 hours I&rsquo;ve been reflecting on my life &amp; I&rsquo;ve realized only one thing. I need a medieval battle axe.</p><footer><strong>@allanbranch <a href="https://twitter.com/allanbranch/status/90766146063712256">https://twitter.com/allanbranch/status/90766146063712256</a></strong></footer></blockquote></p>
+
+<!-- **6. Puts** -->
+
+]]></content>
+    </entry>
+    
+</feed>

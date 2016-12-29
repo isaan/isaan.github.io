@@ -9,13 +9,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Ikhsan Labs</title>
+        <title>Cara Menghapus Repository di Github - Ikhsan Labs</title>
         <meta name="author" content="Ikhsan">
         
-        <meta name="description" content="Personal blog saya yang berisi tentang tips & trick dan tutorial teknologi terbaru.">
-        
+        <meta name="description" content="Cara cepat menghapus repository di Github.">
+        <meta name="keywords" content="git, github, repository, programming, code.">
         <meta name="viewport" content="width=device-width">
-        <link rel="canonical" href="https://ikhsanir.com/blog">
+        <link rel="canonical" href="https://ikhsanir.com/cara-menghapus-repository-di-github">
 
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
@@ -76,14 +76,95 @@
                 
                 <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
                 
-                        
+                    <article class="article article--single">
+    <header class="article__header">
+    
+        <h1 class="article__title">Cara Menghapus Repository di Github</h1>
     
 
-    <div class="pagination">
     
+        <div class="article__meta clearfix">
+            
 
-    
+
+
+
+
+
+    <time class="article__date pull-left" datetime="2016-11-29T10:15:21+07:00" pubdate><i class="fa fa-calendar"></i> Nov 29th, 2016</time>
+
+
+
+
+            
+
+    <div class="article__tags pull-left">
+        <i class="fa fa-tags"></i>
+        <ul class="unstyled">
+        
+
+            
+                <li><a class='category' href='/categories/github/'>github</a></li>
+            
+        
+        </ul>
     </div>
+
+
+            
+                <a class="pull-right" href="#disqus_thread">
+                    Comments <i class="fa fa-comment"></i>
+                </a>
+            
+        </div>
+    
+</header>
+
+
+
+
+    <p><img src="/images/2016/11/29/gitrepo.png" title="repository" ></p>
+
+<p><strong>Menghapus repository di github</strong> sebenarnya cukup mudah dan ga sampai 5 menit untuk melakukannya. Pertama, anda harus masuk ke <em>repository</em> terlebih dahulu misalnya</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/username/nama-repository</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/images/2016/11/29/repo1.png" title="repository" ></p>
+
+<p>Klik tab <em>Settings</em> di bagian paling kanan</p>
+
+<figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/username/nama-repository/settings</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/images/2016/11/29/repo2.png" title="repository" ></p>
+
+<p>Lalu scroll ke bawah, di bagian bawah terdapat <strong>&ldquo;Danger Zone&rdquo;</strong> yang ditandai dengan warna merah dan klik di tombol Delete this repository. Setelah itu akan muncul popup konfirmasi untuk menghapus repository tersebut dengan memasukkan nama repository nya.</p>
+
+<p><img src="/images/2016/11/29/repo3.png" title="repository" ></p>
+
+<p><strong>NOTE:</strong> Penting diingat bahwa ketika anda telah menghapus repository maka hal tersebut tidak bisa dibatalkan. Itu akan otomatis menghapus secara permanen repository termasuk wiki, isu, dan komentar didalamnya.</p>
+
+
+
+</article>
+
+
+<section id="disqus">
+    <h1 class="disqus__title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
 
                 </div>
 
@@ -293,7 +374,10 @@
     var disqus_shortname = 'ikhsanir';
     
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'https://ikhsanir.com/cara-menghapus-repository-di-github/';
+        var disqus_url = 'https://ikhsanir.com/cara-menghapus-repository-di-github/';
+        var disqus_script = 'embed.js';
     
     (function () {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

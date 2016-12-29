@@ -4,7 +4,7 @@
     <title><![CDATA[Ikhsan Labs]]></title>
     <link href="https://ikhsanir.com/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2016-12-29T10:21:24+07:00</updated>
+    <updated>2016-12-29T10:57:10+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -15,9 +15,9 @@
     
     <entry>
         <title type="html"><![CDATA[Membuat Video Embed di Octopress Responsive]]></title>
-        <link href="https://ikhsanir.com/blog/2016/12/27/membuat-video-embed-di-octopress-responsive/"/>
+        <link href="https://ikhsanir.com/membuat-video-embed-di-octopress-responsive/"/>
         <updated>2016-12-27T17:04:25+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/12/27/membuat-video-embed-di-octopress-responsive</id>
+        <id>https://ikhsanir.com/membuat-video-embed-di-octopress-responsive</id>
         <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/12/27/octocode.jpg"></p>
 
 <p>Dalam framework Octopress, untuk melakukan penulisan artikel beda dengan framework blogging yang lain. Di Octopress menggunakan syntax markdown. Jadi ketika kita ingin memasukkan misalkan gambar maka menggunakan syntax &ldquo;img (lokasi gambar)&rdquo;.</p>
@@ -210,9 +210,9 @@
     
     <entry>
         <title type="html"><![CDATA[Install Ruby on Rails dengan RVM di Ubuntu 16.04]]></title>
-        <link href="https://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/"/>
+        <link href="https://ikhsanir.com/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/"/>
         <updated>2016-12-21T09:42:28+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04</id>
+        <id>https://ikhsanir.com/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04</id>
         <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/12/21/rubyonrails.jpg" title="ruby on rails" ></p>
 
 <p><strong>Ruby on Rails</strong> adalah application stacks yang cukup populer di kalangan developer untuk membuat situs dan web apps. Ruby adalah bahasa pemrograman yang dikombinasikan dengan Rails framework, yang membuat development aplikasi menjadi sederhana.</p>
@@ -304,9 +304,9 @@
     
     <entry>
         <title type="html"><![CDATA[Cara Menggunakan Github dan Membuat Repository Baru]]></title>
-        <link href="https://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru/"/>
+        <link href="https://ikhsanir.com/cara-menggunakan-github-dan-membuat-repository-baru/"/>
         <updated>2016-11-30T09:44:45+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru</id>
+        <id>https://ikhsanir.com/cara-menggunakan-github-dan-membuat-repository-baru</id>
         <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/30/githome.png" title="github repository" ></p>
 
 <p>Setelah melakukan <a href="https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/">install git</a>, langkah selanjutnya adalah memulai untuk <strong>menggunakan Github dan membuat repository baru</strong> untuk aplikasi yang kita buat agar tersimpan dalam sistem versi kontrol dari <em>Github</em>.</p>
@@ -439,9 +439,9 @@ $ git add apps
     
     <entry>
         <title type="html"><![CDATA[Cara Install Git di Ubuntu 16.04]]></title>
-        <link href="https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/"/>
+        <link href="https://ikhsanir.com/cara-install-git-di-ubuntu-16-dot-04/"/>
         <updated>2016-11-29T16:03:14+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04</id>
+        <id>https://ikhsanir.com/cara-install-git-di-ubuntu-16-dot-04</id>
         <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/29/gitlogo.jpg" title="git" ></p>
 
 <p>Dalam pengembangan software (perangkat lunak) modern sangat memerlukan alat sistem kontrol versi atau yang lebih dikenal dengan <em>version control</em>. Sistem kontrol versi memungkinkan Anda untuk melacak software atau aplikasi yang anda kerjakan pada tingkat sumber. Salah satu sistem kontrol versi yang paling populer di kalangan developer adalah Git, sistem kontrol versi terdistribusi.</p>
@@ -515,9 +515,9 @@ $ git add apps
     
     <entry>
         <title type="html"><![CDATA[Cara Menghapus Repository di Github]]></title>
-        <link href="https://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github/"/>
+        <link href="https://ikhsanir.com/cara-menghapus-repository-di-github/"/>
         <updated>2016-11-29T10:15:21+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github</id>
+        <id>https://ikhsanir.com/cara-menghapus-repository-di-github</id>
         <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/29/gitrepo.png" title="repository" ></p>
 
 <p><strong>Menghapus repository di github</strong> sebenarnya cukup mudah dan ga sampai 5 menit untuk melakukannya. Pertama, anda harus masuk ke <em>repository</em> terlebih dahulu misalnya</p>
@@ -553,9 +553,9 @@ $ git add apps
     
     <entry>
         <title type="html"><![CDATA[Mencoba Plugin di Octopress]]></title>
-        <link href="https://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress/"/>
+        <link href="https://ikhsanir.com/mencoba-plugin-di-octopress/"/>
         <updated>2016-11-08T10:43:40+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress</id>
+        <id>https://ikhsanir.com/mencoba-plugin-di-octopress</id>
         <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/08/octopress.jpg" title="octopress" ></p>
 
 <p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu :D). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
@@ -690,9 +690,9 @@ Contoh:</p>
     
     <entry>
         <title type="html"><![CDATA[Introduction]]></title>
-        <link href="https://ikhsanir.com/blog/2016/11/04/introduction/"/>
+        <link href="https://ikhsanir.com/introduction/"/>
         <updated>2016-11-04T11:12:06+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/11/04/introduction</id>
+        <id>https://ikhsanir.com/introduction</id>
         <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/04/github.jpg" title="introduction" ></p>
 
 <!-- more -->

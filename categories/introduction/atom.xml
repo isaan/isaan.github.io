@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title><![CDATA[Category: introduction | Ikhsan Labs]]></title>
+    <link href="https://ikhsanir.com/categories/introduction/atom.xml" rel="self"/>
+    <link href="https://ikhsanir.com/"/>
+    <updated>2016-12-29T10:57:10+07:00</updated>
+    <id>https://ikhsanir.com/</id>
+    <author>
+        <name><![CDATA[Ikhsan]]></name>
+        
+      </author>
+    <generator uri="http://octopress.org/">Octopress</generator>
+
+    
+    <entry>
+        <title type="html"><![CDATA[Introduction]]></title>
+        <link href="https://ikhsanir.com/introduction/"/>
+        <updated>2016-11-04T11:12:06+07:00</updated>
+        <id>https://ikhsanir.com/introduction</id>
+        <content type="html"><![CDATA[<p><img src="/images/2016/11/04/github.jpg" title="introduction" ></p>
+
+<!-- more -->
+
+
+<p>Hi, i&rsquo;m icesan, nice to meet you guys. Stay tune with me on twitter: <a href="https://twitter.com/Ikhsan_IR">@Ikhsan_IR</a></p>
+
+<!-- <img src="https://s-media-cache-ak0.pinimg.com/originals/97/61/87/9761871e4eeff7c3a1698d8688852ed9.jpg"> -->
+
+
+<p><figure class='code'><figcaption><span>Time to code - code.rb </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Hello</span> <span class="n">world!</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="n">happy</span> <span class="n">tuesday</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<!-- <div class="embed-video-container"><iframe src="//www.youtube.com/embed/wC0dNJGuD9w" allowfullscreen></iframe></div>
+<div class="embed-video-container"><iframe src="//player.vimeo.com/video/196565201"></iframe></div>
+<div class="embed-video-container"><iframe src="//www.dailymotion.com/embed/video/x56eaeo"></iframe></div> -->
+
+]]></content>
+    </entry>
+    
+</feed>

@@ -1,0 +1,583 @@
+<!doctype html>
+    <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    
+      
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Membuat Video Embed di Octopress Responsive - Ikhsan Labs</title>
+        <meta name="author" content="Ikhsan">
+        
+        <meta name="description" content="Cara embed video responsive dari youtube, vimeo, dan dailymotion di Octopress.">
+        <meta name="keywords" content="embed video octopress, embed video responsive octopress, embed video vimeo octopress.">
+        <meta name="viewport" content="width=device-width">
+        <link rel="canonical" href="https://ikhsanir.com/membuat-video-embed-di-octopress-responsive">
+
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+
+        
+        <link href="/favicon.png" rel="icon">
+        <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
+        <link href="/atom.xml" rel="alternate" title="Ikhsan Labs" type="application/atom+xml">
+    </head>
+
+
+    <body >
+
+        <header id="header">
+    <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-4">
+        <a href="/" class="site-title">Ikhsan Labs</a>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-8">
+        <nav>
+    <input type="checkbox" id="toggle">
+    <label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu"></label>
+    <ul class="menu">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <!-- <li><a href="/blog/">Blog</a></li> -->
+</ul>
+
+</nav>
+
+    </div>
+</div>
+
+</header>
+
+
+        <div id="main-content">
+
+            <!--[if lte IE 9]>
+<div class="row upgrade-row">
+    <div class="col-lg-12">
+        <div class="upgrade">
+            <i class="upgrade__icon fa fa-warning"></i>
+            <h1 class="upgrade__title h6">Ohnoes!</h1>
+            <p class="upgrade__text">
+                Unfortunately, certain parts of this site may not display correctly in your version of Internet Explorer!<br>
+                If possible, you should consider <a href="http://browsehappy.com/">upgrading your browser</a>.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- <![endif]-->
+
+
+            
+
+            <div class="row top-xs center-sm center-md center-lg site-wrapper">
+                
+                <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
+                
+                    <article class="article article--single">
+    <header class="article__header">
+    
+        <h1 class="article__title">Membuat Video Embed di Octopress Responsive</h1>
+    
+
+    
+        <div class="article__meta clearfix">
+            
+
+
+
+
+
+
+    <time class="article__date pull-left" datetime="2016-12-27T17:04:25+07:00" pubdate><i class="fa fa-calendar"></i> Dec 27th, 2016</time>
+
+
+
+
+            
+
+    <div class="article__tags pull-left">
+        <i class="fa fa-tags"></i>
+        <ul class="unstyled">
+        
+
+            
+                <li><a class='category' href='/categories/octopress/'>octopress</a></li>
+            
+                <li><a class='category' href='/categories/ruby-on-rails/'>ruby on rails</a></li>
+            
+                <li><a class='category' href='/categories/plugin/'>plugin</a></li>
+            
+        
+        </ul>
+    </div>
+
+
+            
+                <a class="pull-right" href="#disqus_thread">
+                    Comments <i class="fa fa-comment"></i>
+                </a>
+            
+        </div>
+    
+</header>
+
+
+
+
+    <p><img src="/images/2016/12/27/octocode.jpg"></p>
+
+<p>Dalam framework Octopress, untuk melakukan penulisan artikel beda dengan framework blogging yang lain. Di Octopress menggunakan syntax markdown. Jadi ketika kita ingin memasukkan misalkan gambar maka menggunakan syntax &ldquo;img (lokasi gambar)&rdquo;.</p>
+
+<!-- more -->
+
+
+<p>Yang jadi pertanyaan adalah <strong>bagaimana melakukan embed video dari Youtube</strong> atau beberapa situs video yang lain? Jika dalam framework blogging lain untuk melakukan embed adalah dengan langsung memasukkan <em>embed code</em> dari Youtube.</p>
+
+<p>Sebenarnya di Octopress ketika menulis artikel dan ingin menyisipkan atau embed video bisa langsung ditulis atau paste embed code yang kita dapatkan dari video youtube tersebut, tetapi setelah saya tes ternyata hasilnya belum responsive, dimana tampilan video nya akan berantakan ketika dibuka pada tampilan mobile.</p>
+
+<p>Berikut adalah beberapa code untuk mengakalinya agar video yang kita embed menjadi responsive. Tambahkan file atau buat file baru di dalam directory &ldquo;&hellip;/plugins&rdquo; anda dan isi dengan ruby code dibawah ini.</p>
+
+<p><strong>1. Code Embed Youtube</strong></p>
+
+<figure class='code'><figcaption><span>youtube.rb</span><a href='https://github.com/optikfluffel/octopress-responsive-video-embed/blob/master/youtube.rb'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">Youtube</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">tokens</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">super</span>
+</span><span class='line'>      <span class="vi">@id</span> <span class="o">=</span> <span class="nb">id</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class='line'>      <span class="sx">%(&lt;div class=&quot;embed-video-container&quot;&gt;&lt;iframe src=&quot;//www.youtube.com/embed/</span><span class="si">#{</span><span class="vi">@id</span><span class="o">.</span><span class="n">strip</span><span class="si">}</span><span class="sx">&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;youtube&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">Youtube</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>2. Code Embed Vimeo</strong></p>
+
+<figure class='code'><figcaption><span>vimeo.rb</span><a href='https://github.com/optikfluffel/octopress-responsive-video-embed/blob/master/vimeo.rb'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">Vimeo</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">tokens</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">super</span>
+</span><span class='line'>      <span class="vi">@id</span> <span class="o">=</span> <span class="nb">id</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class='line'>      <span class="sx">%(&lt;div class=&quot;embed-video-container&quot;&gt;&lt;iframe src=&quot;//player.vimeo.com/video/</span><span class="si">#{</span><span class="vi">@id</span><span class="o">.</span><span class="n">strip</span><span class="si">}</span><span class="sx">&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;vimeo&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">Vimeo</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>3. Code Embed Dailymotion</strong></p>
+
+<figure class='code'><figcaption><span>dailymotion.rb</span><a href='https://github.com/optikfluffel/octopress-responsive-video-embed/blob/master/dailymotion.rb'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="k">module</span> <span class="nn">Jekyll</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">DailyMotion</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">tokens</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">super</span>
+</span><span class='line'>      <span class="vi">@id</span> <span class="o">=</span> <span class="nb">id</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class='line'>  <span class="sx">%(&lt;div class=&quot;embed-video-container&quot;&gt;&lt;iframe src=&quot;//www.dailymotion.com/embed/video/</span><span class="si">#{</span><span class="vi">@id</span><span class="o">.</span><span class="n">strip</span><span class="si">}</span><span class="sx">&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;)</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'><span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="o">.</span><span class="n">register_tag</span><span class="p">(</span><span class="s1">&#39;dailymotion&#39;</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">DailyMotion</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Setelah anda menambahkan file tersebut didalam <em>plugins</em> selanjutnya adalah menambahkan file .scss didalam folder sass Anda. Jika Anda menggunakan theme custom (bukan theme bawaan dari Octopress) maka lokasinya adalah disini &ldquo;../sass/(nama theme)/custom/&rdquo;. Namun bila anda menggunakan theme lain atau default Anda bisa menyesuaikannya lokasinya. Tambahkan file &ldquo;_rve.scss&rdquo; dibawah ini didalam directory tersebut.</p>
+
+<figure class='code'><figcaption><span>_rve.scss</span><a href='https://github.com/optikfluffel/octopress-responsive-video-embed/blob/master/_rve.scss'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='scss'><span class='line'><span class="nc">.embed-video-container</span> <span class="p">{</span>
+</span><span class='line'>  <span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">padding-bottom</span><span class="o">:</span> <span class="mi">56</span><span class="mf">.25</span><span class="kt">%</span><span class="p">;</span> <span class="cm">/* 16/9 ratio */</span>
+</span><span class='line'>  <span class="na">padding-top</span><span class="o">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span> <span class="cm">/* IE6 workaround*/</span>
+</span><span class='line'>  <span class="na">height</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">overflow</span><span class="o">:</span> <span class="no">hidden</span><span class="p">;</span>
+</span><span class='line'>  <span class="na">margin-bottom</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">em</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nt">iframe</span><span class="o">,</span> <span class="nt">object</span><span class="o">,</span> <span class="nt">embed</span> <span class="p">{</span>
+</span><span class='line'>    <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">left</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span><span class='line'>    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sampai sejauh ini cara diatas sudah selesai dan siap untuk dilakukan testing. Untuk post video atau embed video di dalam post artikel caranya adalah:</p>
+
+<p><strong>1. Vimeo</strong></p>
+
+<p>Syntax penulisan embed vimeo.</p>
+
+<p><img src="/images/2016/12/27/vimeo.png"></p>
+
+<p>Contoh Vimeo Embed:</p>
+
+<div class="embed-video-container"><iframe src="//player.vimeo.com/video/188608314"></iframe></div>
+
+
+<p><strong>2. Youtube</strong></p>
+
+<p>Syntax penulisan embed youtube.</p>
+
+<p><img src="/images/2016/12/27/youtube.png"></p>
+
+<p>Contoh Youtube Embed:</p>
+
+<div class="embed-video-container"><iframe src="//www.youtube.com/embed/N-GNV7jhKV4" allowfullscreen></iframe></div>
+
+
+<p><strong>3. Dailymotion</strong></p>
+
+<p>Syntax penulisan embed dailymotion.</p>
+
+<p><img src="/images/2016/12/27/dailymotion.png"></p>
+
+<p>Contoh Dailymotion Embed:</p>
+
+<div class="embed-video-container"><iframe src="//www.dailymotion.com/embed/video/x56eaeo"></iframe></div>
+
+
+<p>Diatas ada beberapa contoh embed dari Vimeo, Youtube, dan Dailymotion. Jika anda mengikuti proses dari awal harusnya sudah berhasil embed video nya dan akan responsive ketika dibuka di mobile.</p>
+
+<p>Sekian <em>cara embed video responsive di Octopress</em>. Semoga membantu. Code credit ada <a href="https://github.com/optikfluffel/octopress-responsive-video-embed">disini</a>.</p>
+
+
+
+</article>
+
+
+<section id="disqus">
+    <h1 class="disqus__title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
+
+                </div>
+
+                
+                <aside class="sidebar col-xs-12 col-md-4 col-lg-4">
+                    <div class="row">
+
+    
+
+    
+<section class="social col-xs-12 col-sm-6 col-md-12">
+    <h1>
+        Follow me!
+    </h1>
+    <ul class="unstyled">
+        
+        
+        
+        <li><a class="facebook" href="//facebook.com/iceisan"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+        <li><a class="github" href="//github.com/isaan"><i class="fa fa-github"></i> Github</a></li>
+        <li><a class="googleplus" href="//plus.google.com/u/1/114689953695450695773"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+        
+        
+        <li><a class="linkedin" href="//linkedin.com/in/ikhsanin"><i class="fa fa-linkedin-square"></i> LinkedIn</a></li>
+        
+        
+        
+        <li><a class="twitter" href="//twitter.com/Ikhsan_IR"><i class="fa fa-twitter"></i> Twitter</a></li>
+        
+    </ul>
+</section>
+
+ <!-- Bagian sosmed "follow me" -->
+
+    <!-- <section style="margin-top:15px"> -->
+<section id="recent-posts" class="col-xs-12 col-sm-6 col-md-12">
+	<h1>Sponsored</h1>
+        <a href="https://www.vultr.com/?ref=7045410-3B"><img src="https://www.vultr.com/media/banner_3.png" width="300" height="250"></a>
+</section><section id="recent-posts" class="col-xs-12 col-sm-6 col-md-12">
+    <h1>Recent Posts</h1>
+    <ul class="divided">
+        
+        <li class="post">
+            <a href="/membuat-video-embed-di-octopress-responsive/">Membuat Video Embed di Octopress Responsive</a>
+        </li>
+        
+        <li class="post">
+            <a href="/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/">Install Ruby on Rails dengan RVM di Ubuntu 16.04</a>
+        </li>
+        
+        <li class="post">
+            <a href="/cara-menggunakan-github-dan-membuat-repository-baru/">Cara Menggunakan Github dan Membuat Repository Baru</a>
+        </li>
+        
+        <li class="post">
+            <a href="/cara-install-git-di-ubuntu-16-dot-04/">Cara Install Git di Ubuntu 16.04</a>
+        </li>
+        
+        <li class="post">
+            <a href="/cara-menghapus-repository-di-github/">Cara Menghapus Repository di Github</a>
+        </li>
+        
+    </ul>
+</section>
+
+<section id="github-repos" class="col-xs-12 col-sm-6 col-md-12">
+    <h1>
+        GitHub Repos
+        
+        <small class="pull-right">
+            <a class="btn" href="//github.com/isaan" title="@isaan on GitHub" target="_blank">
+                <i class="fa fa-external-link"></i>
+            </a>
+        </small>
+        
+    </h1>
+    <ul id="gh_repos" class="divided">
+        <li class="loading">
+            <i class="fa fa-spinner fa-spin"></i>
+        </li>
+    </ul>
+</section>
+
+
+
+
+<section>
+	<h1>Categories</h1>
+	<ul id="categories">
+		<li class='category'><a href='/categories/github/'>github (3)</a></li>
+<li class='category'><a href='/categories/introduction/'>introduction (1)</a></li>
+<li class='category'><a href='/categories/octopress/'>octopress (3)</a></li>
+<li class='category'><a href='/categories/plugin/'>plugin (2)</a></li>
+<li class='category'><a href='/categories/ruby-on-rails/'>ruby on rails (3)</a></li>
+<li class='category'><a href='/categories/ubuntu/'>ubuntu (1)</a></li>
+
+	</ul>
+</section><section id="twitter-timeline" class="col-xs-12 col-sm-6 col-md-12">
+	<h1>
+        Latest Tweets
+        <small class="pull-right">
+            <a class="btn" href="//twitter.com/Ikhsan_IR" title="@Ikhsan_IR on Twitter" target="_blank">
+                <i class="fa fa-external-link"></i>
+            </a>
+        </small>
+    </h1>
+	<!-- <h2>
+		<a class="twitter-timeline" href="https://twitter.com/Ikhsan_IR">Tweets by Ikhsan_IR</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</h2> -->
+</section>
+<section style="margin-top:15px;height: 90vh;margin-top: 15px;overflow-x: auto;">
+<a class="twitter-timeline" href="https://twitter.com/Ikhsan_IR">Tweets by Ikhsan_IR</a>
+<!-- <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/Ikhsan_IR" data-link-color="#049cdb" data-tweet-limit="" data-chrome="noheader nofooter transparent noscrollbar">Tweets by Ikhsan_IR</a> -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script> -->
+</section> <!-- Bagian asides tambahan yg di _config.yml" -->
+
+    <!-- 
+<section id="twitter-timeline" class="col-xs-12 col-sm-6 col-md-12">
+    <h1>
+        Latest Tweets
+        
+        <small class="pull-right">
+            <a class="btn" href="//twitter.com/Ikhsan_IR" title="@Ikhsan_IR on Twitter" target="_blank">
+                <i class="fa fa-external-link"></i>
+            </a>
+        </small>
+        
+    </h1>
+
+    <a class="twitter-timeline" data-dnt="true" href="//twitter.com/Ikhsan_IR"  data-widget-id="801675965038366720"  data-link-color="#049cdb" data-tweet-limit="" data-chrome="noheader nofooter transparent noscrollbar">Tweets by @Ikhsan_IR</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</section>
+
+ -->
+    <!-- 
+<section class="social col-xs-12 col-sm-6 col-md-12">
+    <h1>
+        Follow me!
+    </h1>
+    <ul class="unstyled">
+        
+        
+        
+        <li><a class="facebook" href="//facebook.com/iceisan"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+        <li><a class="github" href="//github.com/isaan"><i class="fa fa-github"></i> Github</a></li>
+        <li><a class="googleplus" href="//plus.google.com/u/1/114689953695450695773"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+        
+        
+        <li><a class="linkedin" href="//linkedin.com/in/ikhsanin"><i class="fa fa-linkedin-square"></i> LinkedIn</a></li>
+        
+        
+        
+        <li><a class="twitter" href="//twitter.com/Ikhsan_IR"><i class="fa fa-twitter"></i> Twitter</a></li>
+        
+    </ul>
+</section>
+
+ -->
+</div>
+                </aside>
+                
+            </div>
+        </div>
+
+        
+
+    
+    
+
+
+
+
+<footer class="footer">
+    <div class="row middle-xs">
+        
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p class="footer__copyright">
+    Copyright &copy; <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> 
+    Ikhsan - Framework <a href="http://octopress.org">Octopress</a>, Built with <a href="https://www.ruby-lang.org/">Ruby</a> and Deploy on <a href="https://github.com/">Github.</a>
+    <!-- Code under <a href="//github.com/coogie/oscailte/blob/master/README.md">MIT Licence</a>. -->
+</p>
+
+        </div>
+        
+        
+    </div>
+</footer>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+<script defer src="/javascripts/octopress.js"></script>
+
+
+<script>
+    var _gaq=[['_setAccount','UA-88300812-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+
+
+<script>
+    var disqus_shortname = 'ikhsanir';
+    
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'https://ikhsanir.com/membuat-video-embed-di-octopress-responsive/';
+        var disqus_url = 'https://ikhsanir.com/membuat-video-embed-di-octopress-responsive/';
+        var disqus_script = 'embed.js';
+    
+    (function () {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+<script>
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'isaan',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+</script>
+<script src="/javascripts/github.js"></script>
+
+
+
+
+
+
+
+
+    </body>
+
+</html>
