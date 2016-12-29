@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-    <title><![CDATA[Iceisan Labs]]></title>
+    <title><![CDATA[Ikhsan Labs]]></title>
     <link href="https://ikhsanir.com/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2016-12-27T18:10:22+07:00</updated>
+    <updated>2016-12-29T09:45:40+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
-        <name><![CDATA[Iceisan]]></name>
+        <name><![CDATA[Ikhsan]]></name>
         
     </author>
     <generator uri="http://octopress.org/">Octopress</generator>
@@ -204,7 +204,7 @@
 
 <p>Diatas ada beberapa contoh embed dari Vimeo, Youtube, dan Dailymotion. Jika anda mengikuti proses dari awal harusnya sudah berhasil embed video nya dan akan responsive ketika dibuka di mobile.</p>
 
-<p>Sekian <em>cara embed video responsive di Octopress</em>. Semoga membantu. Code credit ada <a href="">disini</a>.</p>
+<p>Sekian <em>cara embed video responsive di Octopress</em>. Semoga membantu. Code credit ada <a href="https://github.com/optikfluffel/octopress-responsive-video-embed">disini</a>.</p>
 ]]></content>
     </entry>
     
