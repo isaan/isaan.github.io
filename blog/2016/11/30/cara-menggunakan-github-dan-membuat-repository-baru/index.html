@@ -9,13 +9,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Introduction - Ikhsan Labs</title>
+        <title>Cara Menggunakan Github dan Membuat Repository Baru - Ikhsan Labs</title>
         <meta name="author" content="Ikhsan">
         
-        <meta name="description" content="Mencoba framework Octopress untuk personal blog.">
-        <meta name="keywords" content="octopress, framework, jekyll, open source, programming.">
+        <meta name="description" content="Menggunakan github repository untuk developing program.">
+        <meta name="keywords" content="git, github, repository, programming, code.">
         <meta name="viewport" content="width=device-width">
-        <link rel="canonical" href="https://ikhsanir.com/introduction">
+        <link rel="canonical" href="https://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru">
 
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
@@ -79,7 +79,7 @@
                     <article class="article article--single">
     <header class="article__header">
     
-        <h1 class="article__title">Introduction</h1>
+        <h1 class="article__title">Cara Menggunakan Github dan Membuat Repository Baru</h1>
     
 
     
@@ -91,7 +91,7 @@
 
 
 
-    <time class="article__date pull-left" datetime="2016-11-04T11:12:06+07:00" pubdate><i class="fa fa-calendar"></i> Nov 4th, 2016</time>
+    <time class="article__date pull-left" datetime="2016-11-30T09:44:45+07:00" pubdate><i class="fa fa-calendar"></i> Nov 30th, 2016</time>
 
 
 
@@ -104,9 +104,7 @@
         
 
             
-                <li><a class='category' href='/categories/octopress/'>octopress</a></li>
-            
-                <li><a class='category' href='/categories/introduction/'>introduction</a></li>
+                <li><a class='category' href='/categories/github/'>github</a></li>
             
         
         </ul>
@@ -125,29 +123,132 @@
 
 
 
-    <p><img src="/images/2016/11/04/github.jpg" title="introduction" ></p>
+    <p><img src="/images/2016/11/30/githome.png" title="github repository" ></p>
+
+<p>Setelah melakukan <a href="https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/">install git</a>, langkah selanjutnya adalah memulai untuk <strong>menggunakan Github dan membuat repository baru</strong> untuk aplikasi yang kita buat agar tersimpan dalam sistem versi kontrol dari <em>Github</em>.</p>
 
 <!-- more -->
 
 
-<p>Hi, i&rsquo;m icesan, nice to meet you guys. Stay tune with me on twitter: <a href="https://twitter.com/Ikhsan_IR">@Ikhsan_IR</a></p>
+<p>Pertama login di situs Github dengan username dan password anda, kemudian klik <strong>Create New Repository</strong>.</p>
 
-<!-- <img src="https://s-media-cache-ak0.pinimg.com/originals/97/61/87/9761871e4eeff7c3a1698d8688852ed9.jpg"> -->
+<p><img src="/images/2016/11/30/newrepo.png" title="github repository" ></p>
 
+<p>Isi nama repository dan deskripsinya. Di github ada dua jenis repository yaitu public dan private. Public artinya repository kita bisa diliat oleh semua orang sedangkan private itu nanti yg bisa liat cuma kita dan team yang kita tentukan saja, tetapi untuk private ini kita dikenakan biaya langganan $7/month. Untuk awal kita buat public terlebih dahulu untuk perkenalan dengan teknologinya, baru nanti kalau sudah mulai faham anda bisa <em>upgrade plan</em> ke paket private sendiri. Setelah itu klik <strong>Create Repository</strong></p>
 
+<p><img src="/images/2016/11/30/repo.gif" title="github repository" ></p>
 
+<p>Akan muncul tampilan &ldquo;Quick setup&rdquo; seperti gambar diatas. Ada dua opsi untuk melakukan setup yaitu dengan HTTPS atau SSH. Pilih salah satu dan kemudian masuk buka terminal dari desktop Ubuntu anda. Masuk ke directory kerja anda (dimana saja terserah) untuk melakukan clone repository yang telah anda buat di Github. Contoh disini saya mengguakan SSH untuk melakukan clone:</p>
 
-<figure class='code'><figcaption><span>Time to code - code.rb </span></figcaption>
+<figure class='code'><figcaption><span>git clone </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;Hello world!&quot;</span> <span class="n">happy</span> <span class="n">tuesday</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git@github.com:isaan/timetracker.git</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/images/2016/11/30/gitclone.png" title="git clone" ></p>
+
+<p>Lalu masuk ke directory yang telah di clone dari Github tersebut. Buat file apa saja untuk tes apakah repository sudah berfungsi.</p>
+
+<figure class='code'><figcaption><span>git clone </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ echo "this is readme" >> README.md</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Diatas saya membuat file README.md yang isinya adalah this is readme. Lalu tambahkan ke git, commit, dan push ke server git.</p>
+
+<figure class='code'><figcaption><span>git add </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git add README.md</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<!-- <div class="embed-video-container"><iframe src="//www.youtube.com/embed/wC0dNJGuD9w" allowfullscreen></iframe></div>
-<div class="embed-video-container"><iframe src="//player.vimeo.com/video/196565201"></iframe></div>
-<div class="embed-video-container"><iframe src="//www.dailymotion.com/embed/video/x56eaeo"></iframe></div> -->
+<figure class='code'><figcaption><span>git commit </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git commit -m "add README"</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>git push </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/images/2016/11/30/gitadd.png" title="git add" ></p>
+
+<p>Jika tidak ada error dan muncul notifikasi seperti diatas, harusnya file <em>README.md</em> yang baru saja dibuat akan terkirim ke server github. Sekarang cek ke repository github Anda, file tersebut sudah masuk ke repository. Artinya repositroy tersebut sudah siap digunakan untuk dilakukan development.</p>
+
+<p><img src="/images/2016/11/30/repository.png" title="repository" ></p>
+
+<p>Selanjutnya kita akan mencoba menambah directory di repository yang telah kita clone dan melakukan push ke github lagi.</p>
+
+<figure class='code'><figcaption><span>git add </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ mkdir apps</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>git commit </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git commit -m "add directory"</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>git push </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/images/2016/11/30/gitadddir.png" title="add directory" ></p>
+
+<p>Ketika anda mengikuti mengikuti 3 cara diatas pasti directory yang dibuat tidak terkirim ke repository github. Walaupun 100 kali reload github tetap tidak ada directory yang baru saja dibuat ada disana. Mengapa? Karena directory yang dibuat tadi belum ada isinya alias kosong.</p>
+
+<p>Github tidak bisa menambah directory yang didalamnya tidak ada isinya, atau dengan kata lain git membacanya sebagai null. Jadi ketika anda melakukan commit dan push pasti git akan mengeluarkan notifikasi kalau branch repository nya up-to-date.</p>
+
+<p>Cara agar directory tersebut masuk ke repository di github adalah dengan mengisinya file. Sebagai contoh saya menambah file index.php didalam directory apps yang tadi dibuat.</p>
+
+<figure class='code'><figcaption><span>git add </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ touch apps/index.php</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Jangan lupa melakukan git add</p>
+
+<figure class='code'><figcaption><span>git add </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git add apps</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>git commit </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git commit -m "add index.php & directory"</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>git push </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sekarang refresh repository Github anda, akan muncul directory beserta isi file didalamnya.</p>
+
+<p><img src="/images/2016/11/30/directory.png" title="add directory" ></p>
+
+<p>Sekian tutorial <em>menggunakan github dan membuat repository baru</em> kali ini, semoga bermanfaat. Salam.</p>
+
+<!-- ```sh
+
+$ cd apps
+$ touch apps/index.html
+$ git add apps
+
+``` -->
 
 
 
@@ -204,23 +305,23 @@
     <ul class="divided">
         
         <li class="post">
-            <a href="/membuat-video-embed-di-octopress-responsive/">Membuat Video Embed di Octopress Responsive</a>
+            <a href="/blog/2016/12/27/membuat-video-embed-responsive-di-octopress/">Membuat Video Embed Responsive di Octopress</a>
         </li>
         
         <li class="post">
-            <a href="/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/">Install Ruby on Rails dengan RVM di Ubuntu 16.04</a>
+            <a href="/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/">Install Ruby on Rails dengan RVM di Ubuntu 16.04</a>
         </li>
         
         <li class="post">
-            <a href="/cara-menggunakan-github-dan-membuat-repository-baru/">Cara Menggunakan Github dan Membuat Repository Baru</a>
+            <a href="/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru/">Cara Menggunakan Github dan Membuat Repository Baru</a>
         </li>
         
         <li class="post">
-            <a href="/cara-install-git-di-ubuntu-16-dot-04/">Cara Install Git di Ubuntu 16.04</a>
+            <a href="/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/">Cara Install Git di Ubuntu 16.04</a>
         </li>
         
         <li class="post">
-            <a href="/cara-menghapus-repository-di-github/">Cara Menghapus Repository di Github</a>
+            <a href="/blog/2016/11/29/cara-menghapus-repository-di-github/">Cara Menghapus Repository di Github</a>
         </li>
         
     </ul>
@@ -371,8 +472,8 @@
     
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'https://ikhsanir.com/introduction/';
-        var disqus_url = 'https://ikhsanir.com/introduction/';
+        var disqus_identifier = 'https://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru/';
+        var disqus_url = 'https://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru/';
         var disqus_script = 'embed.js';
     
     (function () {

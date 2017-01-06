@@ -4,7 +4,7 @@
     <title><![CDATA[Category: ubuntu | Ikhsan Labs]]></title>
     <link href="https://ikhsanir.com/categories/ubuntu/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2016-12-29T10:57:10+07:00</updated>
+    <updated>2017-01-06T10:38:53+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -15,9 +15,9 @@
     
     <entry>
         <title type="html"><![CDATA[Install Ruby on Rails dengan RVM di Ubuntu 16.04]]></title>
-        <link href="https://ikhsanir.com/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/"/>
+        <link href="https://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/"/>
         <updated>2016-12-21T09:42:28+07:00</updated>
-        <id>https://ikhsanir.com/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04</id>
+        <id>https://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04</id>
         <content type="html"><![CDATA[<p><img src="/images/2016/12/21/rubyonrails.jpg" title="ruby on rails" ></p>
 
 <p><strong>Ruby on Rails</strong> adalah application stacks yang cukup populer di kalangan developer untuk membuat situs dan web apps. Ruby adalah bahasa pemrograman yang dikombinasikan dengan Rails framework, yang membuat development aplikasi menjadi sederhana.</p>

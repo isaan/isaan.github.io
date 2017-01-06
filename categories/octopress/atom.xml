@@ -4,7 +4,7 @@
     <title><![CDATA[Category: octopress | Ikhsan Labs]]></title>
     <link href="https://ikhsanir.com/categories/octopress/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2016-12-29T10:57:10+07:00</updated>
+    <updated>2017-01-06T10:38:53+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -14,10 +14,10 @@
 
     
     <entry>
-        <title type="html"><![CDATA[Membuat Video Embed di Octopress Responsive]]></title>
-        <link href="https://ikhsanir.com/membuat-video-embed-di-octopress-responsive/"/>
+        <title type="html"><![CDATA[Membuat Video Embed Responsive di Octopress]]></title>
+        <link href="https://ikhsanir.com/blog/2016/12/27/membuat-video-embed-responsive-di-octopress/"/>
         <updated>2016-12-27T17:04:25+07:00</updated>
-        <id>https://ikhsanir.com/membuat-video-embed-di-octopress-responsive</id>
+        <id>https://ikhsanir.com/blog/2016/12/27/membuat-video-embed-responsive-di-octopress</id>
         <content type="html"><![CDATA[<p><img src="/images/2016/12/27/octocode.jpg"></p>
 
 <p>Dalam framework Octopress, untuk melakukan penulisan artikel beda dengan framework blogging yang lain. Di Octopress menggunakan syntax markdown. Jadi ketika kita ingin memasukkan misalkan gambar maka menggunakan syntax &ldquo;img (lokasi gambar)&rdquo;.</p>
@@ -212,9 +212,9 @@
     
     <entry>
         <title type="html"><![CDATA[Mencoba Plugin di Octopress]]></title>
-        <link href="https://ikhsanir.com/mencoba-plugin-di-octopress/"/>
+        <link href="https://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress/"/>
         <updated>2016-11-08T10:43:40+07:00</updated>
-        <id>https://ikhsanir.com/mencoba-plugin-di-octopress</id>
+        <id>https://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress</id>
         <content type="html"><![CDATA[<p><img src="/images/2016/11/08/octopress.jpg" title="octopress" ></p>
 
 <p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu :D). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
@@ -342,9 +342,9 @@ Contoh:
     
     <entry>
         <title type="html"><![CDATA[Introduction]]></title>
-        <link href="https://ikhsanir.com/introduction/"/>
+        <link href="https://ikhsanir.com/blog/2016/11/04/introduction/"/>
         <updated>2016-11-04T11:12:06+07:00</updated>
-        <id>https://ikhsanir.com/introduction</id>
+        <id>https://ikhsanir.com/blog/2016/11/04/introduction</id>
         <content type="html"><![CDATA[<p><img src="/images/2016/11/04/github.jpg" title="introduction" ></p>
 
 <!-- more -->
