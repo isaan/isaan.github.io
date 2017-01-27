@@ -4,7 +4,7 @@
     <title><![CDATA[Ikhsan Labs]]></title>
     <link href="https://ikhsanir.com/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2017-01-06T10:38:53+07:00</updated>
+    <updated>2017-01-27T15:00:20+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -12,6 +12,48 @@
     </author>
     <generator uri="http://octopress.org/">Octopress</generator>
 
+    
+    <entry>
+        <title type="html"><![CDATA[Cara Install Synapse Indicator di Ubuntu 16.04]]></title>
+        <link href="https://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04/"/>
+        <updated>2017-01-27T10:50:41+07:00</updated>
+        <id>https://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04</id>
+        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2017/01/27/synapseindicator.png"></p>
+
+<p><strong>Synapse Indicator</strong> adalah aplikasi alternatif Spotlight yang dibuat oleh <a href="https://plus.google.com/+TomBeckmann/posts">Tom Beckmann</a>. Synapse Indicator sangat membantu kita dalam melakukan pencarian file, folder ataupun aplikasi. Dengan posisi search button diatas tentu mirip dengan spotlight di MacOS. <!-- more --></p>
+
+<p>Synapse Indicator sangat cepat dalam melakukan pencarian ketika Anda menggunakan themes custom MacOS seperti yang saya pakai ini. Kecuali anda masih menggunakan theme bawaan dari Ubuntu 16.04 Xenial Xerus, maka untuk melakukan pencarian tinggal mengetikan apa yang anda cari di sebelah kiri atas. Dibanding dengan fitur pencarian <em>Spotlight Apple</em>, keduanya merupakan perangkat pencarian berdasarkan menu yang menunjukkan top hit dari hasil file, aplikasi, dan sebagainya.</p>
+
+<p>Dalam penulisan artikel ini saya menggunakan sistem operasi Ubuntu 16.04. Berikut adalah <strong>langkah yang perlu anda lakukan ketika ingin memasang Synapse Indicator di Ubuntu Desktop 16.04</strong>.</p>
+
+<p>Tambahkan repository berikut ini sebelum install Synapse.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:noobslab/apps
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get install indicator-synapse</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Jika sewaktu melakukan install Synapse Indicator anda menemui error itu karena maka solusinya adalah dengan mengganti distribution pada repository yang baru saja anda tambahkan dari Xenial menjadi Trusty. Maksud dari mengganti repo distribution tersebut adalah agar kita bisa install aplikasi di Ubuntu 16.04 dengan repo dari Ubuntu 14.04 Trusty Tahr.</p>
+
+<p>Cara mengganti repository distributionnya adalah dengan langkah berikut:
+<strong>System Settings > Software &amp; Updates > Other Software > Cari apps repository dari noobslab dan klik Edit > Change Distribution Value menjadi &ldquo;trusty&rdquo;</strong></p>
+
+<p><img src="https://ikhsanir.com/images/2017/01/27/systemsetting.png"></p>
+
+<p><img src="https://ikhsanir.com/images/2017/01/27/othersoft.png"></p>
+
+<p><img src="https://ikhsanir.com/images/2017/01/27/editsource.png"></p>
+
+<p>Setelah itu update dengan &ldquo;sudo apt-get update&rdquo; dan install synapse nya &ldquo;sudo apt-get install indicator-synapse&rdquo;.</p>
+
+<p>Thats it! Restart Komputer Anda, akan anda temui &ldquo;search button&rdquo; di top bar Ubuntu 16.04 anda yang bisa membantu bekerja lebih cepat dalam menemukan file ataupun aplikasi.</p>
+
+<p>Sekian <em>Cara Install Synapse Indicator di Ubuntu 16.04</em>. Semoga bermanfaat.</p>
+]]></content>
+    </entry>
     
     <entry>
         <title type="html"><![CDATA[Membuat Video Embed Responsive di Octopress]]></title>

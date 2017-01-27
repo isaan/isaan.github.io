@@ -9,13 +9,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Cara Menghapus Repository di Github - Ikhsan Labs</title>
+        <title>Cara Install Synapse Indicator di Ubuntu 16.04 - Ikhsan Labs</title>
         <meta name="author" content="Ikhsan">
         
-        <meta name="description" content="Cara cepat menghapus repository di Github.">
-        <meta name="keywords" content="git, github, repository, programming, code.">
+        <meta name="description" content="Langkah install synapse indicator di top bar pada Ubuntu 16.04">
+        <meta name="keywords" content="install synapse ubuntu 16.04, cara install synapse di ubuntu, install synapse indicator">
         <meta name="viewport" content="width=device-width">
-        <link rel="canonical" href="https://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github">
+        <link rel="canonical" href="https://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04">
 
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
@@ -79,7 +79,7 @@
                     <article class="article article--single">
     <header class="article__header">
     
-        <h1 class="article__title">Cara Menghapus Repository di Github</h1>
+        <h1 class="article__title">Cara Install Synapse Indicator di Ubuntu 16.04</h1>
     
 
     
@@ -91,7 +91,7 @@
 
 
 
-    <time class="article__date pull-left" datetime="2016-11-29T10:15:21+07:00" pubdate><i class="fa fa-calendar"></i> Nov 29th, 2016</time>
+    <time class="article__date pull-left" datetime="2017-01-27T10:50:41+07:00" pubdate><i class="fa fa-calendar"></i> Jan 27th, 2017</time>
 
 
 
@@ -104,7 +104,9 @@
         
 
             
-                <li><a class='category' href='/categories/github/'>github</a></li>
+                <li><a class='category' href='/categories/ubuntu/'>ubuntu</a></li>
+            
+                <li><a class='category' href='/categories/linux/'>linux</a></li>
             
         
         </ul>
@@ -123,36 +125,40 @@
 
 
 
-    <p><img src="/images/2016/11/29/gitrepo.png" title="repository" ></p>
+    <p><img src="/images/2017/01/27/synapseindicator.png"></p>
 
-<p><strong>Menghapus repository di github</strong> sebenarnya cukup mudah dan ga sampai 5 menit untuk melakukannya. Pertama, anda harus masuk ke <em>repository</em> terlebih dahulu misalnya</p>
+<p><strong>Synapse Indicator</strong> adalah aplikasi alternatif Spotlight yang dibuat oleh <a href="https://plus.google.com/+TomBeckmann/posts">Tom Beckmann</a>. Synapse Indicator sangat membantu kita dalam melakukan pencarian file, folder ataupun aplikasi. Dengan posisi search button diatas tentu mirip dengan spotlight di MacOS. <!-- more --></p>
 
-<!-- more -->
+<p>Synapse Indicator sangat cepat dalam melakukan pencarian ketika Anda menggunakan themes custom MacOS seperti yang saya pakai ini. Kecuali anda masih menggunakan theme bawaan dari Ubuntu 16.04 Xenial Xerus, maka untuk melakukan pencarian tinggal mengetikan apa yang anda cari di sebelah kiri atas. Dibanding dengan fitur pencarian <em>Spotlight Apple</em>, keduanya merupakan perangkat pencarian berdasarkan menu yang menunjukkan top hit dari hasil file, aplikasi, dan sebagainya.</p>
 
+<p>Dalam penulisan artikel ini saya menggunakan sistem operasi Ubuntu 16.04. Berikut adalah <strong>langkah yang perlu anda lakukan ketika ingin memasang Synapse Indicator di Ubuntu Desktop 16.04</strong>.</p>
 
+<p>Tambahkan repository berikut ini sebelum install Synapse.</p>
 
-
-<figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/username/nama-repository</span></code></pre></td></tr></table></div></figure>
-
-
-<p><img src="/images/2016/11/29/repo1.png" title="repository" ></p>
-
-<p>Klik tab <em>Settings</em> di bagian paling kanan</p>
-
-<figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/username/nama-repository/settings</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:noobslab/apps
+</span><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get install indicator-synapse</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="/images/2016/11/29/repo2.png" title="repository" ></p>
+<p>Jika sewaktu melakukan install Synapse Indicator anda menemui error itu karena maka solusinya adalah dengan mengganti distribution pada repository yang baru saja anda tambahkan dari Xenial menjadi Trusty. Maksud dari mengganti repo distribution tersebut adalah agar kita bisa install aplikasi di Ubuntu 16.04 dengan repo dari Ubuntu 14.04 Trusty Tahr.</p>
 
-<p>Lalu scroll ke bawah, di bagian bawah terdapat <strong>&ldquo;Danger Zone&rdquo;</strong> yang ditandai dengan warna merah dan klik di tombol Delete this repository. Setelah itu akan muncul popup konfirmasi untuk menghapus repository tersebut dengan memasukkan nama repository nya.</p>
+<p>Cara mengganti repository distributionnya adalah dengan langkah berikut:
+<strong>System Settings > Software &amp; Updates > Other Software > Cari apps repository dari noobslab dan klik Edit > Change Distribution Value menjadi &ldquo;trusty&rdquo;</strong></p>
 
-<p><img src="/images/2016/11/29/repo3.png" title="repository" ></p>
+<p><img src="/images/2017/01/27/systemsetting.png"></p>
 
-<p><strong>NOTE:</strong> Penting diingat bahwa ketika anda telah menghapus repository maka hal tersebut tidak bisa dibatalkan. Itu akan otomatis menghapus secara permanen repository termasuk wiki, isu, dan komentar didalamnya.</p>
+<p><img src="/images/2017/01/27/othersoft.png"></p>
+
+<p><img src="/images/2017/01/27/editsource.png"></p>
+
+<p>Setelah itu update dengan &ldquo;sudo apt-get update&rdquo; dan install synapse nya &ldquo;sudo apt-get install indicator-synapse&rdquo;.</p>
+
+<p>Thats it! Restart Komputer Anda, akan anda temui &ldquo;search button&rdquo; di top bar Ubuntu 16.04 anda yang bisa membantu bekerja lebih cepat dalam menemukan file ataupun aplikasi.</p>
+
+<p>Sekian <em>Cara Install Synapse Indicator di Ubuntu 16.04</em>. Semoga bermanfaat.</p>
 
 
 
@@ -376,8 +382,8 @@
     
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'https://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github/';
-        var disqus_url = 'https://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github/';
+        var disqus_identifier = 'https://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04/';
+        var disqus_url = 'https://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04/';
         var disqus_script = 'embed.js';
     
     (function () {
