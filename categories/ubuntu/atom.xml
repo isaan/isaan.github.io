@@ -4,7 +4,7 @@
     <title><![CDATA[Category: ubuntu | Ikhsan Labs]]></title>
     <link href="https://ikhsanir.com/categories/ubuntu/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2017-03-14T11:43:17+07:00</updated>
+    <updated>2017-03-14T13:44:28+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -18,7 +18,7 @@
         <link href="https://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04/"/>
         <updated>2017-01-27T10:50:41+07:00</updated>
         <id>https://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04</id>
-        <content type="html"><![CDATA[<p><img src="/images/2017/01/27/synapseindicator.png"></p>
+        <content type="html"><![CDATA[<p><img src="/images/2017/01/27/synapseindicator.jpg"></p>
 
 <p><strong>Synapse Indicator</strong> adalah aplikasi alternatif Spotlight yang dibuat oleh <a href="https://plus.google.com/+TomBeckmann/posts">Tom Beckmann</a>. Synapse Indicator sangat membantu kita dalam melakukan pencarian file, folder ataupun aplikasi. Dengan posisi search button diatas tentu mirip dengan spotlight di MacOS. <!-- more --></p>
 
