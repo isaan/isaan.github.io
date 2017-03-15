@@ -4,7 +4,7 @@
     <title><![CDATA[Category: linux | Ikhsan Labs]]></title>
     <link href="https://ikhsanir.com/categories/linux/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2017-03-15T10:22:13+07:00</updated>
+    <updated>2017-03-15T10:40:49+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -18,7 +18,7 @@
         <link href="https://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04/"/>
         <updated>2017-01-27T10:50:41+07:00</updated>
         <id>https://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04</id>
-        <content type="html"><![CDATA[<p><img src="/images/2017/01/27/synapseindicator.jpg"></p>
+        <content type="html"><![CDATA[<p>{% img /images/2017/01/27/synapseindicator.jpg %}</p>
 
 <p><strong>Synapse Indicator</strong> adalah aplikasi alternatif Spotlight yang dibuat oleh <a href="https://plus.google.com/+TomBeckmann/posts">Tom Beckmann</a>. Synapse Indicator sangat membantu kita dalam melakukan pencarian file, folder ataupun aplikasi. Dengan posisi search button diatas tentu mirip dengan spotlight di MacOS. <!-- more --></p>
 
@@ -28,23 +28,22 @@
 
 <p>Tambahkan repository berikut ini sebelum install Synapse.</p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:noobslab/apps
-</span><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get install indicator-synapse</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock %}
+sudo add-apt-repository ppa:noobslab/apps
+sudo apt-get update
+sudo apt-get install indicator-synapse
+{% endcodeblock %}</p>
 
 <p>Jika sewaktu melakukan install Synapse Indicator anda menemui error itu karena maka solusinya adalah dengan mengganti distribution pada repository yang baru saja anda tambahkan dari Xenial menjadi Trusty. Maksud dari mengganti repo distribution tersebut adalah agar kita bisa install aplikasi di Ubuntu 16.04 dengan repo dari Ubuntu 14.04 Trusty Tahr.</p>
 
 <p>Cara mengganti repository distributionnya adalah dengan langkah berikut:
 <strong>System Settings > Software &amp; Updates > Other Software > Cari apps repository dari noobslab dan klik Edit > Change Distribution Value menjadi &ldquo;trusty&rdquo;</strong></p>
 
-<p><img src="/images/2017/01/27/systemsetting.png"></p>
+<p>{% img /images/2017/01/27/systemsetting.png %}</p>
 
-<p><img src="/images/2017/01/27/othersoft.png"></p>
+<p>{% img /images/2017/01/27/othersoft.png %}</p>
 
-<p><img src="/images/2017/01/27/editsource.png"></p>
+<p>{% img /images/2017/01/27/editsource.png %}</p>
 
 <p>Setelah itu update dengan &ldquo;sudo apt-get update&rdquo; dan install synapse nya &ldquo;sudo apt-get install indicator-synapse&rdquo;.</p>
 

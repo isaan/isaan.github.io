@@ -4,7 +4,7 @@
     <title><![CDATA[Category: github | Ikhsan Labs]]></title>
     <link href="https://ikhsanir.com/categories/github/atom.xml" rel="self"/>
     <link href="https://ikhsanir.com/"/>
-    <updated>2017-03-15T10:22:13+07:00</updated>
+    <updated>2017-03-15T10:40:49+07:00</updated>
     <id>https://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -18,7 +18,7 @@
         <link href="https://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru/"/>
         <updated>2016-11-30T09:44:45+07:00</updated>
         <id>https://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru</id>
-        <content type="html"><![CDATA[<p><img src="/images/2016/11/30/githome.jpg" title="github repository" ></p>
+        <content type="html"><![CDATA[<p>{%img /images/2016/11/30/githome.jpg github repository %}</p>
 
 <p>Setelah melakukan <a href="https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/">install git</a>, langkah selanjutnya adalah memulai untuk <strong>menggunakan Github dan membuat repository baru</strong> untuk aplikasi yang kita buat agar tersimpan dalam sistem versi kontrol dari <em>Github</em>.</p>
 
@@ -27,61 +27,61 @@
 
 <p>Pertama login di situs Github dengan username dan password anda, kemudian klik <strong>Create New Repository</strong>.</p>
 
-<p><img src="/images/2016/11/30/newrepo.png" title="github repository" ></p>
+<p>{%img /images/2016/11/30/newrepo.png github repository %}</p>
 
 <p>Isi nama repository dan deskripsinya. Di github ada dua jenis repository yaitu public dan private. Public artinya repository kita bisa diliat oleh semua orang sedangkan private itu nanti yg bisa liat cuma kita dan team yang kita tentukan saja, tetapi untuk private ini kita dikenakan biaya langganan $7/month. Untuk awal kita buat public terlebih dahulu untuk perkenalan dengan teknologinya, baru nanti kalau sudah mulai faham anda bisa <em>upgrade plan</em> ke paket private sendiri. Setelah itu klik <strong>Create Repository</strong></p>
 
-<p><img src="/images/2016/11/30/repo.gif" title="github repository" ></p>
+<p>{%img /images/2016/11/30/repo.gif github repository %}</p>
 
 <p>Akan muncul tampilan &ldquo;Quick setup&rdquo; seperti gambar diatas. Ada dua opsi untuk melakukan setup yaitu dengan HTTPS atau SSH. Pilih salah satu dan kemudian masuk buka terminal dari desktop Ubuntu anda. Masuk ke directory kerja anda (dimana saja terserah) untuk melakukan clone repository yang telah anda buat di Github. Contoh disini saya mengguakan SSH untuk melakukan clone:</p>
 
-<p><figure class='code'><figcaption><span>git clone </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git@github.com:isaan/timetracker.git</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git clone %}
+$ git clone git@github.com:isaan/timetracker.git
+{% endcodeblock %}</p>
 
-<p><img src="/images/2016/11/30/gitclone.png" title="git clone" ></p>
+<p>{%img /images/2016/11/30/gitclone.png git clone %}</p>
 
 <p>Lalu masuk ke directory yang telah di clone dari Github tersebut. Buat file apa saja untuk tes apakah repository sudah berfungsi.</p>
 
-<p><figure class='code'><figcaption><span>git clone </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ echo &ldquo;this is readme&rdquo; >> README.md</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git clone %}
+$ echo &ldquo;this is readme&rdquo; >> README.md
+{% endcodeblock %}</p>
 
 <p>Diatas saya membuat file README.md yang isinya adalah this is readme. Lalu tambahkan ke git, commit, dan push ke server git.</p>
 
-<p><figure class='code'><figcaption><span>git add </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git add README.md</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git add %}
+$ git add README.md
+{% endcodeblock %}</p>
 
-<p><figure class='code'><figcaption><span>git commit </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git commit -m &ldquo;add README&rdquo;</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git commit %}
+$ git commit -m &ldquo;add README&rdquo;
+{% endcodeblock %}</p>
 
-<p><figure class='code'><figcaption><span>git push </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git push %}
+$ git push -u origin master
+{% endcodeblock %}</p>
 
-<p><img src="/images/2016/11/30/gitadd.png" title="git add" ></p>
+<p>{%img /images/2016/11/30/gitadd.png git add %}</p>
 
 <p>Jika tidak ada error dan muncul notifikasi seperti diatas, harusnya file <em>README.md</em> yang baru saja dibuat akan terkirim ke server github. Sekarang cek ke repository github Anda, file tersebut sudah masuk ke repository. Artinya repositroy tersebut sudah siap digunakan untuk dilakukan development.</p>
 
-<p><img src="/images/2016/11/30/repository.png" title="repository" ></p>
+<p>{%img /images/2016/11/30/repository.png repository %}</p>
 
 <p>Selanjutnya kita akan mencoba menambah directory di repository yang telah kita clone dan melakukan push ke github lagi.</p>
 
-<p><figure class='code'><figcaption><span>git add </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ mkdir apps</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git add %}
+$ mkdir apps
+{% endcodeblock %}</p>
 
-<p><figure class='code'><figcaption><span>git commit </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git commit -m &ldquo;add directory&rdquo;</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git commit %}
+$ git commit -m &ldquo;add directory&rdquo;
+{% endcodeblock %}</p>
 
-<p><figure class='code'><figcaption><span>git push </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git push %}
+$ git push -u origin master
+{% endcodeblock %}</p>
 
-<p><img src="/images/2016/11/30/gitadddir.png" title="add directory" ></p>
+<p>{%img /images/2016/11/30/gitadddir.png add directory %}</p>
 
 <p>Ketika anda mengikuti mengikuti 3 cara diatas pasti directory yang dibuat tidak terkirim ke repository github. Walaupun 100 kali reload github tetap tidak ada directory yang baru saja dibuat ada disana. Mengapa? Karena directory yang dibuat tadi belum ada isinya alias kosong.</p>
 
@@ -89,27 +89,27 @@
 
 <p>Cara agar directory tersebut masuk ke repository di github adalah dengan mengisinya file. Sebagai contoh saya menambah file index.php didalam directory apps yang tadi dibuat.</p>
 
-<p><figure class='code'><figcaption><span>git add </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ touch apps/index.php</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git add %}
+$ touch apps/index.php
+{% endcodeblock %}</p>
 
 <p>Jangan lupa melakukan git add</p>
 
-<p><figure class='code'><figcaption><span>git add </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git add apps</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git add %}
+$ git add apps
+{% endcodeblock %}</p>
 
-<p><figure class='code'><figcaption><span>git commit </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git commit -m &ldquo;add index.php &amp; directory&rdquo;</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git commit %}
+$ git commit -m &ldquo;add index.php &amp; directory&rdquo;
+{% endcodeblock %}</p>
 
-<p><figure class='code'><figcaption><span>git push </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git push %}
+$ git push -u origin master
+{% endcodeblock %}</p>
 
 <p>Sekarang refresh repository Github anda, akan muncul directory beserta isi file didalamnya.</p>
 
-<p><img src="/images/2016/11/30/directory.png" title="add directory" ></p>
+<p>{%img /images/2016/11/30/directory.png add directory %}</p>
 
 <p>Sekian tutorial <em>menggunakan github dan membuat repository baru</em> kali ini, semoga bermanfaat. Salam.</p>
 
@@ -129,7 +129,7 @@ $ git add apps
         <link href="https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/"/>
         <updated>2016-11-29T16:03:14+07:00</updated>
         <id>https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04</id>
-        <content type="html"><![CDATA[<p><img src="/images/2016/11/29/gitlogo.jpg" title="git" ></p>
+        <content type="html"><![CDATA[<p>{%img /images/2016/11/29/gitlogo.jpg git %}</p>
 
 <p>Dalam pengembangan software (perangkat lunak) modern sangat memerlukan alat sistem kontrol versi atau yang lebih dikenal dengan <em>version control</em>. Sistem kontrol versi memungkinkan Anda untuk melacak software atau aplikasi yang anda kerjakan pada tingkat sumber. Salah satu sistem kontrol versi yang paling populer di kalangan developer adalah Git, sistem kontrol versi terdistribusi.</p>
 
@@ -142,11 +142,10 @@ $ git add apps
 
 <p>Ini adalah cara paling mudah karena anda dengan cepat memasang git dengan memanfaatkan repositori Ubuntu.</p>
 
-<p><figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get update
-</span><span class='line'>$ sudo apt-get install git</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock root@xboct:~$ %}
+$ sudo apt-get update
+$ sudo apt-get install git
+{% endcodeblock %}</p>
 
 <p><strong>2. Setup Git</strong></p>
 
@@ -154,39 +153,35 @@ $ git add apps
 
 <p>Jika sudah memilik akun Github anda langsung menuju config dibawah ini"</p>
 
-<p><figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git config &ndash;global user.name &ldquo;Your Name&rdquo; -> isi dengan username Github anda
-</span><span class='line'>$ git config &ndash;global user.email &ldquo;&lt;a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#121;&#x6f;&#117;&#x72;&#101;&#x6d;&#97;&#105;&#x6c;&#64;&#100;&#x6f;&#x6d;&#97;&#x69;&#x6e;&#46;&#x63;&#111;&#109;">&#121;&#x6f;&#117;&#114;&#x65;&#109;&#x61;&#105;&#108;&#x40;&#x64;&#x6f;&#x6d;&#x61;&#105;&#x6e;&#46;&#99;&#x6f;&#x6d;&lt;/a>&rdquo; -> isi dengan email yg anda daftarkan di Github</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock root@xboct:~$ %}
+$ git config &ndash;global user.name &ldquo;Your Name&rdquo; -> isi dengan username Github anda
+$ git config &ndash;global user.email &ldquo;<a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#121;&#111;&#117;&#114;&#101;&#109;&#x61;&#x69;&#x6c;&#x40;&#100;&#111;&#109;&#x61;&#105;&#110;&#46;&#99;&#111;&#x6d;">&#x79;&#111;&#117;&#x72;&#x65;&#109;&#97;&#105;&#108;&#64;&#100;&#x6f;&#109;&#97;&#x69;&#110;&#46;&#99;&#x6f;&#109;</a>&rdquo; -> isi dengan email yg anda daftarkan di Github
+{% endcodeblock %}</p>
 
 <p>Setelah sudah anda bisa melihat konfigurasi tersebut dengan command dibawah ini</p>
 
-<p><figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git config &ndash;list</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock root@xboct:~$ %}
+$ git config &ndash;list
+{% endcodeblock %}</p>
 
 <p>Maka akan tampil konfigurasi yang telah dilakukan</p>
 
-<p><figure class='code'><figcaption><span>git configuration </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>user.name=your name
-</span><span class='line'>user.emai=&lt;a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x79;&#x6f;&#x75;&#x72;&#x65;&#x6d;&#x61;&#x69;&#108;&#64;&#100;&#111;&#109;&#97;&#x69;&#x6e;&#x2e;&#99;&#x6f;&#109;">&#x79;&#x6f;&#117;&#114;&#101;&#109;&#x61;&#105;&#108;&#x40;&#x64;&#x6f;&#109;&#x61;&#105;&#x6e;&#46;&#99;&#x6f;&#109;&lt;/a></span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock git configuration %}
+user.name=your name
+user.emai=<a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x79;&#111;&#117;&#114;&#x65;&#109;&#97;&#105;&#x6c;&#64;&#x64;&#x6f;&#x6d;&#x61;&#x69;&#110;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#x6f;&#117;&#114;&#x65;&#109;&#97;&#x69;&#x6c;&#64;&#x64;&#111;&#109;&#x61;&#105;&#x6e;&#46;&#x63;&#x6f;&#x6d;</a>
+{% endcodeblock %}</p>
 
 <p>Konfigurasi dari akun Github tersebut disimpan di ~/.gitconfig. Untuk melihatnya ketik command:</p>
 
-<p><figure class='code'><figcaption><span>~/.gitconfig </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ cat ~/.gitconfig</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock ~/.gitconfig %}
+$ cat ~/.gitconfig
+{% endcodeblock %}</p>
 
-<p><figure class='code'><figcaption><span>~/.gitconfig </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[user]
-</span><span class='line'>    name = your name
-</span><span class='line'>    emai = &lt;a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#121;&#111;&#x75;&#x72;&#x65;&#x6d;&#x61;&#105;&#x6c;&#x40;&#x64;&#x6f;&#x6d;&#x61;&#105;&#x6e;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#x6f;&#117;&#x72;&#x65;&#x6d;&#97;&#105;&#x6c;&#64;&#100;&#x6f;&#109;&#x61;&#105;&#110;&#46;&#x63;&#111;&#x6d;&lt;/a></span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock ~/.gitconfig %}
+[user]
+    name = your name
+    emai = <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#121;&#111;&#x75;&#x72;&#101;&#x6d;&#97;&#105;&#108;&#64;&#100;&#x6f;&#x6d;&#97;&#105;&#x6e;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#117;&#x72;&#101;&#x6d;&#97;&#105;&#108;&#64;&#x64;&#x6f;&#109;&#97;&#105;&#110;&#x2e;&#99;&#111;&#x6d;</a>
+{% endcodeblock %}</p>
 
 <p>Sekarang Ubuntu 16.04 Desktop anda sudah terinstall git dan sudah siap digunakan.</p>
 ]]></content>
@@ -197,29 +192,29 @@ $ git add apps
         <link href="https://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github/"/>
         <updated>2016-11-29T10:15:21+07:00</updated>
         <id>https://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github</id>
-        <content type="html"><![CDATA[<p><img src="/images/2016/11/29/gitrepo.png" title="repository" ></p>
+        <content type="html"><![CDATA[<p>{%img /images/2016/11/29/gitrepo.png repository %}</p>
 
 <p><strong>Menghapus repository di github</strong> sebenarnya cukup mudah dan ga sampai 5 menit untuk melakukannya. Pertama, anda harus masuk ke <em>repository</em> terlebih dahulu misalnya</p>
 
 <!-- more -->
 
 
-<p><figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;a href="https://github.com/username/nama-repository">https://github.com/username/nama-repository&lt;/a></span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock root@xboct:~$ %}
+<a href="https://github.com/username/nama-repository">https://github.com/username/nama-repository</a>
+{% endcodeblock %}</p>
 
-<p><img src="/images/2016/11/29/repo1.png" title="repository" ></p>
+<p>{%img /images/2016/11/29/repo1.png repository %}</p>
 
 <p>Klik tab <em>Settings</em> di bagian paling kanan
-<figure class='code'><figcaption><span>root@xboct:~$ </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;a href="https://github.com/username/nama-repository/settings">https://github.com/username/nama-repository/settings&lt;/a></span></code></pre></td></tr></table></div></figure></p>
+{% codeblock root@xboct:~$ %}
+<a href="https://github.com/username/nama-repository/settings">https://github.com/username/nama-repository/settings</a>
+{% endcodeblock %}</p>
 
-<p><img src="/images/2016/11/29/repo2.png" title="repository" ></p>
+<p>{%img /images/2016/11/29/repo2.png repository %}</p>
 
 <p>Lalu scroll ke bawah, di bagian bawah terdapat <strong>&ldquo;Danger Zone&rdquo;</strong> yang ditandai dengan warna merah dan klik di tombol Delete this repository. Setelah itu akan muncul popup konfirmasi untuk menghapus repository tersebut dengan memasukkan nama repository nya.</p>
 
-<p><img src="/images/2016/11/29/repo3.png" title="repository" ></p>
+<p>{%img /images/2016/11/29/repo3.png repository %}</p>
 
 <p><strong>NOTE:</strong> Penting diingat bahwa ketika anda telah menghapus repository maka hal tersebut tidak bisa dibatalkan. Itu akan otomatis menghapus secara permanen repository termasuk wiki, isu, dan komentar didalamnya.</p>
 ]]></content>
