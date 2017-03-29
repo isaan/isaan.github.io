@@ -1,0 +1,15 @@
+<div class="row">
+
+    {% if site.oscailte.hire.visible.sidebar %}
+        <section class="hire--aside col-xs-12 col-sm-10 col-md-12">
+            {% include custom/hire.html %}
+        </section>
+    {% endif %}
+
+    {% include asides/social.html %} <!-- Bagian sosmed "follow me" -->
+
+    {% include_array default_asides %} <!-- Bagian asides tambahan yg di _config.yml" -->
+
+    <!-- {% include asides/twitter.html %} -->
+    <!-- {% include asides/social.html %} -->
+</div>
