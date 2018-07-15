@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://ikhsanir.com/sitemap.xml
+Sitemap: http://ikhsanir.com/sitemap.xml

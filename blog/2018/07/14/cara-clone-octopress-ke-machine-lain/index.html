@@ -9,13 +9,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Cara Menggunakan Github dan Membuat Repository Baru - Ikhsan Labs</title>
+        <title>Cara Clone Octopress ke Machine Lain - Ikhsan Labs</title>
         <meta name="author" content="Ikhsan">
         
-        <meta name="description" content="Menggunakan github repository untuk developing program.">
-        <meta name="keywords" content="git, github, repository, programming, code.">
+        <meta name="description" content="cara clone repository octopress ke komputer lain">
+        <meta name="keywords" content="clone octopress, cara clone octopress, cara termudah clone octopress">
         <meta name="viewport" content="width=device-width">
-        <link rel="canonical" href="http://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru">
+        <link rel="canonical" href="http://ikhsanir.com/blog/2018/07/14/cara-clone-octopress-ke-machine-lain">
 
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
@@ -79,7 +79,7 @@
                     <article class="article article--single">
     <header class="article__header">
     
-        <h1 class="article__title">Cara Menggunakan Github dan Membuat Repository Baru</h1>
+        <h1 class="article__title">Cara Clone Octopress ke Machine Lain</h1>
     
 
     
@@ -91,7 +91,7 @@
 
 
 
-    <time class="article__date pull-left" datetime="2016-11-30T09:44:45+07:00" pubdate><i class="fa fa-calendar"></i> Nov 30th, 2016</time>
+    <time class="article__date pull-left" datetime="2018-07-14T08:35:31+07:00" pubdate><i class="fa fa-calendar"></i> Jul 14th, 2018</time>
 
 
 
@@ -104,7 +104,7 @@
         
 
             
-                <li><a class='category' href='/categories/github/'>github</a></li>
+                <li><a class='category' href='/categories/octopress/'>octopress</a></li>
             
         
         </ul>
@@ -123,133 +123,85 @@
 
 
 
-    <p><img src="/images/2016/11/30/githome.jpg" title="github repository" ></p>
+    <p><img src="/images/2018/07/14/gambar.png"></p>
 
-<p>Setelah melakukan <a href="https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/">install git</a>, langkah selanjutnya adalah memulai untuk <strong>menggunakan Github dan membuat repository baru</strong> untuk aplikasi yang kita buat agar tersimpan dalam sistem versi kontrol dari <em>Github</em>.</p>
+<p><strong>Clone Octopress</strong> adalah melakukan copy data octopress yang berada di repository Github ke dalam machine lain. Clone Octopress ini dilakukan jika kita sebelumnya kita pernah install octopress dengan machine lain dan sekarang ingin melakukan clone ke laptop kita sendiri. <!-- more --></p>
 
-<!-- more -->
+<p>Dalam artikel ini saya akan membahas bagaimana caranya melakukan clone octopress ke machine / komputer lain. Bagi kamu yang belum tahu apa itu octopress, bisa baca dulu disini <a href="http://octopress.org">apa itu octopress?</a>.</p>
 
+<p>Artikel ini saya buat sesuai dengan case saya saat ini yaitu ketika saya menggunakan octopress pertama kali saya menggunakan PC, sedangkan sekarang saya menggunakan laptop pribadi saya. Untung data nya tersimpan utuh di dalam Github sehingga kapanpun akan menggunakan kembali tinggal clone saja repository tersebut.</p>
 
-<p>Pertama login di situs Github dengan username dan password anda, kemudian klik <strong>Create New Repository</strong>.</p>
+<p>Sebelum melakukan <strong>clone octopress</strong> tentu saja kamu harus install git dan ruby terlebih dahulu. Kamu bisa menggunakan rvm atau rbenv untuk menginstall ruby. Kalau saya saat ini menggunakan rbenv dan menggunakan sistem operasi Mac OS.</p>
 
-<p><img src="/images/2016/11/30/newrepo.png" title="github repository" ></p>
+<p>Setelah semua prerequisites (persyaratan) yang dibutuhkan ter install. Selanjutnya kamu langsung bisa melakukan clone repository github kamu. Oiya  yang perlu diperhatikan disini adalah kamu harus melakukan clone repository octopress anda yang terdapat Gemfile nya. Dalam hal ini di repository saya terdapat 2 branch, master (sebagai production), dan source (sebagai development). Untuk itu saya melakukan clone ke dalam branch source saya. Mungkin masing masing repository akan ada perbedaan disini, disesuaikan aja sesuai kebutuhan.</p>
 
-<p>Isi nama repository dan deskripsinya. Di github ada dua jenis repository yaitu public dan private. Public artinya repository kita bisa diliat oleh semua orang sedangkan private itu nanti yg bisa liat cuma kita dan team yang kita tentukan saja, tetapi untuk private ini kita dikenakan biaya langganan $7/month. Untuk awal kita buat public terlebih dahulu untuk perkenalan dengan teknologinya, baru nanti kalau sudah mulai faham anda bisa <em>upgrade plan</em> ke paket private sendiri. Setelah itu klik <strong>Create Repository</strong></p>
+<p>Format standar untuk melakukan clone adalah seperti ini :</p>
 
-<p><img src="/images/2016/11/30/repo.gif" title="github repository" ></p>
-
-<p>Akan muncul tampilan &ldquo;Quick setup&rdquo; seperti gambar diatas. Ada dua opsi untuk melakukan setup yaitu dengan HTTPS atau SSH. Pilih salah satu dan kemudian masuk buka terminal dari desktop Ubuntu anda. Masuk ke directory kerja anda (dimana saja terserah) untuk melakukan clone repository yang telah anda buat di Github. Contoh disini saya mengguakan SSH untuk melakukan clone:</p>
-
-<figure class='code'><figcaption><span>git clone </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git@github.com:isaan/timetracker.git</span></code></pre></td></tr></table></div></figure>
-
-
-<p><img src="/images/2016/11/30/gitclone.png" title="git clone" ></p>
-
-<p>Lalu masuk ke directory yang telah di clone dari Github tersebut. Buat file apa saja untuk tes apakah repository sudah berfungsi.</p>
-
-<figure class='code'><figcaption><span>git clone </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ echo "this is readme" >> README.md</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone (git repo kamu)
+</span><span class='line'>
+</span><span class='line'>git clone -b (nama branch) (git repo kamu)</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Diatas saya membuat file README.md yang isinya adalah this is readme. Lalu tambahkan ke git, commit, dan push ke server git.</p>
+<p>Saya menggunakan format yang nomer dua karena saya perlu clone di branch tertentu yang bernama source.</p>
 
-<figure class='code'><figcaption><span>git add </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git add README.md</span></code></pre></td></tr></table></div></figure>
-
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone -b source git@github.com:isaan/isaan.github.io.git</span></code></pre></td></tr></table></div></figure>
 
 
+<p>Tunggu beberapa saat hingga proses clone selesai. Setelah proses selesai masuk ke directory hasil clone tersebut dan pastikan ada Gemfile di dalamnya. Ketikkan command berikut ini di dalam directory tersebut</p>
 
-<figure class='code'><figcaption><span>git commit </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git commit -m "add README"</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>git push </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure>
-
-
-<p><img src="/images/2016/11/30/gitadd.png" title="git add" ></p>
-
-<p>Jika tidak ada error dan muncul notifikasi seperti diatas, harusnya file <em>README.md</em> yang baru saja dibuat akan terkirim ke server github. Sekarang cek ke repository github Anda, file tersebut sudah masuk ke repository. Artinya repositroy tersebut sudah siap digunakan untuk dilakukan development.</p>
-
-<p><img src="/images/2016/11/30/repository.png" title="repository" ></p>
-
-<p>Selanjutnya kita akan mencoba menambah directory di repository yang telah kita clone dan melakukan push ke github lagi.</p>
-
-<figure class='code'><figcaption><span>git add </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ mkdir apps</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install bundler
+</span><span class='line'>
+</span><span class='line'>rbenv rehash (jika kamu menggunakan rbenv, perintah ini diperlukan untuk bisa menggunakan bundle command)
+</span><span class='line'>
+</span><span class='line'>bundle install 
+</span><span class='line'>
+</span><span class='line'>rake install (di versi ruby terbaru terkadang muncul error, kamu bisa menambah perintah "bundle exec rake install")</span></code></pre></td></tr></table></div></figure>
 
 
+<p><img src="/images/2018/07/14/1.png"></p>
+
+<p>Jika kamu menggunakan custom theme sendiri alias bukan menggunakan theme default dari octopress biasanya akan muncul popup berikut ini.</p>
+
+<p><img src="/images/2018/07/14/2.png"></p>
+
+<p>Kamu bisa melakukan pilihan disini, ketik ‘y’ untuk kembali menggunakan theme default octopress, atau ketik ’n’ untuk tetap menggunakan theme custom kamu.</p>
+
+<p>Sampai proses ini seharusnya proses clone ke local machine kamu sudah selesai. Untuk melakukan testing apakah sudah berhasil atau belum, kamu bisa melakukan testing membuat post baru dengan perintah</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post[“(judul post)”]</span></code></pre></td></tr></table></div></figure>
 
 
-<figure class='code'><figcaption><span>git commit </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git commit -m "add directory"</span></code></pre></td></tr></table></div></figure>
+<p>Jika error tambahkan perintah bundle exec di depannya</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake new_post[“(judul post)”]</span></code></pre></td></tr></table></div></figure>
 
 
+<p>Untuk melihat hasil post nya bisa di tes di local browser kamu terlebih dahulu.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake preview atau bundle exec rake preview</span></code></pre></td></tr></table></div></figure>
 
 
-<figure class='code'><figcaption><span>git push </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure>
+<p>Buka browser kamu dengan alamat berikut localhost:4000. Jika langkah langkah clone sudah benar harusnya sudah muncul hasilnya.</p>
 
+<p>Ini adalah halaman home di local server development.
+<img src="/images/2018/07/14/3.png"></p>
 
-<p><img src="/images/2016/11/30/gitadddir.png" title="add directory" ></p>
-
-<p>Ketika anda mengikuti mengikuti 3 cara diatas pasti directory yang dibuat tidak terkirim ke repository github. Walaupun 100 kali reload github tetap tidak ada directory yang baru saja dibuat ada disana. Mengapa? Karena directory yang dibuat tadi belum ada isinya alias kosong.</p>
-
-<p>Github tidak bisa menambah directory yang didalamnya tidak ada isinya, atau dengan kata lain git membacanya sebagai null. Jadi ketika anda melakukan commit dan push pasti git akan mengeluarkan notifikasi kalau branch repository nya up-to-date.</p>
-
-<p>Cara agar directory tersebut masuk ke repository di github adalah dengan mengisinya file. Sebagai contoh saya menambah file index.php didalam directory apps yang tadi dibuat.</p>
-
-<figure class='code'><figcaption><span>git add </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ touch apps/index.php</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Jangan lupa melakukan git add</p>
-
-<figure class='code'><figcaption><span>git add </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git add apps</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>git commit </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git commit -m "add index.php & directory"</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>git push </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Sekarang refresh repository Github anda, akan muncul directory beserta isi file didalamnya.</p>
-
-<p><img src="/images/2016/11/30/directory.png" title="add directory" ></p>
-
-<p>Sekian tutorial <em>menggunakan github dan membuat repository baru</em> kali ini, semoga bermanfaat. Salam.</p>
-
-<!-- ```sh
-
-$ cd apps
-$ touch apps/index.html
-$ git add apps
-
-``` -->
-
+<p>Ini adalah detail page nya di local server development.
+<img src="/images/2018/07/14/3.png"></p>
 
 
 
@@ -455,8 +407,8 @@ $ git add apps
     
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru/';
-        var disqus_url = 'http://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru/';
+        var disqus_identifier = 'http://ikhsanir.com/blog/2018/07/14/cara-clone-octopress-ke-machine-lain/';
+        var disqus_url = 'http://ikhsanir.com/blog/2018/07/14/cara-clone-octopress-ke-machine-lain/';
         var disqus_script = 'embed.js';
     
     (function () {

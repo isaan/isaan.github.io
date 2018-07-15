@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
     <title><![CDATA[Ikhsan Labs]]></title>
-    <link href="https://ikhsanir.com/atom.xml" rel="self"/>
-    <link href="https://ikhsanir.com/"/>
-    <updated>2017-03-15T17:29:38+07:00</updated>
-    <id>https://ikhsanir.com/</id>
+    <link href="http://ikhsanir.com/atom.xml" rel="self"/>
+    <link href="http://ikhsanir.com/"/>
+    <updated>2018-07-15T13:17:13+07:00</updated>
+    <id>http://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
         
@@ -14,11 +14,98 @@
 
     
     <entry>
+        <title type="html"><![CDATA[Cara Clone Octopress ke Machine Lain]]></title>
+        <link href="http://ikhsanir.com/blog/2018/07/14/cara-clone-octopress-ke-machine-lain/"/>
+        <updated>2018-07-14T08:35:31+07:00</updated>
+        <id>http://ikhsanir.com/blog/2018/07/14/cara-clone-octopress-ke-machine-lain</id>
+        <content type="html"><![CDATA[<p><img src="http://ikhsanir.com/images/2018/07/14/gambar.png"></p>
+
+<p><strong>Clone Octopress</strong> adalah melakukan copy data octopress yang berada di repository Github ke dalam machine lain. Clone Octopress ini dilakukan jika kita sebelumnya kita pernah install octopress dengan machine lain dan sekarang ingin melakukan clone ke laptop kita sendiri. <!-- more --></p>
+
+<p>Dalam artikel ini saya akan membahas bagaimana caranya melakukan clone octopress ke machine / komputer lain. Bagi kamu yang belum tahu apa itu octopress, bisa baca dulu disini <a href="http://octopress.org">apa itu octopress?</a>.</p>
+
+<p>Artikel ini saya buat sesuai dengan case saya saat ini yaitu ketika saya menggunakan octopress pertama kali saya menggunakan PC, sedangkan sekarang saya menggunakan laptop pribadi saya. Untung data nya tersimpan utuh di dalam Github sehingga kapanpun akan menggunakan kembali tinggal clone saja repository tersebut.</p>
+
+<p>Sebelum melakukan <strong>clone octopress</strong> tentu saja kamu harus install git dan ruby terlebih dahulu. Kamu bisa menggunakan rvm atau rbenv untuk menginstall ruby. Kalau saya saat ini menggunakan rbenv dan menggunakan sistem operasi Mac OS.</p>
+
+<p>Setelah semua prerequisites (persyaratan) yang dibutuhkan ter install. Selanjutnya kamu langsung bisa melakukan clone repository github kamu. Oiya  yang perlu diperhatikan disini adalah kamu harus melakukan clone repository octopress anda yang terdapat Gemfile nya. Dalam hal ini di repository saya terdapat 2 branch, master (sebagai production), dan source (sebagai development). Untuk itu saya melakukan clone ke dalam branch source saya. Mungkin masing masing repository akan ada perbedaan disini, disesuaikan aja sesuai kebutuhan.</p>
+
+<p>Format standar untuk melakukan clone adalah seperti ini :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone (git repo kamu)
+</span><span class='line'>
+</span><span class='line'>git clone -b (nama branch) (git repo kamu)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Saya menggunakan format yang nomer dua karena saya perlu clone di branch tertentu yang bernama source.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone -b source git@github.com:isaan/isaan.github.io.git</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Tunggu beberapa saat hingga proses clone selesai. Setelah proses selesai masuk ke directory hasil clone tersebut dan pastikan ada Gemfile di dalamnya. Ketikkan command berikut ini di dalam directory tersebut</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem install bundler
+</span><span class='line'>
+</span><span class='line'>rbenv rehash (jika kamu menggunakan rbenv, perintah ini diperlukan untuk bisa menggunakan bundle command)
+</span><span class='line'>
+</span><span class='line'>bundle install 
+</span><span class='line'>
+</span><span class='line'>rake install (di versi ruby terbaru terkadang muncul error, kamu bisa menambah perintah "bundle exec rake install")</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="http://ikhsanir.com/images/2018/07/14/1.png"></p>
+
+<p>Jika kamu menggunakan custom theme sendiri alias bukan menggunakan theme default dari octopress biasanya akan muncul popup berikut ini.</p>
+
+<p><img src="http://ikhsanir.com/images/2018/07/14/2.png"></p>
+
+<p>Kamu bisa melakukan pilihan disini, ketik ‘y’ untuk kembali menggunakan theme default octopress, atau ketik ’n’ untuk tetap menggunakan theme custom kamu.</p>
+
+<p>Sampai proses ini seharusnya proses clone ke local machine kamu sudah selesai. Untuk melakukan testing apakah sudah berhasil atau belum, kamu bisa melakukan testing membuat post baru dengan perintah</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post[“(judul post)”]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Jika error tambahkan perintah bundle exec di depannya</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake new_post[“(judul post)”]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Untuk melihat hasil post nya bisa di tes di local browser kamu terlebih dahulu.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake preview atau bundle exec rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Buka browser kamu dengan alamat berikut localhost:4000. Jika langkah langkah clone sudah benar harusnya sudah muncul hasilnya.</p>
+
+<p>Ini adalah halaman home di local server development.
+<img src="http://ikhsanir.com/images/2018/07/14/3.png"></p>
+
+<p>Ini adalah detail page nya di local server development.
+<img src="http://ikhsanir.com/images/2018/07/14/3.png"></p>
+]]></content>
+    </entry>
+    
+    <entry>
         <title type="html"><![CDATA[Cara Install Synapse Indicator di Ubuntu 16.04]]></title>
-        <link href="https://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04/"/>
+        <link href="http://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04/"/>
         <updated>2017-01-27T10:50:41+07:00</updated>
-        <id>https://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2017/01/27/synapseindicator.jpg"></p>
+        <id>http://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04</id>
+        <content type="html"><![CDATA[<p><img src="http://ikhsanir.com/images/2017/01/27/synapseindicator.jpg"></p>
 
 <p><strong>Synapse Indicator</strong> adalah aplikasi alternatif Spotlight yang dibuat oleh <a href="https://plus.google.com/+TomBeckmann/posts">Tom Beckmann</a>. Synapse Indicator sangat membantu kita dalam melakukan pencarian file, folder ataupun aplikasi. Dengan posisi search button diatas tentu mirip dengan spotlight di MacOS. <!-- more --></p>
 
@@ -41,11 +128,11 @@
 <p>Cara mengganti repository distributionnya adalah dengan langkah berikut:
 <strong>System Settings > Software &amp; Updates > Other Software > Cari apps repository dari noobslab dan klik Edit > Change Distribution Value menjadi &ldquo;trusty&rdquo;</strong></p>
 
-<p><img src="https://ikhsanir.com/images/2017/01/27/systemsetting.png"></p>
+<p><img src="http://ikhsanir.com/images/2017/01/27/systemsetting.png"></p>
 
-<p><img src="https://ikhsanir.com/images/2017/01/27/othersoft.png"></p>
+<p><img src="http://ikhsanir.com/images/2017/01/27/othersoft.png"></p>
 
-<p><img src="https://ikhsanir.com/images/2017/01/27/editsource.png"></p>
+<p><img src="http://ikhsanir.com/images/2017/01/27/editsource.png"></p>
 
 <p>Setelah itu update dengan &ldquo;sudo apt-get update&rdquo; dan install synapse nya &ldquo;sudo apt-get install indicator-synapse&rdquo;.</p>
 
@@ -57,10 +144,10 @@
     
     <entry>
         <title type="html"><![CDATA[Membuat Video Embed Responsive di Octopress]]></title>
-        <link href="https://ikhsanir.com/blog/2016/12/27/membuat-video-embed-responsive-di-octopress/"/>
+        <link href="http://ikhsanir.com/blog/2016/12/27/membuat-video-embed-responsive-di-octopress/"/>
         <updated>2016-12-27T17:04:25+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/12/27/membuat-video-embed-responsive-di-octopress</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/12/27/octocode.jpg"></p>
+        <id>http://ikhsanir.com/blog/2016/12/27/membuat-video-embed-responsive-di-octopress</id>
+        <content type="html"><![CDATA[<p><img src="http://ikhsanir.com/images/2016/12/27/octocode.jpg"></p>
 
 <p>Dalam framework Octopress, untuk melakukan penulisan artikel beda dengan framework blogging yang lain. Di Octopress menggunakan syntax markdown. Jadi ketika kita ingin memasukkan misalkan gambar maka menggunakan syntax &ldquo;img (lokasi gambar)&rdquo;.</p>
 
@@ -215,7 +302,7 @@
 
 <p>Syntax penulisan embed vimeo.</p>
 
-<p><img src="https://ikhsanir.com/images/2016/12/27/vimeo.png"></p>
+<p><img src="http://ikhsanir.com/images/2016/12/27/vimeo.png"></p>
 
 <p>Contoh Vimeo Embed:</p>
 
@@ -226,7 +313,7 @@
 
 <p>Syntax penulisan embed youtube.</p>
 
-<p><img src="https://ikhsanir.com/images/2016/12/27/youtube.png"></p>
+<p><img src="http://ikhsanir.com/images/2016/12/27/youtube.png"></p>
 
 <p>Contoh Youtube Embed:</p>
 
@@ -237,7 +324,7 @@
 
 <p>Syntax penulisan embed dailymotion.</p>
 
-<p><img src="https://ikhsanir.com/images/2016/12/27/dailymotion.png"></p>
+<p><img src="http://ikhsanir.com/images/2016/12/27/dailymotion.png"></p>
 
 <p>Contoh Dailymotion Embed:</p>
 
@@ -252,10 +339,10 @@
     
     <entry>
         <title type="html"><![CDATA[Install Ruby on Rails dengan RVM di Ubuntu 16.04]]></title>
-        <link href="https://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/"/>
+        <link href="http://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/"/>
         <updated>2016-12-21T09:42:28+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/12/21/rubyonrails.jpg" title="ruby on rails" ></p>
+        <id>http://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04</id>
+        <content type="html"><![CDATA[<p><img src="http://ikhsanir.com/images/2016/12/21/rubyonrails.jpg" title="ruby on rails" ></p>
 
 <p><strong>Ruby on Rails</strong> adalah application stacks yang cukup populer di kalangan developer untuk membuat situs dan web apps. Ruby adalah bahasa pemrograman yang dikombinasikan dengan Rails framework, yang membuat development aplikasi menjadi sederhana.</p>
 
@@ -346,10 +433,10 @@
     
     <entry>
         <title type="html"><![CDATA[Cara Menggunakan Github dan Membuat Repository Baru]]></title>
-        <link href="https://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru/"/>
+        <link href="http://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru/"/>
         <updated>2016-11-30T09:44:45+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/30/githome.jpg" title="github repository" ></p>
+        <id>http://ikhsanir.com/blog/2016/11/30/cara-menggunakan-github-dan-membuat-repository-baru</id>
+        <content type="html"><![CDATA[<p><img src="http://ikhsanir.com/images/2016/11/30/githome.jpg" title="github repository" ></p>
 
 <p>Setelah melakukan <a href="https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/">install git</a>, langkah selanjutnya adalah memulai untuk <strong>menggunakan Github dan membuat repository baru</strong> untuk aplikasi yang kita buat agar tersimpan dalam sistem versi kontrol dari <em>Github</em>.</p>
 
@@ -358,11 +445,11 @@
 
 <p>Pertama login di situs Github dengan username dan password anda, kemudian klik <strong>Create New Repository</strong>.</p>
 
-<p><img src="https://ikhsanir.com/images/2016/11/30/newrepo.png" title="github repository" ></p>
+<p><img src="http://ikhsanir.com/images/2016/11/30/newrepo.png" title="github repository" ></p>
 
 <p>Isi nama repository dan deskripsinya. Di github ada dua jenis repository yaitu public dan private. Public artinya repository kita bisa diliat oleh semua orang sedangkan private itu nanti yg bisa liat cuma kita dan team yang kita tentukan saja, tetapi untuk private ini kita dikenakan biaya langganan $7/month. Untuk awal kita buat public terlebih dahulu untuk perkenalan dengan teknologinya, baru nanti kalau sudah mulai faham anda bisa <em>upgrade plan</em> ke paket private sendiri. Setelah itu klik <strong>Create Repository</strong></p>
 
-<p><img src="https://ikhsanir.com/images/2016/11/30/repo.gif" title="github repository" ></p>
+<p><img src="http://ikhsanir.com/images/2016/11/30/repo.gif" title="github repository" ></p>
 
 <p>Akan muncul tampilan &ldquo;Quick setup&rdquo; seperti gambar diatas. Ada dua opsi untuk melakukan setup yaitu dengan HTTPS atau SSH. Pilih salah satu dan kemudian masuk buka terminal dari desktop Ubuntu anda. Masuk ke directory kerja anda (dimana saja terserah) untuk melakukan clone repository yang telah anda buat di Github. Contoh disini saya mengguakan SSH untuk melakukan clone:</p>
 
@@ -371,7 +458,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone git@github.com:isaan/timetracker.git</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="https://ikhsanir.com/images/2016/11/30/gitclone.png" title="git clone" ></p>
+<p><img src="http://ikhsanir.com/images/2016/11/30/gitclone.png" title="git clone" ></p>
 
 <p>Lalu masuk ke directory yang telah di clone dari Github tersebut. Buat file apa saja untuk tes apakah repository sudah berfungsi.</p>
 
@@ -401,11 +488,11 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="https://ikhsanir.com/images/2016/11/30/gitadd.png" title="git add" ></p>
+<p><img src="http://ikhsanir.com/images/2016/11/30/gitadd.png" title="git add" ></p>
 
 <p>Jika tidak ada error dan muncul notifikasi seperti diatas, harusnya file <em>README.md</em> yang baru saja dibuat akan terkirim ke server github. Sekarang cek ke repository github Anda, file tersebut sudah masuk ke repository. Artinya repositroy tersebut sudah siap digunakan untuk dilakukan development.</p>
 
-<p><img src="https://ikhsanir.com/images/2016/11/30/repository.png" title="repository" ></p>
+<p><img src="http://ikhsanir.com/images/2016/11/30/repository.png" title="repository" ></p>
 
 <p>Selanjutnya kita akan mencoba menambah directory di repository yang telah kita clone dan melakukan push ke github lagi.</p>
 
@@ -428,7 +515,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ git push -u origin master</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="https://ikhsanir.com/images/2016/11/30/gitadddir.png" title="add directory" ></p>
+<p><img src="http://ikhsanir.com/images/2016/11/30/gitadddir.png" title="add directory" ></p>
 
 <p>Ketika anda mengikuti mengikuti 3 cara diatas pasti directory yang dibuat tidak terkirim ke repository github. Walaupun 100 kali reload github tetap tidak ada directory yang baru saja dibuat ada disana. Mengapa? Karena directory yang dibuat tadi belum ada isinya alias kosong.</p>
 
@@ -464,7 +551,7 @@
 
 <p>Sekarang refresh repository Github anda, akan muncul directory beserta isi file didalamnya.</p>
 
-<p><img src="https://ikhsanir.com/images/2016/11/30/directory.png" title="add directory" ></p>
+<p><img src="http://ikhsanir.com/images/2016/11/30/directory.png" title="add directory" ></p>
 
 <p>Sekian tutorial <em>menggunakan github dan membuat repository baru</em> kali ini, semoga bermanfaat. Salam.</p>
 
@@ -481,10 +568,10 @@ $ git add apps
     
     <entry>
         <title type="html"><![CDATA[Cara Install Git di Ubuntu 16.04]]></title>
-        <link href="https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/"/>
+        <link href="http://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04/"/>
         <updated>2016-11-29T16:03:14+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/29/gitlogo.jpg" title="git" ></p>
+        <id>http://ikhsanir.com/blog/2016/11/29/cara-install-git-di-ubuntu-16-dot-04</id>
+        <content type="html"><![CDATA[<p><img src="http://ikhsanir.com/images/2016/11/29/gitlogo.jpg" title="git" ></p>
 
 <p>Dalam pengembangan software (perangkat lunak) modern sangat memerlukan alat sistem kontrol versi atau yang lebih dikenal dengan <em>version control</em>. Sistem kontrol versi memungkinkan Anda untuk melacak software atau aplikasi yang anda kerjakan pada tingkat sumber. Salah satu sistem kontrol versi yang paling populer di kalangan developer adalah Git, sistem kontrol versi terdistribusi.</p>
 
@@ -557,10 +644,10 @@ $ git add apps
     
     <entry>
         <title type="html"><![CDATA[Cara Menghapus Repository di Github]]></title>
-        <link href="https://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github/"/>
+        <link href="http://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github/"/>
         <updated>2016-11-29T10:15:21+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/29/gitrepo.png" title="repository" ></p>
+        <id>http://ikhsanir.com/blog/2016/11/29/cara-menghapus-repository-di-github</id>
+        <content type="html"><![CDATA[<p><img src="http://ikhsanir.com/images/2016/11/29/gitrepo.png" title="repository" ></p>
 
 <p><strong>Menghapus repository di github</strong> sebenarnya cukup mudah dan ga sampai 5 menit untuk melakukannya. Pertama, anda harus masuk ke <em>repository</em> terlebih dahulu misalnya</p>
 
@@ -574,7 +661,7 @@ $ git add apps
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/username/nama-repository</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="https://ikhsanir.com/images/2016/11/29/repo1.png" title="repository" ></p>
+<p><img src="http://ikhsanir.com/images/2016/11/29/repo1.png" title="repository" ></p>
 
 <p>Klik tab <em>Settings</em> di bagian paling kanan</p>
 
@@ -583,11 +670,11 @@ $ git add apps
 </pre></td><td class='code'><pre><code class=''><span class='line'>https://github.com/username/nama-repository/settings</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="https://ikhsanir.com/images/2016/11/29/repo2.png" title="repository" ></p>
+<p><img src="http://ikhsanir.com/images/2016/11/29/repo2.png" title="repository" ></p>
 
 <p>Lalu scroll ke bawah, di bagian bawah terdapat <strong>&ldquo;Danger Zone&rdquo;</strong> yang ditandai dengan warna merah dan klik di tombol Delete this repository. Setelah itu akan muncul popup konfirmasi untuk menghapus repository tersebut dengan memasukkan nama repository nya.</p>
 
-<p><img src="https://ikhsanir.com/images/2016/11/29/repo3.png" title="repository" ></p>
+<p><img src="http://ikhsanir.com/images/2016/11/29/repo3.png" title="repository" ></p>
 
 <p><strong>NOTE:</strong> Penting diingat bahwa ketika anda telah menghapus repository maka hal tersebut tidak bisa dibatalkan. Itu akan otomatis menghapus secara permanen repository termasuk wiki, isu, dan komentar didalamnya.</p>
 ]]></content>
@@ -595,10 +682,10 @@ $ git add apps
     
     <entry>
         <title type="html"><![CDATA[Mencoba Plugin di Octopress]]></title>
-        <link href="https://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress/"/>
+        <link href="http://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress/"/>
         <updated>2016-11-08T10:43:40+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/08/octopress.jpg" title="octopress" ></p>
+        <id>http://ikhsanir.com/blog/2016/11/08/mencoba-plugin-di-octopress</id>
+        <content type="html"><![CDATA[<p><img src="http://ikhsanir.com/images/2016/11/08/octopress.jpg" title="octopress" ></p>
 
 <p>Beberapa waktu yang lalu saya baru saja menginstall Octopress, yaitu blogging framework yang terkenal untuk hacker (katanya seperti itu :D). Oke langsung saja, jadi di Octopress ada beberapa plugin yang bisa digunakan untuk ditambahkan di post artikel. Berikut adalah beberapa pluginnya.</p>
 
@@ -624,7 +711,7 @@ Plugin ini memungkinkan kamu untuk menambah gambar di dalam post artikel. Di oct
 <p>Dan yang kedua adalah memasukkan gambar kita sendiri dari Local. Caranya yaitu dengan copy gambar yang akan di post misal dari hasil screenshot ke dalam folder &lsquo;/source/images&rsquo;. Setelah itu url pada gambar ubah menjadi /images/namagambar.png.</p>
 
 <p>Contoh Gambar Local:
-<img src="https://ikhsanir.com/images/2016/11/08/screenshot.png" title="Octopress" ></p>
+<img src="http://ikhsanir.com/images/2016/11/08/screenshot.png" title="Octopress" ></p>
 
 <p>Bedanya adalah ketika memasukkan gambar dari link web lain otomatis itu bukan milik kita tetapi milik gambar orang tertentu, dan kita bisa terkena hak cipta jika suatu saat yang punya gambar menuntut. Sedangkan jika memasukkan gambar sendiri itu artinya gambar milik kita sendiri misal dari hasil Screenshot, foto objek tertentu, dll. Cara membedakan apakah gambar itu diambil dari link web lain atau upload sendiri adalah dengan klik kanan pada gambar dan open image in new tab.</p>
 
@@ -636,7 +723,7 @@ Plugin ini memungkinkan kamu untuk memasukan video mp4 yang di encode dalam form
 <p><strong>4. Include Code</strong>
 Untuk menampilkan isi code tertentu, arahkan path directory tersebut. Default dari Octopress adalah di dalam directory &lsquo;source/&hellip;.&rsquo;</p>
 
-<figure class='code'><figcaption><span> (github.js)</span> <a href='https://ikhsanir.com/./javascripts/github.js'>download</a></figcaption>
+<figure class='code'><figcaption><span> (github.js)</span> <a href='http://ikhsanir.com/./javascripts/github.js'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -732,10 +819,10 @@ Contoh:</p>
     
     <entry>
         <title type="html"><![CDATA[Introduction]]></title>
-        <link href="https://ikhsanir.com/blog/2016/11/04/introduction/"/>
+        <link href="http://ikhsanir.com/blog/2016/11/04/introduction/"/>
         <updated>2016-11-04T11:12:06+07:00</updated>
-        <id>https://ikhsanir.com/blog/2016/11/04/introduction</id>
-        <content type="html"><![CDATA[<p><img src="https://ikhsanir.com/images/2016/11/04/github.jpg" title="introduction" ></p>
+        <id>http://ikhsanir.com/blog/2016/11/04/introduction</id>
+        <content type="html"><![CDATA[<p><img src="http://ikhsanir.com/images/2016/11/04/github.jpg" title="introduction" ></p>
 
 <!-- more -->
 
