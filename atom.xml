@@ -4,7 +4,7 @@
     <title><![CDATA[Ikhsan Labs]]></title>
     <link href="http://ikhsanir.com/atom.xml" rel="self"/>
     <link href="http://ikhsanir.com/"/>
-    <updated>2018-07-15T13:17:13+07:00</updated>
+    <updated>2018-07-19T14:16:42+07:00</updated>
     <id>http://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -90,7 +90,7 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>rake preview atau bundle exec rake preview</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Buka browser kamu dengan alamat berikut localhost:4000. Jika langkah langkah clone sudah benar harusnya sudah muncul hasilnya.</p>
+<p>Buka browser kamu dengan alamat berikut ini localhost:4000. Jika langkah langkah clone sudah benar harusnya sudah muncul hasilnya.</p>
 
 <p>Ini adalah halaman home di local server development.
 <img src="http://ikhsanir.com/images/2018/07/14/3.png"></p>
