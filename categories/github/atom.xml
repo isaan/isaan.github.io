@@ -4,7 +4,7 @@
     <title><![CDATA[Category: github | Ikhsan Labs]]></title>
     <link href="http://ikhsanir.com/categories/github/atom.xml" rel="self"/>
     <link href="http://ikhsanir.com/"/>
-    <updated>2018-07-19T14:18:04+07:00</updated>
+    <updated>2018-07-20T16:44:12+07:00</updated>
     <id>http://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -155,7 +155,7 @@ $ sudo apt-get install git
 
 <p>{% codeblock root@xboct:~$ %}
 $ git config &ndash;global user.name &ldquo;Your Name&rdquo; -> isi dengan username Github anda
-$ git config &ndash;global user.email &ldquo;<a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#121;&#111;&#x75;&#x72;&#x65;&#x6d;&#97;&#105;&#x6c;&#x40;&#100;&#111;&#109;&#97;&#x69;&#110;&#46;&#99;&#111;&#x6d;">&#121;&#111;&#117;&#114;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#x64;&#x6f;&#x6d;&#97;&#105;&#x6e;&#46;&#99;&#x6f;&#x6d;</a>&rdquo; -> isi dengan email yg anda daftarkan di Github
+$ git config &ndash;global user.email &ldquo;<a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#121;&#x6f;&#x75;&#114;&#101;&#109;&#97;&#105;&#x6c;&#64;&#100;&#x6f;&#x6d;&#97;&#x69;&#110;&#46;&#x63;&#111;&#x6d;">&#121;&#x6f;&#117;&#114;&#101;&#109;&#97;&#105;&#108;&#x40;&#100;&#111;&#109;&#x61;&#105;&#x6e;&#x2e;&#x63;&#x6f;&#x6d;</a>&rdquo; -> isi dengan email yg anda daftarkan di Github
 {% endcodeblock %}</p>
 
 <p>Setelah sudah anda bisa melihat konfigurasi tersebut dengan command dibawah ini</p>
@@ -168,7 +168,7 @@ $ git config &ndash;list
 
 <p>{% codeblock git configuration %}
 user.name=your name
-user.emai=<a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x79;&#111;&#x75;&#x72;&#101;&#x6d;&#x61;&#105;&#x6c;&#x40;&#100;&#111;&#x6d;&#x61;&#105;&#110;&#46;&#99;&#x6f;&#x6d;">&#121;&#x6f;&#117;&#114;&#x65;&#x6d;&#97;&#x69;&#108;&#x40;&#x64;&#111;&#x6d;&#97;&#x69;&#x6e;&#46;&#99;&#x6f;&#x6d;</a>
+user.emai=<a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x79;&#111;&#x75;&#114;&#x65;&#109;&#97;&#x69;&#108;&#64;&#x64;&#111;&#109;&#97;&#105;&#110;&#x2e;&#x63;&#111;&#109;">&#x79;&#x6f;&#x75;&#114;&#101;&#109;&#97;&#x69;&#x6c;&#64;&#x64;&#111;&#109;&#97;&#105;&#x6e;&#46;&#99;&#111;&#x6d;</a>
 {% endcodeblock %}</p>
 
 <p>Konfigurasi dari akun Github tersebut disimpan di ~/.gitconfig. Untuk melihatnya ketik command:</p>
@@ -180,7 +180,7 @@ $ cat ~/.gitconfig
 <p>{% codeblock ~/.gitconfig %}
 [user]
     name = your name
-    emai = <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#x79;&#111;&#117;&#114;&#101;&#x6d;&#x61;&#105;&#108;&#64;&#100;&#x6f;&#x6d;&#97;&#x69;&#x6e;&#x2e;&#x63;&#111;&#x6d;">&#x79;&#111;&#117;&#114;&#x65;&#109;&#97;&#105;&#108;&#x40;&#x64;&#x6f;&#x6d;&#x61;&#105;&#110;&#46;&#x63;&#111;&#x6d;</a>
+    emai = <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#58;&#x79;&#x6f;&#117;&#x72;&#101;&#109;&#97;&#105;&#108;&#64;&#x64;&#x6f;&#x6d;&#x61;&#x69;&#x6e;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#x6f;&#x75;&#x72;&#x65;&#x6d;&#97;&#x69;&#108;&#64;&#x64;&#x6f;&#109;&#97;&#x69;&#110;&#46;&#x63;&#x6f;&#109;</a>
 {% endcodeblock %}</p>
 
 <p>Sekarang Ubuntu 16.04 Desktop anda sudah terinstall git dan sudah siap digunakan.</p>

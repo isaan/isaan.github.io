@@ -131,7 +131,7 @@
 
 <p>Artikel ini saya buat sesuai dengan case saya saat ini yaitu ketika saya menggunakan octopress pertama kali saya menggunakan PC, sedangkan sekarang saya menggunakan laptop pribadi saya. Untung data nya tersimpan utuh di dalam Github sehingga kapanpun akan menggunakan kembali tinggal clone saja repository tersebut.</p>
 
-<p>Sebelum melakukan <strong>clone octopress</strong> tentu saja kamu harus install git dan ruby terlebih dahulu. Kamu bisa menggunakan rvm atau rbenv untuk menginstall ruby. Kalau saya saat ini menggunakan rbenv dan menggunakan sistem operasi Mac OS.</p>
+<p>Sebelum melakukan <em>clone octopress</em> tentu saja kamu harus install git dan ruby terlebih dahulu. Kamu bisa menggunakan rvm atau rbenv untuk menginstall ruby. Kalau saya saat ini menggunakan rbenv dan menggunakan sistem operasi Mac OS.</p>
 
 <p>Setelah semua prerequisites (persyaratan) yang dibutuhkan ter install. Selanjutnya kamu langsung bisa melakukan clone repository github kamu. Oiya  yang perlu diperhatikan disini adalah kamu harus melakukan clone repository octopress anda yang terdapat Gemfile nya. Dalam hal ini di repository saya terdapat 2 branch, master (sebagai production), dan source (sebagai development). Untuk itu saya melakukan clone ke dalam branch source saya. Mungkin masing masing repository akan ada perbedaan disini, disesuaikan aja sesuai kebutuhan.</p>
 
@@ -145,13 +145,49 @@
 </span><span class='line'>git clone -b (nama branch) (git repo kamu)</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Saya menggunakan format yang nomer dua karena saya perlu clone di branch tertentu yang bernama source.</p>
+<p>Saya menggunakan format yang nomer dua karena saya perlu clone di branch tertentu.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>git clone -b source git@github.com:isaan/isaan.github.io.git</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Tunggu beberapa saat hingga proses clone selesai. Setelah proses selesai masuk ke directory hasil clone tersebut dan pastikan ada Gemfile di dalamnya. Ketikkan command berikut ini di dalam directory tersebut</p>
+<p>Setelah selesai clone masuk ke directory tersebut dan clone branch master dan taruh di directory <em>_deploy</em>. Hal ini sangat diperlukan karena sewaktu deploy akan menggunakan directory <em>_deploy</em> ini. Jadi struktur directory nya nanti adalah :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>hasil clone dari branch source akan disimpan disini
+</span><span class='line'>/User/Projects/Directory_Clone_Source
+</span><span class='line'>
+</span><span class='line'>hasil clone dari branch master akan berada di dalam directory hasil clone branch source
+</span><span class='line'>/User/Projects/Directory_Clone_Source/_deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Berikut adalah command lebih lengkapnya</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /User/Projects/Directory_Clone_Source
+</span><span class='line'>
+</span><span class='line'>git clone -b master git@github.com:isaan/isaan.github.io.git _deploy
+</span><span class='line'>
+</span><span class='line'>cd _deploy
+</span><span class='line'>
+</span><span class='line'>git status #untuk melihat status git terakhir, apakah uptodate atau ada yang masih conflict
+</span><span class='line'>
+</span><span class='line'>git pull origin master #untuk pull data di repo agar sama dengan di lokal kita</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Tunggu beberapa saat hingga proses clone selesai. Setelah proses selesai masuk ke directory hasil clone tersebut dan pastikan ada Gemfile di dalamnya. Ketikkan command berikut ini di dalam directory tersebut, dalam case ini di root directory dari hasil clone source.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -202,6 +238,52 @@
 
 <p>Ini adalah detail page nya di local server development.
 <img src="/images/2018/07/14/3.png"></p>
+
+<p>Setelah semua oke, kamu bisa melakukan proses generate dan deploy ke live dengan perintah berikut ini.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake generate
+</span><span class='line'>
+</span><span class='line'>bundle exec rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Jika sudah selesai maka hasilnya bisa dilihat di website anda. Di tempat saya hasilnya adalah seperti ini.</p>
+
+<p><img src="/images/2018/07/14/5.png"></p>
+
+<p><img src="/images/2018/07/14/6.png"></p>
+
+<p>Hal yang perlu diketahui apakah proses deploy sudah selesai belum adalah kamu bisa mengecek status git nya di directory nya.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /User/Projects/Directory_Clone_Source/_deploy
+</span><span class='line'>
+</span><span class='line'>git status</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Jika yang muncul adalah <em>Your branch is up to date with &lsquo;origin/master&rsquo;. Nothing to commit, working tree clean</em> maka directory tersebut adalah sudah clean dan sudah berhasil ke push ke github branch master. Kamu bisa mengeceknya di Github.</p>
+
+<p>Lalu jika kamu cek status git di source maka akan muncul bahwa terdapat file yang di modifikasi dan belum ter push. Hal ini karena khusus di bagian source ini kamu harus push ke github secara manual</p>
+
+<p><img src="/images/2018/07/14/7.png"></p>
+
+<p>Cara push ke github nya bisa dengan cara berikut ini.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
+</span><span class='line'>git commit -m 'update bla bla'
+</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>note: perintah di atas bisa di sesuaikan dengan kondisi kamu, misal nama branch nya</em></p>
+
+<p>Sekian adalah tutorial <em>Cara Clone Octopress ke Machine Lain</em>. Semoga bermanfaat. :)</p>
 
 
 
