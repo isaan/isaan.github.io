@@ -4,7 +4,7 @@
     <title><![CDATA[Category: ubuntu | Ikhsan Labs]]></title>
     <link href="http://ikhsanir.com/categories/ubuntu/atom.xml" rel="self"/>
     <link href="http://ikhsanir.com/"/>
-    <updated>2018-07-21T18:17:28+07:00</updated>
+    <updated>2018-07-21T22:42:50+07:00</updated>
     <id>http://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -18,7 +18,7 @@
         <link href="http://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04/"/>
         <updated>2017-01-27T10:50:41+07:00</updated>
         <id>http://ikhsanir.com/blog/2017/01/27/cara-install-synapse-indicator-di-ubuntu-16-dot-04</id>
-        <content type="html"><![CDATA[<p><img src="/images/2017/01/27/synapseindicator.jpg"></p>
+        <content type="html"><![CDATA[<p>{% img /images/2017/01/27/synapseindicator.jpg %}</p>
 
 <p><strong>Synapse Indicator</strong> adalah aplikasi alternatif Spotlight yang dibuat oleh <a href="https://plus.google.com/+TomBeckmann/posts">Tom Beckmann</a>. Synapse Indicator sangat membantu kita dalam melakukan pencarian file, folder ataupun aplikasi. Dengan posisi search button diatas tentu mirip dengan spotlight di MacOS. <!-- more --></p>
 
@@ -28,23 +28,22 @@
 
 <p>Tambahkan repository berikut ini sebelum install Synapse.</p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:noobslab/apps
-</span><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get install indicator-synapse</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock %}
+sudo add-apt-repository ppa:noobslab/apps
+sudo apt-get update
+sudo apt-get install indicator-synapse
+{% endcodeblock %}</p>
 
 <p>Jika sewaktu melakukan install Synapse Indicator anda menemui error itu karena maka solusinya adalah dengan mengganti distribution pada repository yang baru saja anda tambahkan dari Xenial menjadi Trusty. Maksud dari mengganti repo distribution tersebut adalah agar kita bisa install aplikasi di Ubuntu 16.04 dengan repo dari Ubuntu 14.04 Trusty Tahr.</p>
 
 <p>Cara mengganti repository distributionnya adalah dengan langkah berikut:
 <strong>System Settings > Software &amp; Updates > Other Software > Cari apps repository dari noobslab dan klik Edit > Change Distribution Value menjadi &ldquo;trusty&rdquo;</strong></p>
 
-<p><img src="/images/2017/01/27/systemsetting.png"></p>
+<p>{% img /images/2017/01/27/systemsetting.png %}</p>
 
-<p><img src="/images/2017/01/27/othersoft.png"></p>
+<p>{% img /images/2017/01/27/othersoft.png %}</p>
 
-<p><img src="/images/2017/01/27/editsource.png"></p>
+<p>{% img /images/2017/01/27/editsource.png %}</p>
 
 <p>Setelah itu update dengan &ldquo;sudo apt-get update&rdquo; dan install synapse nya &ldquo;sudo apt-get install indicator-synapse&rdquo;.</p>
 
@@ -59,7 +58,7 @@
         <link href="http://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04/"/>
         <updated>2016-12-21T09:42:28+07:00</updated>
         <id>http://ikhsanir.com/blog/2016/12/21/tutorial-install-ruby-on-rails-dengan-rvm-di-ubuntu-16-dot-04</id>
-        <content type="html"><![CDATA[<p><img src="/images/2016/12/21/rubyonrails.jpg" title="ruby on rails" ></p>
+        <content type="html"><![CDATA[<p>{%img /images/2016/12/21/rubyonrails.jpg ruby on rails %}</p>
 
 <p><strong>Ruby on Rails</strong> adalah application stacks yang cukup populer di kalangan developer untuk membuat situs dan web apps. Ruby adalah bahasa pemrograman yang dikombinasikan dengan Rails framework, yang membuat development aplikasi menjadi sederhana.</p>
 
@@ -72,66 +71,74 @@
 
 <p><strong>Instalasi</strong></p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ gpg &ndash;keyserver hkp://keys.gnupg.net &ndash;recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock %}
+$ gpg &ndash;keyserver hkp://keys.gnupg.net &ndash;recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+{% endcodeblock %}</p>
 
 <p>Pindah ke directory yang writable locations seperti /tmp dan download RVM script. Gunakan curl untuk mendownload RVM instalasi script nya.</p>
 
-<p><figure class='code'><figcaption><span>/tmp </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ \curl -sSL &lt;a href="https://get.rvm.io">https://get.rvm.io&lt;/a> -o rvm.sh</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock /tmp %}
+$ \curl -sSL <a href="https://get.rvm.io">https://get.rvm.io</a> -o rvm.sh
+{% endcodeblock %}</p>
 
 <p>Setelah selesai download, jalankan script <em>rvm.sh</em> nya</p>
 
-<p><figure class='code'><figcaption><span>/tmp </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ less /tmp/rvm.sh</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock /tmp %}
+$ less /tmp/rvm.sh
+{% endcodeblock %}</p>
 
 <p>Selama proses instalasi, akan muncul popup yang meminta untuk memasukkan password anda. Dan setelah selesai kanu bisa cek nya dengan mengetik &lsquo;rvm&rsquo;</p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock %}
+$ rvm
+{% endcodeblock %}</p>
 
 <p><strong>Install Spesifik Ruby on Rails Version</strong></p>
 
 <p>Jika anda ingin menginstall Ruby dengan versi tertentu, maka anda bisa mengetik command dibawah ini untuk menampilkan versi Ruby yang tersedia.</p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm list known</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock %}
+$ rvm list known
+{% endcodeblock %}</p>
 
 <p>Dan setelah tampil daftar Ruby beserta versinya, ketika akan install dengan versi tertentu yaitu dengan cara:</p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm install ruby_version</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock %}
+$ rvm install ruby_version
+{% endcodeblock %}</p>
 
 <p>Untuk &ldquo;ruby_version&rdquo; kamu bisa menulisnya dengan ruby-2.3.0 atau hanya 2.3.0. Setelah selesai, anda bisa cek versi Ruby yang telah diinstall dengan mengetik:</p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm list</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock %}
+$ rvm list
+{% endcodeblock %}</p>
 
 <p>Lalu ketika anda ingin switch atau ganti versi Ruby cukup mengetik:</p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm use ruby_version</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock %}
+$ rvm use ruby_version
+{% endcodeblock %}</p>
 
 <p>Dan sejak rails adalah gem, kita bisa install beberapa jenis versi dari Rails dengan menggunakan &ldquo;gem command&rdquo;.</p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem search &lsquo;^rails$&rsquo; &ndash;all</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock %}
+$ gem search &lsquo;^rails$&rsquo; &ndash;all
+{% endcodeblock %}</p>
 
 <p>Note: Untuk install rails anda hanya perlu menulis versi rails nya saja. Contoh: 4.2.0</p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem install rails -v rails_version</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock %}
+$ gem install rails -v rails_version
+{% endcodeblock %}</p>
 
 <p><strong>Install JavaScript Runtime</strong></p>
 
 <p>Di beberapa fitur dari Rails, seperti Pipeline asset tergantung pada JavaScript Runtime. Maka dari itu kita akan menginstall node.js dengan mengguanakan command &ldquo;apt-get&rdquo;.</p>
 
-<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get update
-</span><span class='line'>$ sudo apt-get install -y nodejs</span></code></pre></td></tr></table></div></figure></p>
+<p>{% codeblock %}
+$ sudo apt-get update
+$ sudo apt-get install -y nodejs
+{% endcodeblock %}</p>
 
 <p>Sampai langkah ini, anda bisa memulai untuk melakukan tes develop aplikasi web dengan menggunakan Ruby on Rails yang telah di install.</p>
 ]]></content>
