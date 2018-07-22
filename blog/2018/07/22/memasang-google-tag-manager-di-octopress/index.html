@@ -16,13 +16,13 @@
         <!-- End Google Tag Manager -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Cara Clone Octopress ke Machine Lain - Ikhsan Labs</title>
+        <title>Memasang Google Tag Manager di Octopress - Ikhsan Labs</title>
         <meta name="author" content="Ikhsan">
         
-        <meta name="description" content="cara clone repository octopress ke komputer lain">
-        <meta name="keywords" content="clone octopress, cara clone octopress, cara termudah clone octopress">
+        <meta name="description" content="Google Tag Manager adalah sistem pengelolaan tag yang memungkinkan kamu dengan cepat dan mudah mengupdate tag dan script code di situs atau aplikasi &hellip;">
+        <meta name="keywords" content="memasang google tag manager di octopress, cara pasang gtm di octopress, cara memasang google tag manager octopress, google tag manager octopress">
         <meta name="viewport" content="width=device-width">
-        <link rel="canonical" href="http://ikhsanir.com/blog/2018/07/14/cara-clone-octopress-ke-machine-lain">
+        <link rel="canonical" href="http://ikhsanir.com/blog/2018/07/22/memasang-google-tag-manager-di-octopress">
 
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
@@ -89,7 +89,7 @@
                     <article class="article article--single">
     <header class="article__header">
     
-        <h1 class="article__title">Cara Clone Octopress ke Machine Lain</h1>
+        <h1 class="article__title">Memasang Google Tag Manager di Octopress</h1>
     
 
     
@@ -101,7 +101,7 @@
 
 
 
-    <time class="article__date pull-left" datetime="2018-07-14T08:35:31+07:00" pubdate><i class="fa fa-calendar"></i> Jul 14th, 2018</time>
+    <time class="article__date pull-left" datetime="2018-07-22T12:51:12+07:00" pubdate><i class="fa fa-calendar"></i> Jul 22nd, 2018</time>
 
 
 
@@ -115,6 +115,10 @@
 
             
                 <li><a class='category' href='/categories/octopress/'>octopress</a></li>
+            
+                <li><a class='category' href='/categories/google-tag-manager/'>google tag manager</a></li>
+            
+                <li><a class='category' href='/categories/analytics/'>analytics</a></li>
             
         
         </ul>
@@ -133,177 +137,66 @@
 
 
 
-    <p><img src="/images/2018/07/14/gambar.png"></p>
+    <p><img src="/images/2018/07/22/Google-Analytics-Tag-Manager.png"></p>
 
-<p><strong>Clone Octopress</strong> adalah melakukan copy data octopress yang berada di repository Github ke dalam machine lain. Clone Octopress ini dilakukan jika kita sebelumnya kita pernah install octopress dengan machine lain dan sekarang ingin melakukan clone ke laptop kita sendiri. <!-- more --></p>
+<p>Di artikel kali ini saya akan membahas mengenai <strong>Cara Memasang Google Tag Manager di Octopress</strong>. Apa itu Google Tag Manager atau yang biasa dikenal GTM? Bagi yang belum tahu Google Tag Manager adalah sistem pengelolaan tag yang memungkinkan kamu dengan cepat dan mudah mengupdate tag dan script code di situs atau aplikasi mobile. <!-- more --></p>
 
-<p>Dalam artikel ini saya akan membahas bagaimana caranya melakukan clone octopress ke machine / komputer lain. Bagi kamu yang belum tahu apa itu octopress, bisa baca dulu disini <a href="http://octopress.org">apa itu octopress?</a>.</p>
+<p>Setelah script code dari Tag Manager ditambahkan ke website atau aplikasi, kamu dapat mengonfigurasi tag melalui interface pengguna berbasis web tanpa harus mengubah dan menerapkan kode tambahan. Hal ini mengurangi error dan membebaskan kamu dari keharusan untuk melibatkan developer kapan saja jika perlu melakukan perubahan.</p>
 
-<p>Artikel ini saya buat sesuai dengan case saya saat ini yaitu ketika saya menggunakan octopress pertama kali saya menggunakan PC, sedangkan sekarang saya menggunakan laptop pribadi saya. Untung data nya tersimpan utuh di dalam Github sehingga kapanpun akan menggunakan kembali tinggal clone saja repository tersebut.</p>
+<p>Google Tag Manager juga merupakan salah satu fitur dari Google Analytics (GA) yang digunakan untuk membantu marketing dalam manajemen tag yang dibutuhkan untuk analisa kebiasaan pengguna dalam suatu website atau aplikasi. Melalui Google Tag Manager ini kamu bisa mendeteksi kebiasaan user misalnya adalah mendeteksi user yang membuka halaman detail artikel / produk, dimana nantinya data tersebut akan dikirim ke Google Analytics untuk memantau kebasaan pengguna.</p>
 
-<p>Sebelum melakukan <em>clone octopress</em> tentu saja kamu harus install git dan ruby terlebih dahulu. Kamu bisa menggunakan rvm atau rbenv untuk menginstall ruby. Kalau saya saat ini menggunakan rbenv dan menggunakan sistem operasi Mac OS.</p>
+<p><em>Memasang Google Tag Manager di Octopress</em> ini bisa dibilang sangat mudah, karena kita hanya perlu memasang script js yang telah disediakan ke dalam tag head dan body di dalamnya. Namun di dalam octopress ini terdapat banyak sekali file yang berisi tag head dan body di dalamnya, sehingga ketika saya mau implementasi nya sedikit bingung mau di pasang di file yang mana. Saya sudah googling beberapa kali dan tidak ada artikel yang menjelaskan cara pasang gtm di octopress, akhirnya saya coba untuk riset sendiri karena memang perlu ekstra tenaga untuk memasangnya. Haha, bercanda. :)</p>
 
-<p>Setelah semua prerequisites (persyaratan) yang dibutuhkan ter install. Selanjutnya kamu langsung bisa melakukan clone repository github kamu. Oiya  yang perlu diperhatikan disini adalah kamu harus melakukan clone repository octopress anda yang terdapat Gemfile nya. Dalam hal ini di repository saya terdapat 2 branch, master (sebagai production), dan source (sebagai development). Untuk itu saya melakukan clone ke dalam branch source saya. Mungkin masing masing repository akan ada perbedaan disini, disesuaikan aja sesuai kebutuhan.</p>
+<p>Ok berikut adalah langkah langkahnya :</p>
 
-<p>Format standar untuk melakukan clone adalah seperti ini :</p>
+<p>Masukkan nama akun beserta alamat website yang ingin dipasang GTM. Nama akun digunakan sebagai ID jika kamu memiliki beberapa website yang ingin di analisa.</p>
+
+<p><img src="/images/2018/07/22/1.png"></p>
+
+<p>Lalu untuk alamat website ini nanti akan digunakan sebagai preview, untuk mengetahui apakah tag tersebut sudah berjalan atau belum.</p>
+
+<p><img src="/images/2018/07/22/2.png"></p>
+
+<p>Setelah itu kamu akan disuguhkan dengan popup yang berisi script js yang harus dipasang di website.</p>
+
+<p><img src="/images/2018/07/22/3.png"></p>
+
+<p>Terdapat dua script yang harus kamu pasang pada bagian head dan body di semua halaman website kamu. Di Octopress terdapat banyak sekali file yang di dalamnya terdapat tag head dan body. Untuk itu kamu harus menemukan root / inti dari file yang digunakan di semua halaman. Untuk website saya menggunakan theme Oscalite, jadi saya memasangnya di bagian ini :</p>
+
+<p><strong>Script Head</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(repo)/source/_includes/site/head.html</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Script Body</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(repo)/source/_layouts/default.html</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Note: struktur file diatas mungkin bisa beda dengan yang kamu miliki, namun tetap bisa disesuaikan di inti file yang digunakan, biasanya default nya di dalam directory /source/_layouts</em></p>
+
+<p>Jangan lupa simpan lalu generate dan preview dulu di local.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone (git repo kamu)
-</span><span class='line'>
-</span><span class='line'>git clone -b (nama branch) (git repo kamu)</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Saya menggunakan format yang nomer dua karena saya perlu clone di branch tertentu.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone -b source git@github.com:isaan/isaan.github.io.git</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Setelah selesai clone masuk ke directory tersebut dan clone branch master dan taruh di directory <em>_deploy</em>. Hal ini sangat diperlukan karena sewaktu deploy akan menggunakan directory <em>_deploy</em> ini. Jadi struktur directory nya nanti adalah :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hasil clone dari branch source akan disimpan disini
-</span><span class='line'>/User/Projects/Directory_Clone_Source
-</span><span class='line'>
-</span><span class='line'>hasil clone dari branch master akan berada di dalam directory hasil clone branch source
-</span><span class='line'>/User/Projects/Directory_Clone_Source/_deploy</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Berikut adalah command lebih lengkapnya</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd /User/Projects/Directory_Clone_Source
-</span><span class='line'>
-</span><span class='line'>git clone -b master git@github.com:isaan/isaan.github.io.git _deploy
-</span><span class='line'>
-</span><span class='line'>cd _deploy
-</span><span class='line'>
-</span><span class='line'>git status #untuk melihat status git terakhir, apakah uptodate atau ada yang masih conflict
-</span><span class='line'>
-</span><span class='line'>git pull origin master #untuk pull data di repo agar sama dengan di lokal kita</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Tunggu beberapa saat hingga proses clone selesai. Setelah proses selesai masuk ke directory hasil clone tersebut dan pastikan ada Gemfile di dalamnya. Ketikkan command berikut ini di dalam directory tersebut, dalam case ini di root directory dari hasil clone source.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gem install bundler
-</span><span class='line'>
-</span><span class='line'>rbenv rehash (jika kamu menggunakan rbenv, perintah ini diperlukan untuk bisa menggunakan bundle command)
-</span><span class='line'>
-</span><span class='line'>bundle install 
-</span><span class='line'>
-</span><span class='line'>rake install (di versi ruby terbaru terkadang muncul error, kamu bisa menambah perintah "bundle exec rake install")</span></code></pre></td></tr></table></div></figure>
-
-
-<p><img src="/images/2018/07/14/1.png"></p>
-
-<p>Jika kamu menggunakan custom theme sendiri alias bukan menggunakan theme default dari octopress biasanya akan muncul popup berikut ini.</p>
-
-<p><img src="/images/2018/07/14/2.png"></p>
-
-<p>Kamu bisa melakukan pilihan disini, ketik ‘y’ untuk kembali menggunakan theme default octopress, atau ketik ’n’ untuk tetap menggunakan theme custom kamu.</p>
-
-<p>Sampai proses ini seharusnya proses clone ke local machine kamu sudah selesai. Untuk melakukan testing apakah sudah berhasil atau belum, kamu bisa melakukan testing membuat post baru dengan perintah</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post[“(judul post)”]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Jika error tambahkan perintah bundle exec di depannya</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake new_post[“(judul post)”]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Atau bisa juga dengan perintah yang lebih simpel yaitu</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post
-</span><span class='line'>
-</span><span class='line'>Enter a title for your post: ...... #masukkan judul post nya</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Untuk melihat hasil post nya bisa di tes di local browser kamu terlebih dahulu.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake preview atau bundle exec rake preview</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Buka browser kamu dengan alamat berikut ini localhost:4000. Jika langkah langkah clone sudah benar harusnya sudah muncul hasilnya.</p>
-
-<p>Ini adalah halaman home di local server development.
-<img src="/images/2018/07/14/3.png"></p>
-
-<p>Ini adalah detail page nya di local server development.
-<img src="/images/2018/07/14/3.png"></p>
-
-<p>Setelah semua oke, kamu bisa melakukan proses generate dan deploy ke live dengan perintah berikut ini.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake generate
-</span><span class='line'>
-</span><span class='line'>bundle exec rake deploy</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>bundle exec rake preview</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Jika sudah selesai maka hasilnya bisa dilihat di website anda. Di tempat saya hasilnya adalah seperti ini.</p>
+<p>Buka local development kamu di localhost:4000, dan jika sudah berhasil maka akan muncul preview dari Google Tag Manager.</p>
 
-<p><img src="/images/2018/07/14/5.png"></p>
+<p><img src="/images/2018/07/22/4.png"></p>
 
-<p><img src="/images/2018/07/14/6.png"></p>
+<p>Jika belum muncul preview dari Google Tag Manager kamu bisa mengeceknya melalui view source di home page nya dengan cara
+<em>view-source:localhost:4000</em>. Disana akan kelihatan apakah script tersebut sudah berhasil terpasang atau belum.</p>
 
-<p>Hal yang perlu diketahui apakah proses deploy sudah selesai belum adalah kamu bisa mengecek status git nya di directory nya.</p>
+<p>Setelah sukses muncul di local artinya script sudah terpasang dengan benar, maka kamu bisa melakukan deploy agar bisa tampil di live nya.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd /User/Projects/Directory_Clone_Source/_deploy
-</span><span class='line'>
-</span><span class='line'>git status</span></code></pre></td></tr></table></div></figure>
+<p><img src="/images/2018/07/22/5.png"></p>
 
-
-<p>Jika yang muncul adalah <em>Your branch is up to date with &lsquo;origin/master&rsquo;. Nothing to commit, working tree clean</em> maka directory tersebut adalah sudah clean dan sudah berhasil ke push ke github branch master. Kamu bisa mengeceknya di Github.</p>
-
-<p>Lalu jika kamu cek status git di source maka akan muncul bahwa terdapat file yang di modifikasi dan belum ter push. Hal ini karena khusus di bagian source ini kamu harus push ke github secara manual</p>
-
-<p><img src="/images/2018/07/14/7.png"></p>
-
-<p>Cara push ke github nya bisa dengan cara berikut ini.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git add .
-</span><span class='line'>git commit -m 'update bla bla'
-</span><span class='line'>git push origin source</span></code></pre></td></tr></table></div></figure>
-
-
-<p><em>note: perintah di atas bisa di sesuaikan dengan kondisi kamu, misal nama branch nya</em></p>
-
-<p>Sekian adalah tutorial <em>Cara Clone Octopress ke Machine Lain</em>. Semoga bermanfaat. :)</p>
+<p>Sekian tutorial dari saya mengenai <span style="text-decoration:underline">cara memasang google tag manager di octopress</span>. Untuk bagaimana menggunakan tag nya akan saya bahas di artikel selanjutnya. Semoga bermanfaat :)</p>
 
 
 
@@ -511,8 +404,8 @@
     
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://ikhsanir.com/blog/2018/07/14/cara-clone-octopress-ke-machine-lain/';
-        var disqus_url = 'http://ikhsanir.com/blog/2018/07/14/cara-clone-octopress-ke-machine-lain/';
+        var disqus_identifier = 'http://ikhsanir.com/blog/2018/07/22/memasang-google-tag-manager-di-octopress/';
+        var disqus_url = 'http://ikhsanir.com/blog/2018/07/22/memasang-google-tag-manager-di-octopress/';
         var disqus_script = 'embed.js';
     
     (function () {

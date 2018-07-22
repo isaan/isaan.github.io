@@ -4,7 +4,7 @@
     <title><![CDATA[Category: octopress | Ikhsan Labs]]></title>
     <link href="http://ikhsanir.com/categories/octopress/atom.xml" rel="self"/>
     <link href="http://ikhsanir.com/"/>
-    <updated>2018-07-21T23:04:10+07:00</updated>
+    <updated>2018-07-22T18:55:22+07:00</updated>
     <id>http://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -12,6 +12,69 @@
       </author>
     <generator uri="http://octopress.org/">Octopress</generator>
 
+    
+    <entry>
+        <title type="html"><![CDATA[Memasang Google Tag Manager di Octopress]]></title>
+        <link href="http://ikhsanir.com/blog/2018/07/22/memasang-google-tag-manager-di-octopress/"/>
+        <updated>2018-07-22T12:51:12+07:00</updated>
+        <id>http://ikhsanir.com/blog/2018/07/22/memasang-google-tag-manager-di-octopress</id>
+        <content type="html"><![CDATA[<p><img src="/images/2018/07/22/Google-Analytics-Tag-Manager.png"></p>
+
+<p>Di artikel kali ini saya akan membahas mengenai <strong>Cara Memasang Google Tag Manager di Octopress</strong>. Apa itu Google Tag Manager atau yang biasa dikenal GTM? Bagi yang belum tahu Google Tag Manager adalah sistem pengelolaan tag yang memungkinkan kamu dengan cepat dan mudah mengupdate tag dan script code di situs atau aplikasi mobile. <!-- more --></p>
+
+<p>Setelah script code dari Tag Manager ditambahkan ke website atau aplikasi, kamu dapat mengonfigurasi tag melalui interface pengguna berbasis web tanpa harus mengubah dan menerapkan kode tambahan. Hal ini mengurangi error dan membebaskan kamu dari keharusan untuk melibatkan developer kapan saja jika perlu melakukan perubahan.</p>
+
+<p>Google Tag Manager juga merupakan salah satu fitur dari Google Analytics (GA) yang digunakan untuk membantu marketing dalam manajemen tag yang dibutuhkan untuk analisa kebiasaan pengguna dalam suatu website atau aplikasi. Melalui Google Tag Manager ini kamu bisa mendeteksi kebiasaan user misalnya adalah mendeteksi user yang membuka halaman detail artikel / produk, dimana nantinya data tersebut akan dikirim ke Google Analytics untuk memantau kebasaan pengguna.</p>
+
+<p><em>Memasang Google Tag Manager di Octopress</em> ini bisa dibilang sangat mudah, karena kita hanya perlu memasang script js yang telah disediakan ke dalam tag head dan body di dalamnya. Namun di dalam octopress ini terdapat banyak sekali file yang berisi tag head dan body di dalamnya, sehingga ketika saya mau implementasi nya sedikit bingung mau di pasang di file yang mana. Saya sudah googling beberapa kali dan tidak ada artikel yang menjelaskan cara pasang gtm di octopress, akhirnya saya coba untuk riset sendiri karena memang perlu ekstra tenaga untuk memasangnya. Haha, bercanda. :)</p>
+
+<p>Ok berikut adalah langkah langkahnya :</p>
+
+<p>Masukkan nama akun beserta alamat website yang ingin dipasang GTM. Nama akun digunakan sebagai ID jika kamu memiliki beberapa website yang ingin di analisa.</p>
+
+<p><img src="/images/2018/07/22/1.png"></p>
+
+<p>Lalu untuk alamat website ini nanti akan digunakan sebagai preview, untuk mengetahui apakah tag tersebut sudah berjalan atau belum.</p>
+
+<p><img src="/images/2018/07/22/2.png"></p>
+
+<p>Setelah itu kamu akan disuguhkan dengan popup yang berisi script js yang harus dipasang di website.</p>
+
+<p><img src="/images/2018/07/22/3.png"></p>
+
+<p>Terdapat dua script yang harus kamu pasang pada bagian head dan body di semua halaman website kamu. Di Octopress terdapat banyak sekali file yang di dalamnya terdapat tag head dan body. Untuk itu kamu harus menemukan root / inti dari file yang digunakan di semua halaman. Untuk website saya menggunakan theme Oscalite, jadi saya memasangnya di bagian ini :</p>
+
+<p><strong>Script Head</strong>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(repo)/source/_includes/site/head.html</span></code></pre></td></tr></table></div></figure></p>
+
+<p><strong>Script Body</strong>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(repo)/source/_layouts/default.html</span></code></pre></td></tr></table></div></figure></p>
+
+<p><em>Note: struktur file diatas mungkin bisa beda dengan yang kamu miliki, namun tetap bisa disesuaikan di inti file yang digunakan, biasanya default nya di dalam directory /source/_layouts</em></p>
+
+<p>Jangan lupa simpan lalu generate dan preview dulu di local.</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake generate
+</span><span class='line'>bundle exec rake preview</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Buka local development kamu di localhost:4000, dan jika sudah berhasil maka akan muncul preview dari Google Tag Manager.</p>
+
+<p><img src="/images/2018/07/22/4.png"></p>
+
+<p>Jika belum muncul preview dari Google Tag Manager kamu bisa mengeceknya melalui view source di home page nya dengan cara
+<em>view-source:localhost:4000</em>. Disana akan kelihatan apakah script tersebut sudah berhasil terpasang atau belum.</p>
+
+<p>Setelah sukses muncul di local artinya script sudah terpasang dengan benar, maka kamu bisa melakukan deploy agar bisa tampil di live nya.</p>
+
+<p><img src="/images/2018/07/22/5.png"></p>
+
+<p>Sekian tutorial dari saya mengenai <span style="text-decoration:underline">cara memasang google tag manager di octopress</span>. Untuk bagaimana menggunakan tag nya akan saya bahas di artikel selanjutnya. Semoga bermanfaat :)</p>
+]]></content>
+    </entry>
     
     <entry>
         <title type="html"><![CDATA[Cara Clone Octopress ke Machine Lain]]></title>
@@ -116,6 +179,15 @@
 
 <p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake new_post[“(judul post)”]</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Atau bisa juga dengan perintah yang lebih simpel yaitu</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Enter a title for your post: &hellip;&hellip; #masukkan judul post nya</span></code></pre></td></tr></table></div></figure></p>
 
 <p>Untuk melihat hasil post nya bisa di tes di local browser kamu terlebih dahulu.</p>
 
