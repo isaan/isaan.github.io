@@ -91,6 +91,14 @@ Jika error tambahkan perintah bundle exec di depannya
 bundle exec rake new_post[“(judul post)”]
 {% endcodeblock %}
 
+Atau bisa juga dengan perintah yang lebih simpel yaitu 
+
+{% codeblock %}
+rake new_post
+
+Enter a title for your post: ...... #masukkan judul post nya
+{% endcodeblock %}
+
 Untuk melihat hasil post nya bisa di tes di local browser kamu terlebih dahulu.
 
 {% codeblock %}

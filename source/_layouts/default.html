@@ -1,7 +1,10 @@
 {% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}{% include site/head.html %}
 
     <body {% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
-
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8N3RQC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
         {% include site/header.html %}
 
         <div id="main-content">
