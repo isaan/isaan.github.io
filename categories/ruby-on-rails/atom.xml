@@ -4,7 +4,7 @@
     <title><![CDATA[Category: ruby on rails | Ikhsan Labs]]></title>
     <link href="http://ikhsanir.com/categories/ruby-on-rails/atom.xml" rel="self"/>
     <link href="http://ikhsanir.com/"/>
-    <updated>2018-07-22T18:55:22+07:00</updated>
+    <updated>2018-07-22T22:09:09+07:00</updated>
     <id>http://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -12,6 +12,49 @@
       </author>
     <generator uri="http://octopress.org/">Octopress</generator>
 
+    
+    <entry>
+        <title type="html"><![CDATA[Membuat shell script auto deploy octopress]]></title>
+        <link href="http://ikhsanir.com/blog/2018/07/22/membuat-shell-script-auto-deploy-octopress/"/>
+        <updated>2018-07-22T21:15:14+07:00</updated>
+        <id>http://ikhsanir.com/blog/2018/07/22/membuat-shell-script-auto-deploy-octopress</id>
+        <content type="html"><![CDATA[<p><img src="/images/2018/07/22/shell.jpg"></p>
+
+<p>Halo semua, di dalam artikel ini saya akan membahas mengenai <strong>shell script untuk auto deploy octopress</strong>. Shell script adalah kumpulan beberapa perintah yang ditulis pada text file yang nantinya akan di eksekusi oleh shell. Biasanya shell script ini memiliki ekstensi .sh. Fungsi dari shell script ini adalah memudahkan pekerjaan kita dalam mengetikkan perintah yang berulang kali dilakukan. <!-- more --></p>
+
+<p><em>Membuat shell script untuk auto deploy octopress</em> ini sangatlah mudah. Kita hanya perlu mengisikan perintah perintah apa saja ke dalam file .sh yang nantinya akan di eksekusi oleh shell. Kali ini saya akan membuat dua buah shell script yang akan bisa digunakan untuk build di local dan juga deploy ke live nya.</p>
+
+<p>Masuk ke root directory octopress kamu dan buat file berekstensi .sh. Untuk nama file nya bebas bisa diberi nama apa saja yang penting ekstensinya shell (.sh)
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>vi preview.sh</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Lalu masukkan perintah untuk melakukan build di local server development di dalam file <em>preview.sh</em> tersebut
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake generate
+</span><span class='line'>bundle exec rake preview</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Untuk menjalankan perintah shell di atas adalah dengan perintah <em>./preview.sh</em>. Jika muncul permission denied, maka ubah terlebih dahulu hak akses nya (chmod) menjadi 755 atau 777.</p>
+
+<p>Untuk shell script deploy ke live caranya sama seperti diatas yaitu
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>vi deploy.sh</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Lalu masukkan perintah untuk melakukan deploy di live dalam file <em>deploy.sh</em> tersebut
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle exec rake generate
+</span><span class='line'>bundle exec rake deploy</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Struktur urutan perintah yang akan di eksekusi shell script adalah berdasarkan perintah yang paling atas. Jadi jangan sampai terbalik dalam menulis perintahnya. Ketika shell script tersebut dijalankan maka kurang lebih akan muncul seperti ini</p>
+
+<p><img src="/images/2018/07/22/preview.png"></p>
+
+<p>Sebenarnya shell script ini saya iseng buat untuk memudahkan saya dalam menuliskan perintah untuk build di local maupun di live yang perintahnya sama sepanjang waktu. Nah daripada harus mengetik perintah berulang kali yang mungkin akan membuat bosan makanya saya buat file shell script nya, sehingga ketika mau deploy tinggal jalanin file shell script tersebut.</p>
+
+<p>Ok mungkin cukup sekian artikel mengenai <span style="text-decoration:underline">membuat shell script untuk auto deploy octopress</span>. Semoga bermanfaat! :)</p>
+]]></content>
+    </entry>
     
     <entry>
         <title type="html"><![CDATA[Membuat Video Embed Responsive di Octopress]]></title>
