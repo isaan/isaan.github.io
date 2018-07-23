@@ -4,7 +4,7 @@
     <title><![CDATA[Category: octopress | Ikhsan Labs]]></title>
     <link href="http://ikhsanir.com/categories/octopress/atom.xml" rel="self"/>
     <link href="http://ikhsanir.com/"/>
-    <updated>2018-07-22T22:09:09+07:00</updated>
+    <updated>2018-07-23T08:15:14+07:00</updated>
     <id>http://ikhsanir.com/</id>
     <author>
         <name><![CDATA[Ikhsan]]></name>
@@ -14,7 +14,7 @@
 
     
     <entry>
-        <title type="html"><![CDATA[Membuat shell script auto deploy octopress]]></title>
+        <title type="html"><![CDATA[Membuat Shell Script Auto Deploy Octopress]]></title>
         <link href="http://ikhsanir.com/blog/2018/07/22/membuat-shell-script-auto-deploy-octopress/"/>
         <updated>2018-07-22T21:15:14+07:00</updated>
         <id>http://ikhsanir.com/blog/2018/07/22/membuat-shell-script-auto-deploy-octopress</id>
@@ -48,7 +48,11 @@
 
 <p>Struktur urutan perintah yang akan di eksekusi shell script adalah berdasarkan perintah yang paling atas. Jadi jangan sampai terbalik dalam menulis perintahnya. Ketika shell script tersebut dijalankan maka kurang lebih akan muncul seperti ini</p>
 
-<p><img src="/images/2018/07/22/preview.png"></p>
+<p><em>preview.sh</em>
+<img src="/images/2018/07/22/preview.png"></p>
+
+<p><em>deploy.sh</em>
+<img src="/images/2018/07/22/deploy.png"></p>
 
 <p>Sebenarnya shell script ini saya iseng buat untuk memudahkan saya dalam menuliskan perintah untuk build di local maupun di live yang perintahnya sama sepanjang waktu. Nah daripada harus mengetik perintah berulang kali yang mungkin akan membuat bosan makanya saya buat file shell script nya, sehingga ketika mau deploy tinggal jalanin file shell script tersebut.</p>
 
